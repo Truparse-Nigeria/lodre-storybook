@@ -1,0 +1,18 @@
+import { Meta, ColorPalette, ColorItem } from '@storybook/addon-docs/blocks';
+import { PALETTE } from '../tokens/color';
+
+<Meta title="Token/Colors" />
+
+# Colors
+
+<ColorPalette>
+  <ColorItem
+    title="Base Colors"
+    colors={[
+      PALETTE.alert,
+      PALETTE.primary,
+      PALETTE.success,
+      PALETTE.white
+    ]}
+  />
+</ColorPalette>
