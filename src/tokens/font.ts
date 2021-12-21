@@ -3,10 +3,12 @@ export const TYPOGRAPHY = {
       primary: '"Montserrat", sans-serif',
     },
     weight: {
-      regular: '400',
-      bold: '600',
-      extrabold: '800',
-      black: '900',
+      w200: '200',
+      w300: '300',
+      w400: '400',
+      w500: '500',
+      w600: '600',
+      w700: '700',
     },
     size: {
       s1: 13,

@@ -20,6 +20,7 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
+    "compile-icons": "npx @svgr/cli -d src/icons src/icons --typescript",
     "eject": "react-scripts eject",
     "storybook": "start-storybook -p 6006 -s public",
     "build-storybook": "build-storybook -s public"
@@ -58,6 +59,9 @@
     "@storybook/addon-links": "^6.4.9",
     "@storybook/node-logger": "^6.4.9",
     "@storybook/preset-create-react-app": "^3.2.0",
-    "@storybook/react": "^6.4.9"
+    "@storybook/react": "^6.4.9",
+    "@svgr/cli": "^6.1.2",
+    "@types/styled-components": "^5.1.18",
+    "styled-components": "^5.3.3"
   }
 }
