@@ -26,6 +26,15 @@ export const StyledInput = styled.input<InputType>`
 
 export const StyledInputFlex = styled.div`
     display: flex;
+    align-items: center;
+`;
+
+export const StyledInputPrefix = styled.div`
+    margin-right: 10px;
+`;
+
+export const StyledInputSuffix = styled.div`
+    margin-left: 10px;
 `
 
 export const StyledInputContainer = styled.div`
