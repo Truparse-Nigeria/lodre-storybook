@@ -1,20 +1,31 @@
-import { Meta, Story, Preview, Props } from "@storybook/addon-docs/blocks";
+import { Canvas, Meta, Story } from '@storybook/addon-docs';
+import { EyeClose, Help, ShoppingCart, User } from "../icons";
 import * as Icons from "../icons";
 
-<Meta title="Icon" />
+<Meta title="Icons" />
 
-Here's some _markdown_!
+export const EyeCloseTemplate = args => <EyeClose {...args}/>;
+export const HelpTemplate = args => <Help {...args}/>;
+export const ShoppingCartTemplate = args => <ShoppingCart {...args}/>;
+export const UserTemplate = args => <User {...args}/>;
 
-# Preview
+# Icons
+This display the icons we have available in the Design System.
 
-<Preview>
-  <Story name="icons">
-    {Icons.map((el:SVGElement, index: number) => (
-        {el}
-    ))}
+<Canvas>
+  <Story name="EyeClose">
+    {EyeCloseTemplate.bind({})}
   </Story>
-</Preview>
 
-# Props
+  <Story name="Help">
+    {HelpTemplate.bind({})}
+  </Story>
 
-<Props of={Icons} />
+   <Story name="Shopping Cart">
+    {ShoppingCartTemplate.bind({})}
+  </Story>
+  
+  <Story name="User">
+    {UserTemplate.bind({})}
+  </Story>
+</Canvas>
