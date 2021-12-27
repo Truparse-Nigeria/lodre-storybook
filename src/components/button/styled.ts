@@ -1,8 +1,8 @@
 import styled from 'styled-components';
 import { ButtonVariant } from '.';
 import { PALETTE, PaletteType } from '../../tokens/color';
-import { TYPOGRAPHY } from '../../tokens/font';
-import { ComponentSize, HEIGHTS, SIDE_PADDINGS } from '../../tokens/sizes';
+import { FONT_SIZE, FONT_WEIGHT, TYPOGRAPHY } from '../../tokens/font';
+import { ComponentSize, HEIGHTS, RADIUS, SIDE_PADDINGS } from '../../tokens/sizes';
 
 interface StyledButtonProps {
   size: ComponentSize;
@@ -14,15 +14,15 @@ export const StyledButton = styled.button<StyledButtonProps>`
   display: flex;
   align-items: center;
   justify-content: center;
-  border-radius:4px;
+  border-radius: ${RADIUS.small}px;
   border: ${(props) =>
     props.variant === 'block'
       ? `1px solid ${PALETTE[props.usage]}`
       : `1px solid ${PALETTE.dark}`};
   cursor: pointer;
   padding: 0 ${(props) => SIDE_PADDINGS[props.size]}px;
-  font-size: ${TYPOGRAPHY.size.m1}px;
-  font-weight: ${TYPOGRAPHY.weight.w700};
+  font-size: ${FONT_SIZE.pSmall}px;
+  font-weight: ${FONT_WEIGHT.w700};
   height: ${(props) => HEIGHTS.buttons[props.size] || 0}px;
   color: ${PALETTE.dark};
   background-color: ${(props) =>

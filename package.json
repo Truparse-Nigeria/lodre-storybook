@@ -20,7 +20,7 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "compile-icons": "npx @svgr/cli -d src/icons src/icons --typescript",
+    "compile-icons": "npx @svgr/cli --icon -d src/icons src/icons --typescript",
     "eject": "react-scripts eject",
     "storybook": "start-storybook -p 6006 -s public",
     "build-storybook": "build-storybook -s public"

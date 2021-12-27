@@ -15,8 +15,6 @@ export const TextInput = Template.bind({});
 TextInput.args = {
   type: "text",
   placeholder: "Placeholder",
-  prefix: <EyeClose />,
-  suffix: "$",
 };
 
 export const TextInputWithSubtext = Template.bind({});
@@ -24,4 +22,18 @@ TextInputWithSubtext.args = {
   type: "text",
   placeholder: "Placeholder",
   subText: "Lodre main maerket description",
+};
+
+export const TextInputWithSuffix = Template.bind({});
+TextInputWithSuffix.args = {
+  type: "text",
+  placeholder: "Placeholder",
+  trailing: "$",
+};
+
+export const TextInputWithPrefix = Template.bind({});
+TextInputWithPrefix.args = {
+  type: "text",
+  placeholder: "Placeholder",
+  leading: <EyeClose />
 };
