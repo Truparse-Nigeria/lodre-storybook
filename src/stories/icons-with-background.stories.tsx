@@ -4,7 +4,7 @@ import SvgEyeClose from '../icons/EyeClose';
 import { Icon } from '../components';
 
 export default {
-  title: 'Icons With Background',
+  title: 'Icons/With Background',
   component: Icon,
 } as Meta;
 

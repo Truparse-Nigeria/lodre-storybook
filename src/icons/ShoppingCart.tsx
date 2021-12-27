@@ -3,8 +3,9 @@ import { SVGProps } from "react";
 
 const SvgShoppingCart = (props: SVGProps<SVGSVGElement>) => (
   <svg
-    width={21}
-    height={21}
+    width="1em"
+    height="1em"
+    viewBox="0 0 21 21"
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
     {...props}

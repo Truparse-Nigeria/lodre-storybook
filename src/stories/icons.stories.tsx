@@ -7,7 +7,7 @@ import SvgEyeOpen from '../icons/EyeOpen';
 import SvgSafe from '../icons/Safe';
 
 export default {
-  title: 'Icons',
+  title: 'Icons/Without Background',
   component: SvgEyeClose,
 } as Meta;
 
