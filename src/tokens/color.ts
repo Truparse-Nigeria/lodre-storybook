@@ -5,6 +5,6 @@ export const PALETTE: { [Key in PaletteType]: string } = {
   cream: '#17B64B',
   dark: '#191919',
   ash: '#8C8C8C',
-  grey: '#E4E4E4',
+  grey: '#F7F7F7',
   light: '#FFFFFF',
 };

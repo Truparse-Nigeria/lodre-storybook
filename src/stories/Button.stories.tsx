@@ -1,5 +1,5 @@
 import React from 'react';
-import { Story, Meta } from '@storybook/react/types-6-0';
+import { Story, Meta } from '@storybook/react';
 
 import Button, { IButton } from '../components/button';
 
@@ -12,7 +12,7 @@ const Template: Story<IButton> = (args) => <Button {...args} />;
 
 export const Block = Template.bind({});
 Block.args = {
-    children: 'Primary Button'
+    children: 'Primary Button',
 }
 
 export const Outline = Template.bind({});

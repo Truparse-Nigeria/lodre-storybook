@@ -1,11 +1,17 @@
-import React, { FC } from 'react';
+import React, { ElementType, FC } from 'react';
 import { EyeClose } from '../../icons';
-import { StyledInputContainer, StyledInput, StyledInputFlex } from './styled';
+import {
+  StyledInputContainer,
+  StyledInput,
+  StyledInputFlex,
+  StyledInputSuffix,
+  StyledInputPrefix,
+} from './styled';
 
 export interface IInput {
   subText?: string;
-  suffix?: string;
-  prefix?: string;
+  trailing?: ElementType | string;
+  leading?: ElementType | string;
   type: string;
   placeholder: string;
   width?: string;
@@ -13,8 +19,8 @@ export interface IInput {
 
 const Input: FC<IInput & Record<string, any>> = ({
   subText,
-  suffix,
-  prefix,
+  trailing,
+  leading,
   type,
   placeholder,
   width = '100%',
@@ -22,14 +28,15 @@ const Input: FC<IInput & Record<string, any>> = ({
 }) => {
   return (
     <StyledInputContainer>
-      <StyledInputFlex>
-        <EyeClose />
+      <StyledInputFlex leading={leading} trailing={trailing}>
+        {leading && <StyledInputPrefix>{leading}</StyledInputPrefix>}
         <StyledInput
           type={type}
           width={width}
           placeholder={placeholder}
           {...rest}
         />
+        {trailing && <StyledInputSuffix>{trailing}</StyledInputSuffix>}
       </StyledInputFlex>
       {subText && <small>{subText}</small>}
     </StyledInputContainer>

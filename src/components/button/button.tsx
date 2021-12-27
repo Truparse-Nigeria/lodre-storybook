@@ -1,4 +1,4 @@
-import React, { FC, ReactNode } from 'react';
+import React, { FC, HTMLAttributes, ReactNode } from 'react';
 import { PaletteType } from '../../tokens/color';
 import { ComponentSize } from '../../tokens/sizes';
 import { StyledButton } from './styled';
@@ -10,10 +10,9 @@ export interface IButton {
   variant?: ButtonVariant;
   size?: ComponentSize;
   usage?: PaletteType;
-  onClick?: () => void;
 }
 
-const Button: FC<IButton & Record<string, any>> = ({
+const Button: FC<IButton & HTMLAttributes<HTMLButtonElement>> = ({
   children,
   variant = 'block',
   size = 'default',

@@ -1,33 +1,63 @@
-import styled from "styled-components";
-import { PALETTE } from "../../tokens/color";
-import { TYPOGRAPHY } from "../../tokens/font";
-import { HEIGHTS } from "../../tokens/sizes";
+import { ElementType } from 'react';
+import styled from 'styled-components';
+import { PALETTE } from '../../tokens/color';
+import { FONT_SIZE, TYPOGRAPHY } from '../../tokens/font';
+import { HEIGHTS } from '../../tokens/sizes';
 
 type InputType = {
-    width: string;
-}
+  width: string;
+};
+
+type InputFlexType = {
+  trailing?: ElementType | String;
+  leading?: ElementType | String;
+};
 
 export const StyledInput = styled.input<InputType>`
-    border-radius: 4px;
-    border: 1px solid ${PALETTE.grey};
-    height: ${HEIGHTS.inputs.default}px;
-    padding: 0 20px;
-    width: ${props => props.width};
+  border-radius: 4px;
+  border: 1px solid ${PALETTE.ash};
+  height: ${HEIGHTS.inputs.default}px;
+  padding: 0 20px;
+  width: ${(props) => props.width};
 
-    &:focus {
-        outline: 2px solid ${PALETTE.primary}; 
-    }
+  &:focus {
+    outline: 2px solid ${PALETTE.primary};
+  }
 
-    &::placeholder {
-        color: ${PALETTE.ash};
-        font-size: ${TYPOGRAPHY.size.m1};
-    }
+  &::placeholder {
+    color: ${PALETTE.ash};
+    font-size: ${FONT_SIZE.pSmall};
+  }
 `;
 
-export const StyledInputFlex = styled.div`
-    display: flex;
-`
+export const StyledInputFlex = styled.div<InputFlexType>`
+  display: flex;
+  align-items: center;
+  ${(props) =>
+    props.trailing != null
+      ? `& > input {
+    padding-right: 40px !important;
+  } `
+      : ``}
+  ${(props) =>
+    props.leading != null
+      ? `& > input {
+    padding-left: 40px !important;
+  }`
+      : ``}
+`;
+
+export const StyledInputPrefix = styled.div`
+  left: 30px;
+  position: absolute;
+`;
+
+export const StyledInputSuffix = styled.div`
+  margin-left: 30px;
+  position: absolute;
+  right: 30px;
+`;
 
 export const StyledInputContainer = styled.div`
-    margin-bottom: 20px;
-`
+  margin-bottom: 20px;
+`;

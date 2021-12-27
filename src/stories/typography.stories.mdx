@@ -1,0 +1,45 @@
+import { Meta } from '@storybook/addon-docs';
+import { SmallText, Paragraph, Heading} from '../components/typography';
+
+<Meta title="Fonts" />
+
+# Fonts
+Our text style system if very simple. This can be used through the whole textuals in the Project.
+
+The  weight on text: `'w200' | 'w300' | 'w400' | 'w500' | 'w600' | 'w700'`
+
+The size for paragraph: `'small' | 'pSmall' | 'pLarge' | 'hSmall' | 'hLarge'`
+
+where sizes with p should be used in `Paragraph` tag.
+
+where sizes with h should be used in `Heading` tag.
+
+
+#### For small text:
+```
+<SmallText>This is a small text</SmallText>
+```
+<SmallText>This is a small text</SmallText>
+
+#### For default text:
+```
+<Paragraph>This is a paragraph</Paragraph>
+```
+<Paragraph>This is a paragraph</Paragraph>
+
+#### For big text:
+```
+<Paragraph size="pLarge">This is a large paragraph</Paragraph>
+```
+<Paragraph size="pLarge">This is a large paragraph</Paragraph>
+
+#### For Heading:
+```
+<Heading size="hLarge" weight="w600">This is a large Heading</Heading>
+```
+<Heading size="hLarge" weight="w600">This is a large Heading</Heading>
+
+
+
+
+
