@@ -11,7 +11,7 @@ export type GridType = {
 };
 
 export const StyledGrid = styled.div<GridType>`
-  display: grid;
+  display: grid !important;
   grid-template-columns: ${props => props.xs || '1fr'}; 
   gap: ${(props) => props.gap}rem;
 

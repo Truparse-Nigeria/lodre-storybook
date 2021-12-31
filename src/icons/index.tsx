@@ -9,5 +9,6 @@ export { default as EyeOpen } from "./EyeOpen";
 export { default as Headphone } from "./Headphone";
 export { default as HeartFill } from "./HeartFill";
 export { default as Help } from "./Help";
+export { default as Search } from "./Search";
 export { default as ShoppingCart } from "./ShoppingCart";
 export { default as User } from "./User";
