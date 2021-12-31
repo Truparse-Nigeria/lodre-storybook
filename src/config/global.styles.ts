@@ -1,5 +1,6 @@
 import { createGlobalStyle } from 'styled-components';
 import { TYPOGRAPHY } from '../tokens/font';
+import { mediaQueries } from '../tokens/sizes';
 import './fonts/styles.css';
 
 export const GlobalStyles = createGlobalStyle`

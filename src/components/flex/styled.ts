@@ -16,7 +16,7 @@ type flexType = {
 };
 
 export const StyledFlex = styled.div<flexType>`
-    display: flex;
+    display: flex !important;
     gap: ${(props) => props.gap}rem;
     justify-content: ${(props) => props.justifyContent};
     align-items:${(props) => props.alignItems};

@@ -1,4 +1,4 @@
-export type TextType = 'small' | 'pSmall' | 'pLarge' | 'hSmall' | 'hLarge';
+export type TextType = 'xSmall' | 'small' | 'pSmall' | 'pLarge' | 'hSmall' | 'hLarge';
 export type WeightType = 'w200' | 'w300' | 'w400' | 'w500' | 'w600' | 'w700';
 
 export const TYPOGRAPHY = '"Montserrat", sans-serif';
@@ -11,6 +11,7 @@ export const FONT_WEIGHT: { [key in WeightType]: string } = {
   w700: '700',
 };
 export const FONT_SIZE: { [key in TextType]: number } = {
+  xSmall: 9,
   small: 12,
   pSmall: 14,
   pLarge: 16,
