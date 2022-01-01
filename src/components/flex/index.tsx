@@ -1,29 +1,20 @@
-import React, { FC, ReactNode } from 'react';
-import { StyledCol, StyledFlex } from './styled';
+import React, { FC, HTMLAttributes, ReactNode } from 'react';
+import { flexAlignmentType, StyledCol, StyledFlex, textAlignmentType } from './styled';
 
 export interface IFlex {
   children: JSX.Element | JSX.Element[];
   gap?: number;
-  justifyContent?:
-    | 'start'
-    | 'center'
-    | 'space-evenly'
-    | 'space-between'
-    | 'end';
-  alignItems?:
-    | 'start'
-    | 'center'
-    | 'space-evenly'
-    | 'space-between'
-    | 'flex-end';
+  justifyContent?: flexAlignmentType;
+  alignItems?: flexAlignmentType;
 }
 
 export interface ICol {
   children: ReactNode | JSX.Element | JSX.Element[];
   size?: number;
+  align?: textAlignmentType;
 }
 
-export const Flex: FC<IFlex> = ({
+export const Flex: FC<IFlex & HTMLAttributes<HTMLDivElement>> = ({
   children,
   gap = 1,
   justifyContent = 'start',
@@ -42,6 +33,6 @@ export const Flex: FC<IFlex> = ({
   );
 };
 
-export const Col: FC<ICol> = ({ children, size  }) => {
-  return <StyledCol size={size}>{children}</StyledCol>;
+export const Col: FC<ICol> = ({ children, size, align  }) => {
+  return <StyledCol align={align} size={size}>{children}</StyledCol>;
 };

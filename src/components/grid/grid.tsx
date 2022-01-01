@@ -1,4 +1,4 @@
-import React, { FC, ReactChild, ReactChildren } from 'react';
+import React, { FC, HTMLAttributes, ReactChild, ReactChildren } from 'react';
 import { StyledGrid } from './styled';
 
 export interface IGrid {
@@ -11,7 +11,7 @@ export interface IGrid {
   gap?: number;
 }
 
-const Grid: FC<IGrid> = ({
+const Grid: FC<IGrid & HTMLAttributes<HTMLDivElement>> = ({
   children,
   gap = 1,
   md,

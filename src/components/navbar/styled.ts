@@ -60,4 +60,8 @@ export const StyledBottomNav = styled.div`
   position: fixed;
   width: 100%;
   height: 65px;
+  display: block;
+  ${mediaQueries('lg')(`
+  display: none;
+  `)}
 `;

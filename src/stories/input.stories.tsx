@@ -1,7 +1,7 @@
 import React from "react";
 import { Story, Meta } from "@storybook/react/types-6-0";
 
-import Input, { IInput } from "../components/input";
+import Input, { IInput, SearchInput } from "../components/input";
 import { EyeClose } from "../icons";
 
 export default {
@@ -37,3 +37,6 @@ TextInputWithPrefix.args = {
   placeholder: "Placeholder",
   leading: <EyeClose />
 };
+
+
+export const search = (args) => <SearchInput {...args} />
