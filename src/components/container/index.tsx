@@ -1,4 +1,4 @@
-import React, { FC, ReactNode } from 'react';
+import React, { FC, HTMLAttributes, ReactNode } from 'react';
 import { PaletteType } from '../../tokens/color';
 import { StyledContainer } from './styled';
 
@@ -8,8 +8,17 @@ export interface IContainer {
   bgColor?: PaletteType;
 }
 
-const Container: FC<IContainer> = ({children, fluid = false, bgColor, ...rest}) => {
-  return <StyledContainer fluid={fluid} bgColor={bgColor} {...rest}>{children}</StyledContainer>;
+const Container: FC<IContainer & HTMLAttributes<HTMLDivElement>> = ({
+  children,
+  fluid = false,
+  bgColor,
+  ...rest
+}) => {
+  return (
+    <StyledContainer fluid={fluid} bgColor={bgColor} {...rest}>
+      {children}
+    </StyledContainer>
+  );
 };
 
 export default Container;

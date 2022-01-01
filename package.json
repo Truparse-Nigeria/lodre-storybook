@@ -1,6 +1,6 @@
 {
   "name": "truparse-lodre",
-  "version": "1.0.0",
+  "version": "1.0.7",
   "private": false,
   "main": "lib/index.js",
   "files": [
@@ -82,7 +82,6 @@
     "@types/react-dom": "^17.0.0",
     "@types/styled-components": "^5.1.18",
     "copyfiles": "^2.4.1",
-    "node-sass": "5.0.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-scripts": "4.0.3",
