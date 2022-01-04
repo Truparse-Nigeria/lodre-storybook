@@ -11,5 +11,7 @@ export declare const StyledInputFlex: import("styled-components").StyledComponen
 export declare const StyledInputPrefix: import("styled-components").StyledComponent<"div", any, {}, never>;
 export declare const StyledInputSuffix: import("styled-components").StyledComponent<"div", any, {}, never>;
 export declare const StyledInputContainer: import("styled-components").StyledComponent<"div", any, {}, never>;
+export declare const StyledSearchInput: import("styled-components").StyledComponent<"input", any, {}, never>;
+export declare const StyledSearchButton: import("styled-components").StyledComponent<"button", any, {}, never>;
 export {};
 //# sourceMappingURL=styled.d.ts.map
