@@ -48,14 +48,14 @@ export const StyledInputFlex = styled.div<InputFlexType>`
 `;
 
 export const StyledInputPrefix = styled.div`
-  left: 30px;
+  left: 40px;
   position: absolute;
 `;
 
 export const StyledInputSuffix = styled.div`
-  margin-left: 30px;
+  margin-left: 40px;
   position: absolute;
-  right: 30px;
+  right: 40px;
 `;
 
 export const StyledInputContainer = styled.div`
