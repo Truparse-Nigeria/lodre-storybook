@@ -1,4 +1,4 @@
-import { FC } from 'react';
+import { FC, HTMLAttributes } from 'react';
 export interface IGrid {
     children: JSX.Element | JSX.Element[];
     sm?: string;
@@ -8,6 +8,6 @@ export interface IGrid {
     xs?: string;
     gap?: number;
 }
-declare const Grid: FC<IGrid>;
+declare const Grid: FC<IGrid & HTMLAttributes<HTMLDivElement>>;
 export default Grid;
 //# sourceMappingURL=grid.d.ts.map
