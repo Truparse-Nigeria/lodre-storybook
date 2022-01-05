@@ -1,1 +1,13 @@
-{"version":3,"file":"grid.js","sourceRoot":"","sources":["../../../src/components/grid/grid.tsx"],"names":[],"mappings":";;;;;;;;;;;;;;;;;;;;;;AAAA,OAAO,KAAwD,MAAM,OAAO,CAAC;AAC7E,OAAO,EAAE,UAAU,EAAE,MAAM,UAAU,CAAC;AAYtC,IAAM,IAAI,GAA+C,UAAC,EASzD;IARC,IAAA,QAAQ,cAAA,EACR,WAAO,EAAP,GAAG,mBAAG,CAAC,KAAA,EACP,EAAE,QAAA,EACF,EAAE,QAAA,EACF,EAAE,QAAA,EACF,UAAU,EAAV,EAAE,mBAAG,KAAK,KAAA,EACV,UAAqB,EAArB,EAAE,mBAAG,gBAAgB,KAAA,EAClB,IAAI,cARiD,iDASzD,CADQ;IAEP,OAAO,CACL,oBAAC,UAAU,aAAC,GAAG,EAAE,GAAG,EAAE,EAAE,EAAE,EAAE,EAAE,EAAE,EAAE,EAAE,EAAE,EAAE,EAAE,EAAE,EAAE,EAAE,EAAE,EAAE,EAAE,EAAE,EAAE,EAAE,IAAM,IAAI,GACnE,QAAQ,CACE,CACd,CAAC;AACJ,CAAC,CAAC;AAEF,eAAe,IAAI,CAAC","sourcesContent":["import React, { FC, HTMLAttributes, ReactChild, ReactChildren } from 'react';\r\nimport { StyledGrid } from './styled';\r\n\r\nexport interface IGrid {\r\n  children: JSX.Element | JSX.Element[];\r\n  sm?: string;\r\n  md?: string;\r\n  lg?: string;\r\n  xl?: string;\r\n  xs?: string;\r\n  gap?: number;\r\n}\r\n\r\nconst Grid: FC<IGrid & HTMLAttributes<HTMLDivElement>> = ({\r\n  children,\r\n  gap = 1,\r\n  md,\r\n  lg,\r\n  xl,\r\n  xs = '1fr',\r\n  sm = 'repeat(2, 1fr)',\r\n  ...rest\r\n}) => {\r\n  return (\r\n    <StyledGrid gap={gap} sm={sm} md={md} lg={lg} xl={xl} xs={xs} {...rest}>\r\n      {children}\r\n    </StyledGrid>\r\n  );\r\n};\r\n\r\nexport default Grid;\r\n"]}
+{
+  "version": 3,
+  "file": "grid.js",
+  "sourceRoot": "",
+  "sources": [
+    "../../../src/components/grid/grid.tsx"
+  ],
+  "names": [],
+  "mappings": ";;;;;;;;;;;;;;;;;;;;;;AAAA,OAAO,KAAwD,MAAM,OAAO,CAAC;AAC7E,OAAO,EAAE,UAAU,EAAE,MAAM,UAAU,CAAC;AAYtC,IAAM,IAAI,GAA+C,UAAC,EASzD;IARC,IAAA,QAAQ,cAAA,EACR,WAAO,EAAP,GAAG,mBAAG,CAAC,KAAA,EACP,EAAE,QAAA,EACF,EAAE,QAAA,EACF,EAAE,QAAA,EACF,UAAU,EAAV,EAAE,mBAAG,KAAK,KAAA,EACV,UAAqB,EAArB,EAAE,mBAAG,gBAAgB,KAAA,EAClB,IAAI,cARiD,iDASzD,CADQ;IAEP,OAAO,CACL,oBAAC,UAAU,aAAC,GAAG,EAAE,GAAG,EAAE,EAAE,EAAE,EAAE,EAAE,EAAE,EAAE,EAAE,EAAE,EAAE,EAAE,EAAE,EAAE,EAAE,EAAE,EAAE,EAAE,EAAE,EAAE,EAAE,IAAM,IAAI,GACnE,QAAQ,CACE,CACd,CAAC;AACJ,CAAC,CAAC;AAEF,eAAe,IAAI,CAAC",
+  "sourcesContent": [
+    "import React, { FC, HTMLAttributes, ReactChild, ReactChildren } from 'react';\r\nimport { StyledGrid } from './styled';\r\n\r\nexport interface IGrid {\r\n  children: JSX.Element | JSX.Element[];\r\n  sm?: string;\r\n  md?: string;\r\n  lg?: string;\r\n  xl?: string;\r\n  xs?: string;\r\n  gap?: number;\r\n}\r\n\r\nconst Grid: FC<IGrid & HTMLAttributes<HTMLDivElement>> = ({\r\n  children,\r\n  gap = 1,\r\n  md,\r\n  lg,\r\n  xl,\r\n  xs = '1fr',\r\n  sm = 'repeat(2, 1fr)',\r\n  ...rest\r\n}) => {\r\n  return (\r\n    <StyledGrid gap={gap} sm={sm} md={md} lg={lg} xl={xl} xs={xs} {...rest}>\r\n      {children}\r\n    </StyledGrid>\r\n  );\r\n};\r\n\r\nexport default Grid;\r\n"
+  ]
+}
