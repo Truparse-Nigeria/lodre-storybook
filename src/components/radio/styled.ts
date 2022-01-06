@@ -1,61 +1,59 @@
 import styled from "styled-components";
 import { PALETTE } from "../../tokens/color";
 
+interface StyledRadioProps {
+  checked: boolean;
+}
+
 export const StyledRadioContainer = styled.div`
   display: flex;
   align-items: center;
-  height: 48px;
+`;
+
+export const StyledHiddenRadio = styled.input.attrs({ type: "radio" })`
+  border: 0;
+  clip: rect(0 0 0 0);
+  clippath: inset(50%);
+  height: 0px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
   position: relative;
+  white-space: nowrap;
+  width: 0px;
 `;
 
 export const StyledRadioLabel = styled.label`
-  position: absolute;
-  top: 25%;
-  left: 4px;
-  width: 24px;
-  height: 24px;
-  border-radius: 50%;
-  background: white;
-  border: 1px solid #bebebe;
-`;
-export const StyledRadioButton = styled.input.attrs({ type: "checkbox" })`
-  opacity: 0;
-  z-index: 1;
-  border-radius: 50%;
-  width: 24px;
-  height: 24px;
-  margin-right: 10px;
-  &:hover ~ ${StyledRadioLabel} {
-    background: ${PALETTE.ash};
-    &::after {
-      content: "";
-      display: block;
-      border-radius: 50%;
-      width: 12px;
-      height: 12px;
-      margin: 5px;
-      background: ${PALETTE.grey};
-    }
+  position: relative;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+
+  ::before {
+    cursor: pointer;
+    position: absolute;
+    left: 0px;
+    content: " ";
+    width: 16px;
+    height: 16px;
+    border: 2px solid ${PALETTE.dark};
+    border-radius: 15px;
   }
-  ${(props) =>
-    props.checked &&
-    ` 
-    &:checked + ${StyledRadioLabel} {
-      background: ${PALETTE.primary};
-      border: 1px solid ${PALETTE.primary};
 
-      &::after {
-        content: "";
-        display: block;
-        border-radius: 50%;
-        width: 12px;
-        height: 12px;
-        margin: 5px;
-        box-shadow: 1px 3px 3px 1px rgba(0, 0, 0, 0.1);
-        background: ${PALETTE.dark};
-      }
-    }
-  `}
+  ::after {
+    cursor: pointer;
+    position: absolute;
+    left: 5px;
+    content: " ";
+    width: 10px;
+    height: 10px;
+    border-radius: 15px;
+    background-color: ${PALETTE.primary};
+  }
 `;
 
-export default StyledRadioButton;
+export const StyledRadioText = styled.small`
+  margin: 0 30px;
+`;
+
+export default StyledHiddenRadio;

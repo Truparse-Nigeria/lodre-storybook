@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import StyledCheckbox, {
   StyledCheckboxContainer,
-  StyledCheckIcon,
+  StyledCheckboxLabel,
+  StyledCheckboxText,
   StyledHiddenCheckbox,
-  StyledLabel,
 } from "./styled";
 
 export interface CheckboxProps {
@@ -16,20 +16,13 @@ const Checkbox = ({
   const [checked, setChecked] = useState<boolean>(false);
 
   return (
-    <label>
-      <StyledCheckboxContainer>
-        <StyledHiddenCheckbox
-          onChange={() => setChecked(!checked)}
-          checked={checked}
-        />
-        <StyledCheckbox checked={checked}>
-          <StyledCheckIcon viewBox="0 0 24 24">
-            <polyline points="20 6 9 17 4 12" />
-          </StyledCheckIcon>
-        </StyledCheckbox>
-        <StyledLabel>{label}</StyledLabel>
-      </StyledCheckboxContainer>
-    </label>
+    <StyledCheckboxLabel>
+      <StyledHiddenCheckbox
+        onChange={() => setChecked(!checked)}
+        checked={checked}
+      />
+      <StyledCheckboxText>{label}</StyledCheckboxText>
+    </StyledCheckboxLabel>
   );
 };
 

@@ -10,47 +10,53 @@ export const StyledCheckboxContainer = styled.div`
   align-items: center;
 `;
 
-export const StyledCheckIcon = styled.svg`
-  fill: none;
-  stroke: ${PALETTE.dark};
-  stroke-width: 3px;
-  vertical-align: top;
-`;
-
 export const StyledHiddenCheckbox = styled.input.attrs({ type: "checkbox" })`
   border: 0;
   clip: rect(0 0 0 0);
   clippath: inset(50%);
-  height: 1px;
+  height: 0px;
   margin: -1px;
   overflow: hidden;
   padding: 0;
-  position: absolute;
+  position: relative;
   white-space: nowrap;
-  width: 1px;
+  width: 0px;
 `;
 
-const StyledCheckbox = styled.div<StyledCheckboxProps>`
-  display: inline-block;
-  width: 18px;
-  height: 18px;
-  background: ${(props) => (props.checked ? PALETTE.primary : PALETTE.light)};
-  border: 1.5px solid
-    ${(props) => (props.checked ? PALETTE.light : PALETTE.dark)};
-  border-radius: 3px;
-  transition: all 150ms;
+export const StyledCheckboxLabel = styled.label`
+  position: relative;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
 
-  ${StyledHiddenCheckbox}:focus + & {
-    box-shadow: 0 0 0 1px ${PALETTE.primary};
+  ::before {
+    cursor: pointer;
+    position: absolute;
+    left: 0px;
+    content: " ";
+    width: 16px;
+    height: 16px;
+    border: 2px solid ${PALETTE.dark};
+    border-radius: 5px;
   }
 
-  ${StyledCheckIcon} {
-    visibility: ${(props) => (props.checked ? "visible" : "hidden")};
+  ::after {
+    cursor: pointer;
+    position: absolute;
+    left: 2px;
+    content: "✓";
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 16px;
+    height: 16px;
+    border-radius: 2.5px;
+    background-color: ${PALETTE.primary};
   }
 `;
 
-export const StyledLabel = styled.small`
-  margin: 0 5px;
+export const StyledCheckboxText = styled.small`
+  margin: 0 30px;
 `;
 
-export default StyledCheckbox;
+export default StyledHiddenCheckbox;

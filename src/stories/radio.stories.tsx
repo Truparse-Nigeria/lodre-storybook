@@ -1,7 +1,11 @@
 import React from "react";
 import { Story, Meta } from "@storybook/react/types-6-0";
 
-import StyledRadioButton from "../components/radio/styled";
+import StyledRadioButton, {
+  StyledHiddenRadio,
+  StyledRadioLabel,
+  StyledRadioText,
+} from "../components/radio/styled";
 import Radio, { RadioProps } from "../components/radio";
 
 export default {
@@ -9,9 +13,15 @@ export default {
   component: StyledRadioButton,
 } as Meta;
 
-const Template: Story<RadioProps> = (args) => <Radio {...args} />;
+const Template: Story<RadioProps> = (args) => (
+  <StyledRadioLabel>
+    <StyledHiddenRadio
+      value="laptops"
+      onChange={(e) => console.log(e.target.checked)}
+    />
+    <StyledRadioText>Laptops</StyledRadioText>
+  </StyledRadioLabel>
+);
 
 export const PrimaryRadio = Template.bind({});
-PrimaryRadio.args = {
-  label: "Hello World!",
-};
+PrimaryRadio.args = {};
