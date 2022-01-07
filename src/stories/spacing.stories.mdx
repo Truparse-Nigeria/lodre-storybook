@@ -1,0 +1,55 @@
+import { Meta } from '@storybook/addon-docs';
+import { SmallText, Paragraph, Heading} from '../components/typography';
+
+<Meta title="Document/Margins and paddings" />
+
+# Margins & Paddings
+
+You can add a padding or margin to any tag 
+`mx-` and `my-` are used for horizontal and vertical margins respectively.
+Example `<div className="my-5">test</div>`
+
+`px-` and `py-` are used for horizontal and vertical paddings respectively.
+Example `<div className="my-5">test</div>`
+
+the full padding and margins are:
+
+```
+.mt-${i} {
+         margin-top: ${i}px;
+       }
+      .mx-${i} {
+        margin: auto ${i}px;
+      }
+      .my-${i} {
+        margin: ${i}px auto;
+      }
+      .mb-${i} {
+        margin-bottom: ${i}px
+      }
+      .m-${i} {
+        margin: ${i}px
+      }
+      .pt-${i} {
+        padding-top: ${i}px;
+      }
+     .px-${i} {
+       padding: auto ${i}px;
+     }
+     .py-${i} {
+       padding: ${i}px auto;
+     }
+     .pb-${i} {
+       padding-bottom: ${i}px
+     }
+     .p-${i} {
+       padding: ${i}px
+     }
+```
+
+where i is any of the following `0, 5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 75, 100`
+
+
+
+
+
