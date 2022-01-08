@@ -13,6 +13,9 @@ const Template: Story<IButton> = (args) => <Button {...args} />;
 export const Block = Template.bind({});
 Block.args = {
     children: 'Primary Button',
+    fluid: false,
+    outline: 'block',
+    iconOnly: false
 }
 
 export const Outline = Template.bind({});

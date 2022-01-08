@@ -24,7 +24,14 @@ const Button: FC<IButton & HTMLAttributes<HTMLButtonElement>> = ({
   ...rest
 }) => {
   return (
-    <StyledButton size={size} variant={variant} usage={usage} {...rest}>
+    <StyledButton
+      size={size}
+      variant={variant}
+      usage={usage}
+      fluid={fluid}
+      iconOnly={iconOnly}
+      {...rest}
+    >
       {children}
     </StyledButton>
   );

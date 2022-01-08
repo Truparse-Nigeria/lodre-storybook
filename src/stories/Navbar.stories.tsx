@@ -3,6 +3,7 @@ import { Story, Meta } from '@storybook/react';
 
 import {
   Card,
+  CardBody,
   Col,
   Container,
   Flex,
@@ -23,7 +24,11 @@ export default {
 const Template: Story = (args) => (
   <Navbar {...args}>
     <Container className="my-30">
-    <Card bgColor="grey">Basic Card</Card>
+    <Card bgColor="grey">
+      <CardBody>
+      Basic Card
+      </CardBody>
+    </Card>
     </Container>
   </Navbar>
 );

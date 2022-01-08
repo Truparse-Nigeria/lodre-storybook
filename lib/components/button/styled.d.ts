@@ -5,6 +5,8 @@ interface StyledButtonProps {
     size: ComponentSize;
     variant: ButtonVariant;
     usage: PaletteType;
+    fluid?: boolean;
+    iconOnly?: boolean;
 }
 export declare const StyledButton: import("styled-components").StyledComponent<"button", any, StyledButtonProps, never>;
 export {};
