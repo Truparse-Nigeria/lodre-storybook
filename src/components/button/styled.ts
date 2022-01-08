@@ -29,7 +29,7 @@ export const StyledButton = styled.button<StyledButtonProps>`
   color: ${PALETTE.dark};
   background-color: ${(props) =>
     props.variant === 'block' ? PALETTE[props.usage] : 'transparent'};
-  min-width: ${props => props.iconOnly ? 0 : 200}px;
+  min-width: ${props => props.iconOnly ? 0 : 140}px;
   ${
     props  => props.fluid && `
       width: 100%;

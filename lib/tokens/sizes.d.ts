@@ -16,7 +16,9 @@ export declare const RADIUS: {
 export declare const HEIGHTS: {
     [key in ComponentType]: Elements;
 };
-export declare const CONTAINER = 1140;
+export declare const CONTAINER: {
+    [key in ViewportType]?: number;
+};
 export declare const mediaQueries: (key: keyof typeof VIEWPORT) => (style: TemplateStringsArray | String) => string;
 export {};
 //# sourceMappingURL=sizes.d.ts.map

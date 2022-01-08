@@ -36,7 +36,10 @@ export const HEIGHTS: { [key in ComponentType]: Elements } = {
   },
 };
 
-export const CONTAINER = 1140
+export const CONTAINER: { [key in ViewportType]?: number } = {
+  lg: 1140,
+  xl: 1200,
+};
 
 export const mediaQueries = (key: keyof typeof VIEWPORT) => {
   return (style: TemplateStringsArray | String) =>

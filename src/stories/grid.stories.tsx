@@ -1,6 +1,6 @@
 import { Meta } from '@storybook/react';
 import React from 'react';
-import { Card, Grid } from '../components';
+import { Card, CardBody, Grid } from '../components';
 
 export default {
   title: 'Layout/Grid',
@@ -14,7 +14,9 @@ const Template = ({ numberOfChildren, ...args }) => (
   <Grid {...args}>
     {[...Array(numberOfChildren).keys()].map((n) => (
       <Card bgColor="grey">
+        <CardBody>
         <p>Column {n + 1}</p>
+        </CardBody>
       </Card>
     ))}
   </Grid>
