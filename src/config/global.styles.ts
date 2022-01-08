@@ -1,6 +1,6 @@
 import { createGlobalStyle, css } from 'styled-components';
+import { PALETTE } from '../tokens/color';
 import { TYPOGRAPHY } from '../tokens/font';
-import { mediaQueries } from '../tokens/sizes';
 import './fonts/styles.css';
 
 const space: number[] = [0, 5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 75, 100];
@@ -47,6 +47,24 @@ const spaces = () => {
   `;
 };
 
+const bg = () => {
+  let styles = '';
+  for (let color of Object.values(PALETTE)) {
+    styles += `
+      .bg-${color} {
+         background-color: ${color};
+       }
+      .text-${color} {
+        color:  ${color};
+      }
+     `;
+  }
+
+  return css`
+    ${styles}
+  `;
+};
+
 export const GlobalStyles = createGlobalStyle`
   * {
     font-family: ${TYPOGRAPHY};
@@ -55,4 +73,5 @@ export const GlobalStyles = createGlobalStyle`
     padding: 0;
   }
   ${spaces()};
+  ${bg()};
 `;
