@@ -20,5 +20,5 @@ export const PrimaryRange = Template.bind({});
 PrimaryRange.args = {
   initialMinValue: "0",
   initialMaxValue: "150",
-  onChange: (e) => console.log(e.target.value),
+  onChange: () => {},
 };

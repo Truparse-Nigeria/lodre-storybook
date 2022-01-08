@@ -19,5 +19,5 @@ const Template: Story = ({
 export const PrimaryCheckbox = Template.bind({});
 PrimaryCheckbox.args = {
   label: "Hello World!",
-  onChange: (e) => console.log(e.target.checked),
+  onChange: () => {},
 };

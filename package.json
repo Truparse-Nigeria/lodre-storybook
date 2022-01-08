@@ -16,6 +16,8 @@
     "email": "workstation@truparse.com"
   },
   "dependencies": {
+    "@types/react-stars": "^2.2.1",
+    "react-stars": "^2.2.5",
     "styled-components": "^5.3.3"
   },
   "scripts": {

@@ -19,5 +19,21 @@ const Template: Story = ({
 export const PrimaryRadio = Template.bind({});
 PrimaryRadio.args = {
   label: "Hello World!",
-  onChange: (e) => console.log(e.target.checked),
+  onChange: () => {},
+};
+
+export const FullWidthRadio = Template.bind({});
+FullWidthRadio.args = {
+  label: "Door Delivery",
+  subLabel: "Delivered between Thursday 25 Nov and Monday 29 Nov for ₦ 1,750",
+  fullWidth: true,
+  onChange: () => {},
+};
+
+export const ColorRadio = Template.bind({});
+ColorRadio.args = {
+  hexColor: "#51408C",
+  forColor: true,
+  fullWidth: false,
+  onChange: () => {},
 };
