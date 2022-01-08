@@ -8,6 +8,8 @@ interface StyledButtonProps {
   size: ComponentSize;
   variant: ButtonVariant;
   usage: PaletteType;
+  fluid?: boolean;
+  iconOnly?: boolean;
 }
 
 export const StyledButton = styled.button<StyledButtonProps>`
@@ -27,7 +29,12 @@ export const StyledButton = styled.button<StyledButtonProps>`
   color: ${PALETTE.dark};
   background-color: ${(props) =>
     props.variant === 'block' ? PALETTE[props.usage] : 'transparent'};
-  min-width: 200px;
+  min-width: ${props => props.iconOnly ? 0 : 200}px;
+  ${
+    props  => props.fluid && `
+      width: 100%;
+    `
+  }
 
   &:hover {
     opacity: 0.8;

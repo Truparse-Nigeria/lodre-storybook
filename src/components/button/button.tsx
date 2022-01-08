@@ -10,6 +10,8 @@ export interface IButton {
   variant?: ButtonVariant;
   size?: ComponentSize;
   usage?: PaletteType;
+  fluid?: boolean;
+  iconOnly?: boolean;
 }
 
 const Button: FC<IButton & HTMLAttributes<HTMLButtonElement>> = ({
@@ -17,6 +19,8 @@ const Button: FC<IButton & HTMLAttributes<HTMLButtonElement>> = ({
   variant = 'block',
   size = 'default',
   usage = 'primary',
+  fluid = false,
+  iconOnly = false,
   ...rest
 }) => {
   return (

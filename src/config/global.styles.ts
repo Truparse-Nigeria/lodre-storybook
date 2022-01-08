@@ -1,6 +1,6 @@
 import { createGlobalStyle, css } from 'styled-components';
 import { PALETTE } from '../tokens/color';
-import { TYPOGRAPHY } from '../tokens/font';
+import { FONT_WEIGHT, TYPOGRAPHY } from '../tokens/font';
 import './fonts/styles.css';
 
 const space: number[] = [0, 5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 75, 100];
@@ -71,6 +71,9 @@ export const GlobalStyles = createGlobalStyle`
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+  }
+  b {
+    font-weight: ${FONT_WEIGHT.w500}
   }
   ${spaces()};
   ${bg()};
