@@ -7,6 +7,8 @@ export interface IButton {
     variant?: ButtonVariant;
     size?: ComponentSize;
     usage?: PaletteType;
+    fluid?: boolean;
+    iconOnly?: boolean;
 }
 declare const Button: FC<IButton & HTMLAttributes<HTMLButtonElement>>;
 export default Button;
