@@ -1,4 +1,4 @@
-import React, { Children, FC, ReactChild, ReactChildren } from 'react';
+import React, { Children, FC, HTMLAttributes, ReactChild, ReactChildren } from 'react';
 import { Grid } from '..';
 import { PALETTE, PaletteType } from '../../tokens/color';
 import { ComponentSize, SIDE_PADDINGS } from '../../tokens/sizes';
@@ -19,7 +19,7 @@ export interface ISideProductCard extends IProductCard {
   imgSize: 'small' | 'default';
 }
 
-const Card: FC<ICard> = ({
+const Card: FC<ICard & HTMLAttributes<HTMLDivElement>> = ({
   bgColor = 'light',
   children,
   padding = 'small',
@@ -31,7 +31,7 @@ const Card: FC<ICard> = ({
   );
 };
 
-export const ProductCard: FC<IProductCard> = ({
+export const ProductCard: FC<IProductCard & HTMLAttributes<HTMLDivElement>> = ({
   bgColor = 'light',
   children,
   padding = 'small',
@@ -46,7 +46,7 @@ export const ProductCard: FC<IProductCard> = ({
   );
 };
 
-export const SideProductCard: FC<ISideProductCard> = ({
+export const SideProductCard: FC<ISideProductCard & HTMLAttributes<HTMLDivElement>> = ({
   bgColor = 'light',
   children,
   padding = 'small',
