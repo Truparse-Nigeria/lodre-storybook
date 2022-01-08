@@ -1,0 +1,32 @@
+import { Meta, ColorPalette, ColorItem } from '@storybook/addon-docs';
+import { PALETTE } from '../tokens/color';
+
+<Meta title="Document/Colors" />
+
+# Backgrounds and text colors
+
+```
+.bg-${color} {
+  background-color: ${color};
+}
+.text-${color} {
+  color:  ${color};
+}
+```
+Example
+```
+<div className="bg-primary">test</div>
+```
+
+where `color` is any of the following 
+<ColorPalette>
+  <ColorItem title="PALETTE.primary" subtitle="Primary" colors={[PALETTE.primary]} />
+  <ColorItem title="PALETTE.cream" subtitle="Cream" colors={[PALETTE.cream]} />
+  <ColorItem title="PALETTE.dark" subtitle="Dark" colors={[PALETTE.dark]} />
+  <ColorItem title="PALETTE.ash" subtitle="Ash" colors={[PALETTE.ash]} />
+  <ColorItem title="PALETTE.grey" subtitle="Grey" colors={[PALETTE.grey]} />
+  <ColorItem title="PALETTE.light" subtitle="Light" colors={[PALETTE.light]} />
+</ColorPalette>
+
+
+
