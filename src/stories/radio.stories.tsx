@@ -1,23 +1,23 @@
 import React from "react";
 import { Story, Meta } from "@storybook/react/types-6-0";
 
-import {
-  StyledRadio,
-  StyledRadioContainer,
-  StyledRadioText,
-} from "../components/radio/styled";
+import Radio, { RadioControlProps } from "../components/radio";
 
 export default {
   title: "Components/Form/Radio",
-  component: StyledRadio,
+  component: Radio,
 } as Meta;
 
-const Template: Story = () => (
-  <StyledRadioContainer>
-    <StyledRadio />
-    <StyledRadioText>Hello</StyledRadioText>
-  </StyledRadioContainer>
+const Template: Story = ({
+  ...args
+}: RadioControlProps | React.InputHTMLAttributes<InputEvent>) => (
+  <label>
+    <Radio {...args} />
+  </label>
 );
 
 export const PrimaryRadio = Template.bind({});
-PrimaryRadio.args = {};
+PrimaryRadio.args = {
+  label: "Hello World!",
+  onChange: (e) => console.log(e.target.checked),
+};

@@ -1,22 +1,23 @@
 import React from "react";
 import { Story, Meta } from "@storybook/react/types-6-0";
 
-import StyledCheckbox, {
-  StyledCheckboxContainer,
-  StyledCheckboxText,
-} from "../components/checkbox/styled";
+import Checkbox, { CheckboxControlProps } from "../components/checkbox";
 
 export default {
   title: "Components/Form/Checkbox",
-  component: StyledCheckbox,
+  component: Checkbox,
 } as Meta;
 
-const Template: Story = (args) => (
-  <StyledCheckboxContainer>
-    <StyledCheckbox />
-    <StyledCheckboxText>Laptop</StyledCheckboxText>
-  </StyledCheckboxContainer>
+const Template: Story = ({
+  ...args
+}: CheckboxControlProps | React.InputHTMLAttributes<InputEvent>) => (
+  <label>
+    <Checkbox {...args} />
+  </label>
 );
 
 export const PrimaryCheckbox = Template.bind({});
-PrimaryCheckbox.args = {};
+PrimaryCheckbox.args = {
+  label: "Hello World!",
+  onChange: (e) => console.log(e.target.checked),
+};
