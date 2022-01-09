@@ -13,7 +13,8 @@ export const StyledRadioContainer = styled.label<StyledRadioProps>`
   display: flex;
   align-items: ${(props) => (props.fullWidth ? "flex-start" : "center")}
   width: ${(props) => (props.fullWidth ? "100%" : "auto")};
-  border: ${(props) => (props.fullWidth ? "1.5px solid #C4C4C4" : `none`)};
+  border: ${(props) =>
+    props.fullWidth ? `1.5px solid ${PALETTE.grey}` : `none`};
   padding: ${(props) => (props.fullWidth ? "20px" : "0px")};
   border-radius: ${(props) => props.fullWidth && "5px"};
   cursor: pointer;

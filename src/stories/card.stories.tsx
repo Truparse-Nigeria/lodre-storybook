@@ -9,6 +9,7 @@ import {
   Paragraph,
   SmallText,
   ProductCard,
+  CardBody,
 } from '../components';
 import {
   ICard,
@@ -29,7 +30,11 @@ export default {
   },
 } as Meta;
 
-const Template: Story<ICard> = (args) => <Card {...args} />;
+const Template: Story<ICard> = (args) => <Card {...args}>
+  <CardBody>
+    Do any thing in body
+  </CardBody>
+</Card>;
 
 const ProductTemplate: Story<IProductCard> = (args) => (
   <Container>
@@ -90,6 +95,7 @@ export const BasicCard = Template.bind({});
 BasicCard.args = {
   children: 'Basic Card',
   bgColor: 'grey',
+  border: false,
 };
 
 export const ProductCardGrid = ProductTemplate.bind({});

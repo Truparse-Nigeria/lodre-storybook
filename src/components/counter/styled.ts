@@ -2,18 +2,12 @@ import styled from "styled-components";
 import { PALETTE } from "../../tokens/color";
 import { FONT_WEIGHT } from "../../tokens/font";
 
-export const StyledCounterContainer = styled.div`
-  display: flex;
-  align-item: center;
-  margin: 5px auto;
-`;
-
 export const StyledCounterValue = styled.input`
   text-align: center;
   border: none;
   outline: none;
   font-weight: ${FONT_WEIGHT.w600};
-  width: 100px;
+  width: 35px;
 `;
 
 export const StyledCounterButton = styled.button`

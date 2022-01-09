@@ -1,4 +1,5 @@
 import React, { InputHTMLAttributes } from "react";
+import { Paragraph, SmallText } from "..";
 import StyledRadio, {
   StyledColorRadio,
   StyledRadioContainer,
@@ -26,8 +27,8 @@ const Radio = ({
       <StyledRadio forColor={forColor} {...props} />
       {forColor && <StyledColorRadio hexColor={hexColor} />}
       <StyledRadioText fullWidth={fullWidth} forColor={forColor}>
-        <small>{label}</small>
-        <StyledSubLabel>{subLabel}</StyledSubLabel>
+        <Paragraph>{label}</Paragraph>
+        <SmallText className="text-ash">{subLabel}</SmallText>
       </StyledRadioText>
     </StyledRadioContainer>
   );

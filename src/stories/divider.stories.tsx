@@ -5,7 +5,7 @@ import Divider from "../components/divider";
 import { PALETTE } from "../tokens/color";
 
 export default {
-  title: "Components/Layout/Divider",
+  title: "Layout/Divider",
   component: Divider,
 } as Meta;
 

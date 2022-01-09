@@ -1,6 +1,8 @@
+// @ts-ignore
 import { createGlobalStyle, css } from 'styled-components';
 import { PALETTE } from '../tokens/color';
 import { FONT_WEIGHT, TYPOGRAPHY } from '../tokens/font';
+import { RADIUS } from '../tokens/sizes';
 import './fonts/styles.css';
 
 const space: number[] = [0, 5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 75, 100];
@@ -49,16 +51,21 @@ const spaces = () => {
 
 const bg = () => {
   let styles = '';
-  for (let color of Object.values(PALETTE)) {
+  const colors = Object.keys(PALETTE);
+  console.log(colors)
+  for (let color of colors) {
+    
     styles += `
       .bg-${color} {
-         background-color: ${color};
+         background-color: ${PALETTE[color]};
        }
       .text-${color} {
-        color:  ${color};
+        color: ${PALETTE[color]};
       }
      `;
   }
+
+  console.log(styles)
 
   return css`
     ${styles}
@@ -72,9 +79,16 @@ export const GlobalStyles = createGlobalStyle`
     margin: 0;
     padding: 0;
   }
+
   b {
-    font-weight: ${FONT_WEIGHT.w500}
+    font-weight: ${FONT_WEIGHT.w600}
   }
+  
+  .rounded {
+    border-radius: ${RADIUS.small}px;
+    overflow: hidden;
+  }
+
   ${spaces()};
   ${bg()};
 `;

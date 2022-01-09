@@ -1,20 +1,17 @@
 import React, { useState } from "react";
+import { Flex } from "..";
 import { Minus, Plus } from "../../icons";
-import {
-  StyledCounterButton,
-  StyledCounterContainer,
-  StyledCounterValue,
-} from "./styled";
+import { StyledCounterButton, StyledCounterValue } from "./styled";
 
 export interface CounterControlProps {
   maxValue: number;
 }
 
 const Counter = ({ maxValue, ...props }: CounterControlProps) => {
-  const [count, setCount] = useState(0);
+  const [count, setCount] = useState(99999);
 
   return (
-    <StyledCounterContainer>
+    <Flex gap={0.4} alignItems="center">
       <StyledCounterButton
         disabled={count === 0}
         onClick={() => setCount(count - 1)}
@@ -28,7 +25,7 @@ const Counter = ({ maxValue, ...props }: CounterControlProps) => {
       >
         <Plus />
       </StyledCounterButton>
-    </StyledCounterContainer>
+    </Flex>
   );
 };
 

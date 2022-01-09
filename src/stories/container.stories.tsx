@@ -1,6 +1,6 @@
 import { Meta, Story } from '@storybook/react';
 import React from 'react';
-import { Container, Flex, Col, Card } from '../components';
+import { Container, Flex, Col, Card, CardBody } from '../components';
 import { IContainer } from '../components/container';
 
 export default {
@@ -12,10 +12,18 @@ const Template: Story<IContainer> = (args) => (
   <Container {...args}>
     <Flex justifyContent="center">
       <Col size={1}>
-        <Card bgColor="grey">test</Card>
+        <Card bgColor="grey">
+          <CardBody>
+            test
+          </CardBody>
+        </Card>
       </Col>
       <Col size={1}>
-        <Card bgColor="grey">test 2</Card>
+        <Card bgColor="grey">
+          <CardBody>
+            test 2
+          </CardBody>
+        </Card>
       </Col>
     </Flex>
   </Container>

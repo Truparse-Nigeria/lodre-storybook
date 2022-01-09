@@ -1,3 +1,0 @@
-import { Safe, Search, ShoppingCart, List, Help, HeartFill, EyeClose, EyeOpen, Cart, Delivery, Grid, Headphone, User, Remove, Address, CheckCircle, Clock, CustomerCare, Followings, LocationPin, Minus, Orders, Overview, Phone, Plus, PromoCode, Star, Trash, Wallet, X } from "./";
-export { Safe, Search, ShoppingCart, List, Help, HeartFill, EyeClose, EyeOpen, Cart, Delivery, Grid, Headphone, User, Remove, Address, CheckCircle, Clock, CustomerCare, Followings, LocationPin, Minus, Orders, Overview, Phone, Plus, PromoCode, Star, Wallet, X, Trash, };
-//# sourceMappingURL=icons.d.ts.map
