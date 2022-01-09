@@ -1,3 +1,4 @@
+// @ts-ignore
 import { createGlobalStyle, css } from 'styled-components';
 import { PALETTE } from '../tokens/color';
 import { FONT_WEIGHT, TYPOGRAPHY } from '../tokens/font';
@@ -50,16 +51,21 @@ const spaces = () => {
 
 const bg = () => {
   let styles = '';
-  for (let color of Object.values(PALETTE)) {
+  const colors = Object.keys(PALETTE);
+  console.log(colors)
+  for (let color of colors) {
+    
     styles += `
       .bg-${color} {
-         background-color: ${color};
+         background-color: ${PALETTE[color]};
        }
       .text-${color} {
-        color:  ${color};
+        color: ${PALETTE[color]};
       }
      `;
   }
+
+  console.log(styles)
 
   return css`
     ${styles}

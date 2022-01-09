@@ -1,6 +1,6 @@
 export type PaletteType = 'cream' | 'primary' | 'dark' | 'ash' | 'grey' | 'light' | 'border';
 
-export const PALETTE: { [Key in PaletteType]: string } = {
+export const PALETTE: { [Key in PaletteType]?: string } = {
   primary: '#FFC20E',
   cream: '#FFFAEB',
   dark: '#191919',
