@@ -1,1 +1,0 @@
-{"version":3,"file":"index.js","sourceRoot":"","sources":["../../../src/components/card/index.ts"],"names":[],"mappings":"AAAA,OAAO,IAAI,MAAM,QAAQ,CAAC;AAC1B,cAAc,QAAQ,CAAC;AACvB,eAAe,IAAI,CAAC","sourcesContent":["import Card from './card';\nexport * from './card';\nexport default Card;"]}
