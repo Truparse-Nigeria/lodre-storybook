@@ -30,20 +30,31 @@ export const CardHeader: FC<ICard & HTMLAttributes<HTMLDivElement>> = ({
   children,
   bgColor = 'cream',
   padding = 'small',
-}) => <StyledCardHeader bgColor={bgColor} padding={padding}>{children}</StyledCardHeader>;
+  ...rest
+}) => (
+  <StyledCardHeader bgColor={bgColor} padding={padding} {...rest}>
+    {children}
+  </StyledCardHeader>
+);
 
 export const CardBody: FC<ICard & HTMLAttributes<HTMLDivElement>> = ({
   children,
   padding = 'small',
-}) => <StyledCardBody padding={padding}>{children}</StyledCardBody>;
+  ...rest
+}) => (
+  <StyledCardBody padding={padding} {...rest}>
+    {children}
+  </StyledCardBody>
+);
 
 const Card: FC<ICard & HTMLAttributes<HTMLDivElement>> = ({
   bgColor = 'light',
   border = false,
-  children
+  children,
+  ...rest
 }) => {
   return (
-    <StyledCard bgColor={bgColor} border={border}>
+    <StyledCard bgColor={bgColor} border={border} {...rest}>
       {children}
     </StyledCard>
   );
@@ -86,11 +97,11 @@ export const SideProductCard: FC<
   );
 };
 
-export const RoundedImg: FC<IProductCard> = ({ height, src }) => (
-  <StyledImageRounded height={height} src={src} />
+export const RoundedImg: FC<IProductCard & HTMLAttributes<HTMLImageElement>> = ({ height, src, ...rest }) => (
+  <StyledImageRounded height={height} src={src}  {...rest}/>
 );
 
-export const Img: FC<IProductCard> = ({ height, src }) => (
-  <StyledImage height={height} src={src} />
+export const Img: FC<IProductCard> = ({ height, src, ...rest }) => (
+  <StyledImage height={height} src={src}   {...rest}/>
 );
 export default Card;
