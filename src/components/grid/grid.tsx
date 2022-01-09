@@ -1,4 +1,5 @@
 import React, { FC, HTMLAttributes, ReactChild, ReactChildren } from 'react';
+import { flexAlignmentType } from '../flex/styled';
 import { StyledGrid } from './styled';
 
 export interface IGrid {
@@ -9,6 +10,8 @@ export interface IGrid {
   xl?: string;
   xs?: string;
   gap?: number;
+  justifyContent?: flexAlignmentType;
+  alignItems?: flexAlignmentType;
 }
 
 const Grid: FC<IGrid & HTMLAttributes<HTMLDivElement>> = ({
@@ -19,10 +22,22 @@ const Grid: FC<IGrid & HTMLAttributes<HTMLDivElement>> = ({
   xl,
   xs = '1fr',
   sm = 'repeat(2, 1fr)',
+  justifyContent = 'start',
+  alignItems = 'start',
   ...rest
 }) => {
   return (
-    <StyledGrid gap={gap} sm={sm} md={md} lg={lg} xl={xl} xs={xs} {...rest}>
+    <StyledGrid
+      gap={gap}
+      sm={sm}
+      md={md}
+      lg={lg}
+      xl={xl}
+      xs={xs}
+      justifyContent={justifyContent}
+      alignItems={alignItems}
+      {...rest}
+    >
       {children}
     </StyledGrid>
   );

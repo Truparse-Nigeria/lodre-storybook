@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import { mediaQueries } from '../../tokens/sizes';
+import { flexAlignmentType } from '../flex/styled';
 
 export type GridType = {
   sm?: string;
@@ -8,12 +9,17 @@ export type GridType = {
   xl?: string;
   xs?: string;
   gap: number;
+  justifyContent: flexAlignmentType;
+  alignItems: flexAlignmentType;
 };
 
 export const StyledGrid = styled.div<GridType>`
   display: grid !important;
   grid-template-columns: ${props => props.xs || '1fr'}; 
   gap: ${(props) => props.gap}rem;
+  justify-content: ${(props) => props.justifyContent};
+  align-items: ${(props) => props.alignItems};
+  
 
   ${(props) =>
     props.sm &&
@@ -47,4 +53,5 @@ export const StyledGrid = styled.div<GridType>`
       display: grid;
       `
     )}
+    
 `;

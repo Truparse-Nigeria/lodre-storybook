@@ -25,7 +25,7 @@ export const StyledCard = styled.div<CardType>`
   background-color: ${(props) => PALETTE[props.bgColor]};
   overflow: hidden;
   ${props => props.border && `
-  border: 1px solid ${PALETTE.grey}
+  border: 1px solid ${PALETTE.border}
   `}
 `;
 

@@ -95,6 +95,7 @@ export const BasicCard = Template.bind({});
 BasicCard.args = {
   children: 'Basic Card',
   bgColor: 'grey',
+  border: false,
 };
 
 export const ProductCardGrid = ProductTemplate.bind({});
