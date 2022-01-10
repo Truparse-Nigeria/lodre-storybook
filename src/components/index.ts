@@ -15,3 +15,8 @@ export { Flex, Col } from "./flex";
 export { default as Grid } from "./grid";
 export { default as Container } from "./container";
 export { Icon } from "./icon";
+export { default as Checkbox } from "./checkbox";
+export { default as Radio } from "./radio";
+export { default as Range } from "./range";
+export { default as Divider } from "./divider";
+export { default as Rating } from "./star-rating";
