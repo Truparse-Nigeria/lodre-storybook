@@ -18,13 +18,13 @@ const spaces = () => {
         margin: auto ${i}px;
       }
       .my-${i} {
-        margin: ${i}px auto;
+        margin: ${i}px 0px;
       }
       .mb-${i} {
-        margin-bottom: ${i}px
+        margin-bottom: ${i}px;
       }
       .m-${i} {
-        margin: ${i}px
+        margin: ${i}px;
       }
       .pt-${i} {
         padding-top: ${i}px;
@@ -33,13 +33,13 @@ const spaces = () => {
        padding: auto ${i}px;
      }
      .py-${i} {
-       padding: ${i}px auto;
+       padding: ${i}px 0px;
      }
      .pb-${i} {
-       padding-bottom: ${i}px
+       padding-bottom: ${i}px;
      }
      .p-${i} {
-       padding: ${i}px
+       padding: ${i}px;
      }
      `;
   }
@@ -52,21 +52,19 @@ const spaces = () => {
 const bg = () => {
   let styles = '';
   const colors = Object.keys(PALETTE);
-  console.log(colors)
+  let count = 0;
   for (let color of colors) {
-    
+    let hex =Object.values(PALETTE)[count];
     styles += `
       .bg-${color} {
-         background-color: ${PALETTE[color]};
+         background-color: ${hex};
        }
       .text-${color} {
-        color: ${PALETTE[color]};
+        color: ${hex};
       }
      `;
+     count++;
   }
-
-  console.log(styles)
-
   return css`
     ${styles}
   `;
@@ -81,7 +79,13 @@ export const GlobalStyles = createGlobalStyle`
   }
 
   b {
-    font-weight: ${FONT_WEIGHT.w600}
+    font-weight: ${FONT_WEIGHT.w600};
+  }
+
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
   }
   
   .rounded {
