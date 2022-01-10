@@ -18,7 +18,12 @@ const Template: Story = ({
 
 export const PrimaryRange = Template.bind({});
 PrimaryRange.args = {
-  initialMinValue: "0",
-  initialMaxValue: "150",
-  onChange: () => {},
+  minValue: "99",
+  maxValue: "150000",
+  minProps: {
+    onChange: (e) => console.log(e.target.value),
+  },
+  maxProps: {
+    onChange: (e) => console.log(e.target.value),
+  },
 };

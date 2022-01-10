@@ -1,4 +1,5 @@
 import React, { InputHTMLAttributes } from "react";
+import { SmallText } from "..";
 import StyledCheckbox, { StyledCheckboxContainer } from "./styled";
 
 export interface CheckboxControlProps extends InputHTMLAttributes<InputEvent> {
@@ -9,7 +10,8 @@ const Checkbox = ({ label, ...props }: any & CheckboxControlProps) => {
   return (
     <StyledCheckboxContainer>
       <StyledCheckbox {...props} />
-      <small>{label}</small>
+      {"  "}
+      <SmallText>{label}</SmallText>
     </StyledCheckboxContainer>
   );
 };
