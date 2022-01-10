@@ -1,5 +1,5 @@
 import React, { ReactChild } from "react";
-import { Flex } from "..";
+import { Flex, Paragraph } from "..";
 import { StyledNavItem, StyledNavItemContainer } from "./styled";
 
 interface ProfileNavItemProps {
@@ -19,7 +19,7 @@ const ProfileNavItem = ({
       <StyledNavItem {...props}>
         <Flex alignItems="center">
           <>{icon}</>
-          <>{children}</>
+          <Paragraph weight={active ? "w600" : "w400"}>{children}</Paragraph>
         </Flex>
       </StyledNavItem>
     </StyledNavItemContainer>

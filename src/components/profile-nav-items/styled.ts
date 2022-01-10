@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { PALETTE } from "../../tokens/color";
+import { FONT_WEIGHT } from "../../tokens/font";
 
 export interface StyledNavItemProps {
   active?: boolean;
@@ -9,7 +10,7 @@ export const StyledNavItemContainer = styled.div<StyledNavItemProps>`
   margin: 0;
   background-color: ${(props) =>
     props.active ? PALETTE.primary_light : "none"};
-  color: ${(props) => (props.active ? PALETTE.primary : PALETTE.dark)};
+  color: ${PALETTE.dark};
   border-right: ${(props) =>
     props.active ? `4px solid ${PALETTE.primary}` : `none`};
 
