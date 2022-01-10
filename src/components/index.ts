@@ -20,3 +20,4 @@ export { default as Radio } from "./radio";
 export { default as Range } from "./range";
 export { default as Divider } from "./divider";
 export { default as Rating } from "./star-rating";
+export { default as ProfileNavItem } from "./profile-nav-items";
