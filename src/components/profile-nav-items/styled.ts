@@ -29,4 +29,9 @@ export const StyledNavItem = styled.li<StyledNavItemProps>`
   height: 40px;
   text-decoration: none;
   list-style-type: none;
+
+  a {
+    text-decoration: none;
+    color: ${PALETTE.dark};
+  }
 `;

@@ -15,12 +15,12 @@ export const ActiveProfileNavItem = Template.bind({});
 ActiveProfileNavItem.args = {
   active: true,
   icon: <Orders />,
-  children: <a>Hello World</a>,
+  children: <a href="#">Hello World</a>,
 };
 
 export const InactiveProfileNavItem = Template.bind({});
 InactiveProfileNavItem.args = {
   active: false,
   icon: <Orders />,
-  children: <a>Hello World</a>,
+  children: <a href="#">Hello World</a>,
 };
