@@ -58,6 +58,8 @@ export const StyledSearchButton = styled.button`
 export const StyledBottomNav = styled.div`
   bottom: 0;
   position: fixed;
+  background-color: ${PALETTE.light};
+  border-top: 1px solid ${PALETTE.border}
   width: 100%;
   height: 65px;
   display: block;

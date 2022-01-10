@@ -41,6 +41,9 @@ const spaces = () => {
      .p-${i} {
        padding: ${i}px;
      }
+     .h-${i} {
+       height: ${i}%;
+     }
      `;
   }
 
