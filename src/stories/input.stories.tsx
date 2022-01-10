@@ -35,8 +35,7 @@ export const TextInputWithPrefix = Template.bind({});
 TextInputWithPrefix.args = {
   type: "text",
   placeholder: "Placeholder",
-  leading: <EyeClose />
+  leading: <EyeClose />,
 };
 
-
-export const search = (args) => <SearchInput {...args} />
+export const search = (args) => <SearchInput {...args} />;

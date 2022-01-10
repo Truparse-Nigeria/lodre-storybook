@@ -1,8 +1,8 @@
-import { ElementType } from 'react';
-import styled from 'styled-components';
-import { PALETTE } from '../../tokens/color';
-import { FONT_SIZE, TYPOGRAPHY } from '../../tokens/font';
-import { HEIGHTS } from '../../tokens/sizes';
+import { ElementType } from "react";
+import styled from "styled-components";
+import { PALETTE } from "../../tokens/color";
+import { FONT_SIZE, TYPOGRAPHY } from "../../tokens/font";
+import { HEIGHTS } from "../../tokens/sizes";
 
 type InputType = {
   width: string;
@@ -61,7 +61,6 @@ export const StyledInputSuffix = styled.div`
 export const StyledInputContainer = styled.div`
   margin-bottom: 20px;
 `;
-
 
 export const StyledSearchInput = styled.input`
   border-radius: 4px 0 0 4px;
