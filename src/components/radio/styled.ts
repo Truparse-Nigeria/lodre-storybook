@@ -11,7 +11,7 @@ interface StyledRadioProps {
 
 export const StyledRadioContainer = styled.label<StyledRadioProps>`
   display: flex;
-  align-items: ${(props) => (props.fullWidth ? "flex-start" : "center")}
+  align-items: ${(props) => (props.fullWidth ? "flex-start" : "center")};
   width: ${(props) => (props.fullWidth ? "100%" : "auto")};
   border: ${(props) =>
     props.fullWidth ? `1.5px solid ${PALETTE.border}` : `none`};
@@ -24,7 +24,7 @@ export const StyledRadioText = styled.div<StyledRadioProps>`
   display: flex;
   flex-direction: column;
   margin: 0 5px;
-  font-weight: ${(props) => (props.fullWidth ? FONT_WEIGHT.w500 : "normal")};
+  font-weight: ${(props) => (props.fullWidth ? FONT_WEIGHT.w500 : FONT_WEIGHT.w400)};
 `;
 
 export const StyledColorRadio = styled.div<StyledRadioProps>`
@@ -39,12 +39,10 @@ export const StyledSubLabel = styled.small`
   margin-top: 5px;
 `;
 
-export const StyledRadio = styled.input.attrs({
-  type: "radio",
-})<StyledRadioProps>`
+export const StyledRadio = styled.input<StyledRadioProps>`
   -webkit-appearance: none;
   appearance: none;
-  background-color: #fff;
+  background-color: ${PALETTE.light};
   margin: 0 5px;
   font: inherit;
   color: ${PALETTE.dark};
@@ -75,7 +73,7 @@ export const StyledRadio = styled.input.attrs({
   }
 
   margin: 0 5px;
-  visibility: ${(props) => (props.forColor ? "hidden" : "visible")};
+  display: ${(props) => (props.forColor ? "none" : "block")};
 
   &:checked + ${StyledColorRadio} {
     outline: 3px solid ${PALETTE.primary};
