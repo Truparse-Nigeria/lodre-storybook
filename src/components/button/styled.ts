@@ -25,9 +25,7 @@ export const StyledButton = styled.button<StyledButtonProps>`
   border: ${(props) =>
     props.variant === "block"
       ? `1px solid ${PALETTE[props.usage]}`
-      : props.variant === "outline"
-      ? `1px solid ${PALETTE.dark}`
-      : `none`};
+      : `1px solid ${PALETTE.dark}`};
   cursor: pointer;
   padding: 0 ${(props) => SIDE_PADDINGS[props.size]}px;
   font-size: ${FONT_SIZE.pSmall}px;

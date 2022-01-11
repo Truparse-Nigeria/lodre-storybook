@@ -23,9 +23,3 @@ Outline.args = {
   children: "Outline Button",
   variant: "outline",
 };
-
-export const Stripped = Template.bind({});
-Stripped.args = {
-  children: "Stripped Button",
-  variant: "stripped",
-};

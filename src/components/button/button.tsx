@@ -3,7 +3,7 @@ import { PaletteType } from "../../tokens/color";
 import { ComponentSize } from "../../tokens/sizes";
 import { StyledButton } from "./styled";
 
-export type ButtonVariant = "block" | "outline" | "stripped";
+export type ButtonVariant = "block" | "outline";
 
 export interface IButton {
   children?: ReactNode;
