@@ -8,12 +8,10 @@ export default {
   component: Radio,
 } as Meta;
 
-const Template: Story<
-  RadioControlProps & React.InputHTMLAttributes<InputEvent>
-> = ({
-  ...args
-}: RadioControlProps & React.InputHTMLAttributes<InputEvent>) => (
-  <Radio {...args} />
+const Template: Story<RadioControlProps> = ({ ...args }) => (
+  <label>
+    <Radio {...args} />
+  </label>
 );
 
 export const PrimaryRadio = Template.bind({});

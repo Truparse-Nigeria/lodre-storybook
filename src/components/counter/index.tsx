@@ -8,7 +8,7 @@ export interface CounterControlProps {
 }
 
 const Counter = ({ maxValue, ...props }: CounterControlProps) => {
-  const [count, setCount] = useState(99999);
+  const [count, setCount] = useState(0);
 
   return (
     <Flex gap={0.4} alignItems="center">

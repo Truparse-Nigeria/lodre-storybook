@@ -1,4 +1,4 @@
-import React, { ElementType, FC, HTMLAttributes } from 'react';
+import React, { ElementType, FC, HTMLAttributes, InputHTMLAttributes } from 'react';
 import { Flex } from '..';
 import { EyeClose } from '../../icons';
 import SvgSearch from '../../icons/Search';

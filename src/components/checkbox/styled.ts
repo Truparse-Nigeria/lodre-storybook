@@ -7,10 +7,10 @@ export const StyledCheckboxContainer = styled.label`
   cursor: pointer;
 `;
 
-const StyledCheckbox = styled.input.attrs({ type: "checkbox" })`
+const StyledCheckbox = styled.input`
   -webkit-appearance: none;
   appearance: none;
-  background-color: #fff;
+  background-color: ${PALETTE.light};
   margin: 0 5px;
   font: inherit;
   color: ${PALETTE.dark};

@@ -1,16 +1,16 @@
-import React, { InputHTMLAttributes } from "react";
-import { SmallText } from "..";
-import StyledCheckbox, { StyledCheckboxContainer } from "./styled";
+import React, { FC, HTMLAttributes, InputHTMLAttributes } from 'react';
+import { SmallText } from '..';
+import StyledCheckbox, { StyledCheckboxContainer } from './styled';
 
-export interface CheckboxControlProps extends InputHTMLAttributes<InputEvent> {
-  label: string;
+export interface CheckboxControlProps extends HTMLAttributes<HTMLInputElement> {
+  label?: string;
 }
 
-const Checkbox = ({ label, ...props }: any & CheckboxControlProps) => {
+const Checkbox: FC<CheckboxControlProps> = ({ label, ...props }) => {
   return (
     <StyledCheckboxContainer>
-      <StyledCheckbox {...props} />
-      {"  "}
+      <StyledCheckbox type="checkbox" {...props} />
+      {'  '}
       <SmallText>{label}</SmallText>
     </StyledCheckboxContainer>
   );
