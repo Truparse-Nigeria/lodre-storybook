@@ -1,30 +1,30 @@
-import React, { InputHTMLAttributes } from "react";
-import { Paragraph, SmallText } from "..";
+import React, { FC, HTMLAttributes, InputHTMLAttributes } from 'react';
+import { Paragraph, SmallText } from '..';
 import StyledRadio, {
   StyledColorRadio,
   StyledRadioContainer,
   StyledRadioText,
-  StyledSubLabel,
-} from "./styled";
+} from './styled';
 
-export interface RadioControlProps extends InputHTMLAttributes<InputEvent> {
-  label: string;
+export interface RadioControlProps {
+  label?: string;
   subLabel?: string;
   fullWidth?: boolean;
   forColor?: boolean;
+  hexColor?: string;
 }
 
-const Radio = ({
+const Radio: FC<RadioControlProps & HTMLAttributes<HTMLInputElement>> = ({
   label,
   subLabel,
   fullWidth,
   forColor,
   hexColor,
   ...props
-}: any & RadioControlProps) => {
+}) => {
   return (
     <StyledRadioContainer fullWidth={fullWidth}>
-      <StyledRadio forColor={forColor} {...props} />
+      <StyledRadio type="radio" forColor={forColor} {...props} />
       {forColor && <StyledColorRadio hexColor={hexColor} />}
       <StyledRadioText fullWidth={fullWidth} forColor={forColor}>
         <Paragraph>{label}</Paragraph>

@@ -15,10 +15,12 @@ const spaces = () => {
          margin-top: ${i}px;
        }
       .mx-${i} {
-        margin: auto ${i}px;
+        margin-left: ${i}px;
+        margin-right: ${i}px;
       }
       .my-${i} {
-        margin: ${i}px 0px;
+        margin-top: ${i}px;
+        margin-bottom: ${i}px;
       }
       .mb-${i} {
         margin-bottom: ${i}px;
@@ -30,16 +32,21 @@ const spaces = () => {
         padding-top: ${i}px;
       }
      .px-${i} {
-       padding: auto ${i}px;
+       padding-left: ${i}px;
+       padding-right: ${i}px;
      }
      .py-${i} {
-       padding: ${i}px 0px;
+      padding-top: ${i}px;
+      padding-bottom: ${i}px;
      }
      .pb-${i} {
        padding-bottom: ${i}px;
      }
      .p-${i} {
        padding: ${i}px;
+     }
+     .h-${i} {
+       height: ${i}%;
      }
      `;
   }
@@ -54,7 +61,7 @@ const bg = () => {
   const colors = Object.keys(PALETTE);
   let count = 0;
   for (let color of colors) {
-    let hex =Object.values(PALETTE)[count];
+    let hex = Object.values(PALETTE)[count];
     styles += `
       .bg-${color} {
          background-color: ${hex};
@@ -63,7 +70,7 @@ const bg = () => {
         color: ${hex};
       }
      `;
-     count++;
+    count++;
   }
   return css`
     ${styles}
