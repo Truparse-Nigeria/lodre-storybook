@@ -8,9 +8,9 @@ export default {
   component: Range,
 } as Meta;
 
-const Template: Story = ({
+const Template: Story<RangeControlProps | InputHTMLAttributes<InputEvent>> = ({
   ...args
-}: RangeControlProps | InputHTMLAttributes<InputEvent>) => (
+}) => (
   <label>
     <Range {...args} />
   </label>
@@ -20,10 +20,4 @@ export const PrimaryRange = Template.bind({});
 PrimaryRange.args = {
   minValue: "99",
   maxValue: "150000",
-  minProps: {
-    onChange: (e) => console.log(e.target.value),
-  },
-  maxProps: {
-    onChange: (e) => console.log(e.target.value),
-  },
 };

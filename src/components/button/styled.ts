@@ -1,8 +1,13 @@
-import styled from 'styled-components';
-import { ButtonVariant } from '.';
-import { PALETTE, PaletteType } from '../../tokens/color';
-import { FONT_SIZE, FONT_WEIGHT, TYPOGRAPHY } from '../../tokens/font';
-import { ComponentSize, HEIGHTS, RADIUS, SIDE_PADDINGS } from '../../tokens/sizes';
+import styled from "styled-components";
+import { ButtonVariant } from ".";
+import { PALETTE, PaletteType } from "../../tokens/color";
+import { FONT_SIZE, FONT_WEIGHT, TYPOGRAPHY } from "../../tokens/font";
+import {
+  ComponentSize,
+  HEIGHTS,
+  RADIUS,
+  SIDE_PADDINGS,
+} from "../../tokens/sizes";
 
 interface StyledButtonProps {
   size: ComponentSize;
@@ -18,9 +23,11 @@ export const StyledButton = styled.button<StyledButtonProps>`
   justify-content: center;
   border-radius: ${RADIUS.small}px;
   border: ${(props) =>
-    props.variant === 'block'
+    props.variant === "block"
       ? `1px solid ${PALETTE[props.usage]}`
-      : `1px solid ${PALETTE.dark}`};
+      : props.variant === "outline"
+      ? `1px solid ${PALETTE.dark}`
+      : `none`};
   cursor: pointer;
   padding: 0 ${(props) => SIDE_PADDINGS[props.size]}px;
   font-size: ${FONT_SIZE.pSmall}px;
@@ -28,13 +35,13 @@ export const StyledButton = styled.button<StyledButtonProps>`
   height: ${(props) => HEIGHTS.buttons[props.size] || 0}px;
   color: ${PALETTE.dark};
   background-color: ${(props) =>
-    props.variant === 'block' ? PALETTE[props.usage] : 'transparent'};
-  min-width: ${props => props.iconOnly ? 0 : 140}px;
-  ${
-    props  => props.fluid && `
-      width: 100%;
+    props.variant === "block" ? PALETTE[props.usage] : "transparent"};
+  min-width: ${(props) => (props.iconOnly ? 0 : 140)}px;
+  ${(props) =>
+    props.fluid &&
     `
-  }
+      width: 100%;
+    `}
 
   &:hover {
     opacity: 0.8;

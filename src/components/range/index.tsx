@@ -1,25 +1,19 @@
-import React, { InputHTMLAttributes, useState } from "react";
-import { Col, Container, Flex, Input } from "..";
+import React, { FC, InputHTMLAttributes, useState } from "react";
+import { Button, Col, Container, Flex, Input, Paragraph } from "..";
 import { Minus } from "../../icons";
 import StyledRange, {
   StyledRangeContainer,
   StyledRangeDisplay,
 } from "./styled";
 
-export interface RangeControlProps extends InputHTMLAttributes<InputEvent> {
-  initialMinValue: string;
-  initialMaxValue: string;
-  minProps: InputHTMLAttributes<InputEvent>;
-  maxProps: InputHTMLAttributes<InputEvent>;
+export interface RangeControlProps {
+  minValue: string;
+  maxValue: string;
 }
 
-const Range = ({
-  minValue,
-  maxValue,
-  minProps,
-  maxProps,
-  ...props
-}: any & RangeControlProps) => {
+const Range: FC<
+  (RangeControlProps & InputHTMLAttributes<HTMLInputElement & InputEvent>) | any
+> = ({ minValue, maxValue, ...props }) => {
   const [min, setMin] = useState(minValue);
   const [max, setMax] = useState(maxValue);
 
@@ -42,23 +36,13 @@ const Range = ({
 
       <Flex alignItems="center" className="mt-40">
         <Col>
-          <StyledRangeDisplay
-            type="text"
-            value={min}
-            readOnly={false}
-            {...minProps}
-          />
+          <StyledRangeDisplay type="text" value={min} readOnly={false} />
         </Col>
         <Col>
           <Minus />
         </Col>
         <Col>
-          <StyledRangeDisplay
-            type="text"
-            value={max}
-            readOnly={false}
-            {...maxProps}
-          />
+          <StyledRangeDisplay type="text" value={max} readOnly={false} />
         </Col>
       </Flex>
     </Container>
