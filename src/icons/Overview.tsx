@@ -5,14 +5,14 @@ const SvgOverview = (props: SVGProps<SVGSVGElement>) => (
   <svg
     width="1em"
     height="1em"
-    viewBox="0 0 14 14"
+    viewBox="0 0 18 18"
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
     {...props}
   >
     <path
-      d="M7.75 13.75v-7.5h6v7.5h-6Zm-7.5-6V.25h6v7.5h-6Zm4.5-1.5v-4.5h-3v4.5h3Zm-4.5 7.5v-4.5h6v4.5h-6Zm1.5-1.5h3v-1.5h-3v1.5Zm7.5 0h3v-4.5h-3v4.5Zm-1.5-12h6v4.5h-6V.25Zm1.5 1.5v1.5h3v-1.5h-3Z"
-      fill="#FFC20E"
+      d="M10 18V8h8v10h-8ZM0 10V0h8v10H0Zm6-2V2H2v6h4ZM0 18v-6h8v6H0Zm2-2h4v-2H2v2Zm10 0h4v-6h-4v6ZM10 0h8v6h-8V0Zm2 2v2h4V2h-4Z"
+      fill="#000"
     />
   </svg>
 );

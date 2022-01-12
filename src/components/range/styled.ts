@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import React from "react";
 import { PALETTE } from "../../tokens/color";
 import { FONT_WEIGHT } from "../../tokens/font";
 

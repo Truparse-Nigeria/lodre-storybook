@@ -5,14 +5,14 @@ const SvgLocationPin = (props: SVGProps<SVGSVGElement>) => (
   <svg
     width="1em"
     height="1em"
-    viewBox="0 0 14 17"
+    viewBox="0 0 24 24"
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
     {...props}
   >
     <path
-      d="m7 14.675 3.713-3.713a5.25 5.25 0 1 0-7.425 0L7 14.675Zm0 2.12-4.773-4.772a6.75 6.75 0 1 1 9.546 0L7 16.796ZM6.25 6.5V4.25h1.5V6.5H10V8H7.75v2.25h-1.5V8H4V6.5h2.25Z"
-      fill="#8C8C8C"
+      d="m12 20.9 4.95-4.95a7 7 0 1 0-9.9 0L12 20.9Zm0 2.828-6.364-6.364a9 9 0 1 1 12.728 0L12 23.728ZM12 13a2 2 0 1 0 0-4 2 2 0 0 0 0 4Zm0 2a4 4 0 1 1 0-8 4 4 0 0 1 0 8Z"
+      fill="#000"
     />
   </svg>
 );

@@ -1,10 +1,10 @@
-import React from 'react';
-import { Story, Meta } from '@storybook/react/types-6-0';
+import React from "react";
+import { Story, Meta } from "@storybook/react/types-6-0";
 
-import Checkbox, { CheckboxControlProps } from '../components/checkbox';
+import Checkbox, { CheckboxControlProps } from "../components/checkbox";
 
 export default {
-  title: 'Components/Form/Checkbox',
+  title: "Components/Form/Checkbox",
   component: Checkbox,
 } as Meta;
 
@@ -16,6 +16,7 @@ const Template: Story<CheckboxControlProps> = ({ ...args }) => (
 
 export const PrimaryCheckbox = Template.bind({});
 PrimaryCheckbox.args = {
-  label: 'Hello World!',
+  label: "Hello World!",
+  name: "hello",
   onChange: () => {},
 };

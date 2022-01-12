@@ -1,14 +1,15 @@
-import React from "react";
+import React, { FC } from "react";
+import { PALETTE, PaletteType } from "../../tokens/color";
 import { StyledHr } from "./styled";
 
 export interface DividerProps {
-  hexValue?: string;
+  colorValue: PaletteType;
 }
 
-const Divider = ({ hexValue }: DividerProps) => {
+const Divider: FC<DividerProps> = ({ colorValue }) => {
   return (
     <>
-      <StyledHr hexValue={hexValue} />
+      <StyledHr colorValue={PALETTE[colorValue]} />
     </>
   );
 };

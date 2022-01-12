@@ -1,7 +1,7 @@
 import React from "react";
 import { Story, Meta } from "@storybook/react/types-6-0";
 
-import Divider from "../components/divider";
+import Divider, { DividerProps } from "../components/divider";
 import { PALETTE } from "../tokens/color";
 
 export default {
@@ -9,9 +9,11 @@ export default {
   component: Divider,
 } as Meta;
 
-const Template: Story = ({ ...args }) => <Divider {...args} />;
+const Template: Story<DividerProps> = ({ ...args }: DividerProps) => (
+  <Divider {...args} />
+);
 
 export const PrimaryDivider = Template.bind({});
 PrimaryDivider.args = {
-  hexValue: PALETTE.primary,
+  colorValue: PALETTE["primary"],
 };

@@ -5,40 +5,14 @@ const SvgList = (props: SVGProps<SVGSVGElement>) => (
   <svg
     width="1em"
     height="1em"
-    viewBox="0 0 17 18"
+    viewBox="0 0 24 24"
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
     {...props}
   >
-    <mask id="List_svg__a" fill="#fff">
-      <rect width={8} height={8} rx={1} />
-    </mask>
-    <rect
-      width={8}
-      height={8}
-      rx={1}
-      fill="#fff"
-      stroke="#191919"
-      strokeWidth={3}
-      mask="url(#List_svg__a)"
-    />
-    <mask id="List_svg__b" fill="#fff">
-      <rect y={10} width={8} height={8} rx={1} />
-    </mask>
-    <rect
-      y={10}
-      width={8}
-      height={8}
-      rx={1}
-      fill="#fff"
-      stroke="#191919"
-      strokeWidth={3}
-      mask="url(#List_svg__b)"
-    />
     <path
-      stroke="#191919"
-      strokeWidth={1.5}
-      d="M10 2.25h7M10 12.25h7M10 5.25h7M10 15.25h7"
+      d="M11 4h10v2H11V4Zm0 4h6v2h-6V8Zm0 6h10v2H11v-2Zm0 4h6v2h-6v-2ZM3 4h6v6H3V4Zm2 2v2h2V6H5Zm-2 8h6v6H3v-6Zm2 2v2h2v-2H5Z"
+      fill="#000"
     />
   </svg>
 );

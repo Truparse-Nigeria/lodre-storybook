@@ -1,9 +1,9 @@
-import React, { FC, HTMLAttributes, ReactNode } from 'react';
-import { PaletteType } from '../../tokens/color';
-import { ComponentSize } from '../../tokens/sizes';
-import { StyledButton } from './styled';
+import React, { FC, HTMLAttributes, ReactNode } from "react";
+import { PaletteType } from "../../tokens/color";
+import { ComponentSize } from "../../tokens/sizes";
+import { StyledButton } from "./styled";
 
-export type ButtonVariant = 'block' | 'outline';
+export type ButtonVariant = "block" | "outline";
 
 export interface IButton {
   children?: ReactNode;
@@ -16,9 +16,9 @@ export interface IButton {
 
 const Button: FC<IButton & HTMLAttributes<HTMLButtonElement>> = ({
   children,
-  variant = 'block',
-  size = 'default',
-  usage = 'primary',
+  variant = "block",
+  size = "default",
+  usage = "primary",
   fluid = false,
   iconOnly = false,
   ...rest
