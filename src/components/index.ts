@@ -24,3 +24,4 @@ export { default as Counter } from "./counter";
 export { default as Tabs } from "./tabs";
 export { default as Tab } from "./tabs/tab";
 export { default as ProfileNavItem} from './profile-nav-items';
+export { default as ProfilePicture } from "./profile-picture";
