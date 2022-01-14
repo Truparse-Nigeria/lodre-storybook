@@ -10,9 +10,9 @@ interface TabsProps {
 }
 
 export const StyledTabTitle = styled.button<TabProps>`
-  font-size: 20px;
-  padding: 10px 40px;
-  margin-bottom: 30px;
+
+  padding: 15px 20px;
+  margin-bottom: 10px;
   cursor: pointer;
   opacity: 0.6;
   background: white;

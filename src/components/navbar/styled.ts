@@ -59,7 +59,8 @@ export const StyledBottomNav = styled.div`
   bottom: 0;
   position: fixed;
   background-color: ${PALETTE.light};
-  border-top: 1px solid ${PALETTE.border}
+  border-top: 1px solid ${PALETTE.border};
+  padding-top: 20px;
   width: 100%;
   height: 65px;
   display: block;

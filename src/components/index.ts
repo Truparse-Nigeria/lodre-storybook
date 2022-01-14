@@ -22,4 +22,5 @@ export { default as Divider } from "./divider";
 export { default as Rating } from "./star-rating";
 export { default as Counter } from "./counter";
 export { default as Tabs } from "./tabs";
+export { default as Tab } from "./tabs/tab";
 export { default as ProfileNavItem} from './profile-nav-items';

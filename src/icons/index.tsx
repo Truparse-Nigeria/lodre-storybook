@@ -9,6 +9,7 @@ export { default as Followings } from "./Followings";
 export { default as Grid } from "./Grid";
 export { default as List } from "./List";
 export { default as LocationPin } from "./LocationPin";
+export { default as Menu } from "./Menu";
 export { default as Minus } from "./Minus";
 export { default as Orders } from "./Orders";
 export { default as Overview } from "./Overview";
