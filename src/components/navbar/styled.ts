@@ -9,6 +9,7 @@ export const StyledNavbar = styled.section`
   border-bottom: 1px solid ${PALETTE.grey};
   position: sticky;
   top: 0;
+  z-index: 999;
 `;
 
 export const StyledGrid = styled.div`
