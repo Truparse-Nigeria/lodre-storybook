@@ -1,7 +1,7 @@
-import styled from 'styled-components';
-import { PALETTE } from '../../tokens/color';
-import { FONT_SIZE } from '../../tokens/font';
-import { HEIGHTS, mediaQueries, SIDE_PADDINGS } from '../../tokens/sizes';
+import styled from "styled-components";
+import { PALETTE } from "../../tokens/color";
+import { FONT_SIZE } from "../../tokens/font";
+import { HEIGHTS, mediaQueries, SIDE_PADDINGS } from "../../tokens/sizes";
 
 export const StyledNavbar = styled.section`
   background-color: ${PALETTE.light};
@@ -20,7 +20,7 @@ export const StyledGrid = styled.div`
   & div:last-child {
     display: none;
   }
-  ${mediaQueries('lg')(`
+  ${mediaQueries("lg")(`
     grid-template-columns: 0.6fr 1.6fr 1fr;
     & div:first-child, & div:last-child {
         display:block;
@@ -57,13 +57,15 @@ export const StyledSearchButton = styled.button`
 
 export const StyledBottomNav = styled.div`
   bottom: 0;
+  left: 0;
   position: fixed;
   background-color: ${PALETTE.light};
-  border-top: 1px solid ${PALETTE.border}
+  border-top: 1px solid ${PALETTE.border};
   width: 100%;
   height: 65px;
+  padding: 10px 0;
   display: block;
-  ${mediaQueries('lg')(`
+  ${mediaQueries("lg")(`
   display: none;
   `)}
 `;
