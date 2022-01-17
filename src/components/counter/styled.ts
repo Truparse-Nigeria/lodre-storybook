@@ -7,7 +7,20 @@ export const StyledCounterValue = styled.input`
   border: none;
   outline: none;
   font-weight: ${FONT_WEIGHT.w600};
-  width: 35px;
+  width: auto;
+  height: 50px;
+  padding: 25px;
+  position: relative;
+
+  ::-webkit-inner-spin-button {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    width: 20px;
+    height: 20px;
+    padding: 10px;
+    border-radius: 50px;
+  }
 `;
 
 export const StyledCounterButton = styled.button`

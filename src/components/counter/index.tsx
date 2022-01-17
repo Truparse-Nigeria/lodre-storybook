@@ -12,19 +12,13 @@ const Counter = ({ maxValue, ...props }: CounterControlProps) => {
 
   return (
     <Flex gap={0.4} alignItems="center">
-      <StyledCounterButton
-        disabled={count === 0}
-        onClick={() => setCount(count - 1)}
-      >
-        <Minus />
-      </StyledCounterButton>
-      <StyledCounterValue value={count} {...props} />
-      <StyledCounterButton
-        disabled={count === maxValue}
-        onClick={() => setCount(count + 1)}
-      >
-        <Plus />
-      </StyledCounterButton>
+      <StyledCounterValue
+        type={"number"}
+        min={1}
+        max={maxValue}
+        defaultValue={count}
+        {...props}
+      />
     </Flex>
   );
 };
