@@ -3,13 +3,14 @@ import { PALETTE, PaletteType } from "../../tokens/color";
 import { StyledHr } from "./styled";
 
 export interface DividerProps {
-  colorValue: PaletteType;
+  colorValue?: PaletteType;
+  className?: string;
 }
 
-const Divider: FC<DividerProps> = ({ colorValue }) => {
+const Divider: FC<DividerProps> = ({ colorValue = 'border', className }) => {
   return (
     <>
-      <StyledHr colorValue={PALETTE[colorValue]} />
+      <StyledHr colorValue={PALETTE[colorValue]} className={className} />
     </>
   );
 };
