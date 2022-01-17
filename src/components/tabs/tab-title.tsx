@@ -1,5 +1,6 @@
 import React, { FC, useCallback } from "react";
 import { Paragraph } from "..";
+import { PaletteType } from "../../tokens/color";
 import { StyledTabTitle } from "./styled";
 
 interface TabTitleProps {
@@ -7,6 +8,7 @@ interface TabTitleProps {
   active: boolean;
   index: number;
   setTab: (index: number) => void;
+  foreground?: PaletteType;
 }
 
 const TabTitle: FC<TabTitleProps> = ({
@@ -14,6 +16,7 @@ const TabTitle: FC<TabTitleProps> = ({
   active,
   index,
   setTab,
+  foreground,
   ...props
 }) => {
   const onClick = useCallback(() => {
@@ -21,7 +24,12 @@ const TabTitle: FC<TabTitleProps> = ({
   }, [setTab, index]);
 
   return (
-    <StyledTabTitle active={active} onClick={onClick} {...props}>
+    <StyledTabTitle
+      active={active}
+      onClick={onClick}
+      foreground={foreground}
+      {...props}
+    >
       <Paragraph weight="w500">{title}</Paragraph>
     </StyledTabTitle>
   );

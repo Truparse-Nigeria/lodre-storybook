@@ -1,4 +1,5 @@
 export { default as Navbar } from "./navbar";
+export { default as MerchantNavbar } from "./merchant-navbar";
 export { default as Button } from "./button";
 export { default as Input, SearchInput } from "./input";
 export {

@@ -24,4 +24,13 @@ const Template: Story<TabsProps> = ({ ...args }) => (
 export const PrimaryTabs = Template.bind({});
 PrimaryTabs.args = {
   centered: true,
+  radius: false,
+};
+
+export const ComplexTabs = Template.bind({});
+ComplexTabs.args = {
+  centered: false,
+  background: "light",
+  foreground: "dark",
+  radius: true,
 };

@@ -4,7 +4,7 @@ import { StyledNavItem, StyledNavItemContainer } from "./styled";
 
 interface ProfileNavItemProps {
   active?: boolean;
-  icon: SVGElement;
+  icon: JSX.Element;
   children: ReactChild | ReactChild[];
 }
 

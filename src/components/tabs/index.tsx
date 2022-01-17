@@ -1,19 +1,29 @@
 import React, { FC, ReactElement, useState } from "react";
+import { PaletteType } from "../../tokens/color";
 import { TabContainer, TabGroup } from "./styled";
-import Tab, { TabProps } from "./tab";
+import { TabProps } from "./tab";
 import TabTitle from "./tab-title";
 
 export interface TabsProps {
   children: ReactElement[];
   centered?: boolean;
+  background?: PaletteType;
+  foreground?: PaletteType;
+  radius?: boolean;
 }
 
-const Tabs: FC<TabsProps> = ({ centered, children }) => {
+const Tabs: FC<TabsProps> = ({
+  centered,
+  foreground,
+  background,
+  radius,
+  children,
+}) => {
   const [active, setActive] = useState<number>(0);
 
   return (
     <TabContainer centered={centered}>
-      <TabGroup>
+      <TabGroup background={background} foreground={foreground} radius={radius}>
         {children.map((item: ReactElement<TabProps>, index: number) => (
           <TabTitle
             key={index}
@@ -21,6 +31,7 @@ const Tabs: FC<TabsProps> = ({ centered, children }) => {
             title={item.props.title}
             active={active === index}
             setTab={setActive}
+            foreground={foreground}
           />
         ))}
       </TabGroup>

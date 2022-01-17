@@ -31,6 +31,10 @@ import {
   Trash,
   Wallet,
   X,
+  Home,
+  Google,
+  Facebook,
+  Twitter,
 } from "./";
 
 export {
@@ -66,4 +70,8 @@ export {
   Wallet,
   X,
   Trash,
+  Home,
+  Google,
+  Facebook,
+  Twitter,
 };
