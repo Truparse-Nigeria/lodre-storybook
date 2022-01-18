@@ -20,4 +20,10 @@ export const PrimaryRange = Template.bind({});
 PrimaryRange.args = {
   minValue: "99",
   maxValue: "150000",
+  min: {
+    onChange: () => {},
+  },
+  max: {
+    onChange: () => {},
+  },
 };

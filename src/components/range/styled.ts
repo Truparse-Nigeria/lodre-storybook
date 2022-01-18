@@ -38,7 +38,7 @@ const StyledRange = styled.input.attrs({ type: "range" })`
 
   :focus::-webkit-slider-thumb {
     border: 1px solid ${PALETTE.primary};
-    outline: 1.5px solid ${PALETTE.ash};
+    outline: 2px solid ${PALETTE.primary};
     outline-offset: 0.125rem;
   }
 `;

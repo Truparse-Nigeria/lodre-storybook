@@ -24,6 +24,10 @@ import {
   X,
   StarCircle,
   CheckGreenCircle,
+  Home,
+  Google,
+  Facebook,
+  Twitter,
 } from "../icons/icons";
 
 export default {
@@ -56,3 +60,7 @@ export const PromoCodeIcon = () => <PromoCode width={24} height={24} />;
 export const StarIcon = () => <Star width={24} height={24} />;
 export const WalletIcon = () => <Wallet width={24} height={24} />;
 export const XIcon = () => <X width={24} height={24} />;
+export const HomeIcon = () => <Home width={24} height={24} />;
+export const GoogleIcon = () => <Google width={24} height={24} />;
+export const TwitterIcon = () => <Twitter width={24} height={24} />;
+export const FacebookIcon = () => <Facebook width={24} height={24} />;
