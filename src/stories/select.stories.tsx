@@ -1,7 +1,7 @@
 import React from "react";
 import { Story, Meta } from "@storybook/react/types-6-0";
 
-import { Paragraph, Select, SmallText } from "../components";
+import { Flex, Paragraph, Radio, Select, SmallText } from "../components";
 import { SelectProps } from "../components/select";
 
 export default {
@@ -11,8 +11,8 @@ export default {
 
 const Template: Story<SelectProps> = (args) => <Select {...args} />;
 
-export const TextSelect = Template.bind({});
-TextSelect.args = {
+export const PrimarySelect = Template.bind({});
+PrimarySelect.args = {
   buttonChildren: (
     <div>
       <div>
@@ -27,5 +27,13 @@ TextSelect.args = {
       </div>
     </div>
   ),
-  children: <Paragraph>Hello</Paragraph>,
+  children: (
+    <div>
+      <Paragraph weight="w600">Color</Paragraph>
+      <Flex className="mt-20">
+        <Radio name="color" forColor hexColor="#000000" />
+        <Radio name="color" forColor hexColor="#F2F2F2" />
+      </Flex>
+    </div>
+  ),
 };

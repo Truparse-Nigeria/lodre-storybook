@@ -16,21 +16,18 @@ const Select: FC<SelectProps> = ({ buttonChildren, children }) => {
       <Button
         usage="border"
         className="button"
-        onFocus={() => setFocus(!focus)}
-        onBlur={() => setFocus(!focus)}
+        onClick={() => setFocus(!focus)}
         variant="outline"
       >
         <>{buttonChildren}</>
         <ArrowDown className="icon" width={18} height={18} />
-
-        {focus && (
-          <Card border className="dropdown mt-10">
-            <CardBody>
-              <>{children}</>
-            </CardBody>
-          </Card>
-        )}
       </Button>
+
+      <Card border className="dropdown mt-10">
+        <CardBody>
+          <>{children}</>
+        </CardBody>
+      </Card>
     </StyledSelectField>
   );
 };

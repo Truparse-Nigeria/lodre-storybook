@@ -27,3 +27,4 @@ export { default as Tab } from "./tabs/tab";
 export { default as ProfileNavItem } from "./profile-nav-items";
 export { default as ProfilePicture } from "./profile-picture";
 export { default as Select } from "./select";
+export { default as ProductShowcase } from "./product-showcase";

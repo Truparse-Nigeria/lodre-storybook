@@ -18,6 +18,9 @@ export const StyledSelectField = styled.div<SelectFieldProps>`
     .icon {
       justify-self: flex-end;
       margin-left: 25px;
+      transform: ${(props) =>
+        props.focused ? "rotateZ(180deg)" : "rotateZ(0deg)"};
+      transition: all ease-in-out 0.2s;
     }
   }
 
@@ -25,5 +28,7 @@ export const StyledSelectField = styled.div<SelectFieldProps>`
     position: absolute;
     top: 60px;
     left: 0px;
+    visibility: ${(props) => (props.focused ? "visible" : "hidden")};
+    pointer-events: ${(props) => (props.focused ? "auto" : "none")};
   }
 `;
