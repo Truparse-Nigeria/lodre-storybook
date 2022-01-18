@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { PALETTE } from "../../tokens/color";
 
 interface SelectFieldProps {
   focused: boolean;
@@ -12,6 +13,7 @@ export const StyledSelectField = styled.div<SelectFieldProps>`
     padding: 30px 20px;
     text-align: left !important;
     width: 100%;
+    border: 1.5px solid ${PALETTE.border} !important;
 
     .icon {
       justify-self: flex-end;

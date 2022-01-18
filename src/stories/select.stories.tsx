@@ -16,10 +16,14 @@ TextSelect.args = {
   buttonChildren: (
     <div>
       <div>
-        <SmallText weight="w600">Color: Purple</SmallText>
+        <SmallText weight="w400">
+          <b>Color:</b> Purple
+        </SmallText>
       </div>
       <div>
-        <SmallText weight="w600">Size: Large</SmallText>
+        <SmallText weight="w400">
+          <b>Size:</b> Large
+        </SmallText>
       </div>
     </div>
   ),
