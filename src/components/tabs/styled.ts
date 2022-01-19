@@ -37,7 +37,7 @@ export const TabGroup = styled.div<TabsProps>`
   flex-direction: row;
   background: ${(props) =>
     props.background ? PALETTE[props.background] : "transparent"};
-  border-radius: ${(props) => props.radius && "10px"};
+  border-radius: ${(props) => props.radius && "4px"};
   overflow: hidden;
   margin-bottom: ${SIDE_PADDINGS.default}px;
 `;
