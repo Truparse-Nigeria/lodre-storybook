@@ -1,14 +1,14 @@
 // @ts-ignore
-import { createGlobalStyle, css } from 'styled-components';
-import { PALETTE } from '../tokens/color';
-import { FONT_WEIGHT, TYPOGRAPHY } from '../tokens/font';
-import { RADIUS } from '../tokens/sizes';
-import './fonts/styles.css';
+import { createGlobalStyle, css } from "styled-components";
+import { PALETTE } from "../tokens/color";
+import { FONT_WEIGHT, TYPOGRAPHY } from "../tokens/font";
+import { RADIUS } from "../tokens/sizes";
+import "./fonts/styles.css";
 
 const space: number[] = [0, 5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 75, 100];
 
 const spaces = () => {
-  let styles = '';
+  let styles = "";
   for (let i of space) {
     styles += `
       .mt-${i} {
@@ -57,7 +57,7 @@ const spaces = () => {
 };
 
 const bg = () => {
-  let styles = '';
+  let styles = "";
   const colors = Object.keys(PALETTE);
   let count = 0;
   for (let color of colors) {

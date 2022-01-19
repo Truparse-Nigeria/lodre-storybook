@@ -35,6 +35,7 @@ import {
   Google,
   Facebook,
   Twitter,
+  ArrowDown,
 } from "./";
 
 export {
@@ -74,4 +75,5 @@ export {
   Google,
   Facebook,
   Twitter,
+  ArrowDown,
 };

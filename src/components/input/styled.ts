@@ -1,7 +1,7 @@
 import { ElementType } from "react";
 import styled from "styled-components";
 import { PALETTE } from "../../tokens/color";
-import { FONT_SIZE, TYPOGRAPHY } from "../../tokens/font";
+import { FONT_SIZE } from "../../tokens/font";
 import { HEIGHTS } from "../../tokens/sizes";
 
 type InputType = {
@@ -31,6 +31,7 @@ export const StyledInput = styled.input<InputType>`
 `;
 
 export const StyledInputFlex = styled.div<InputFlexType>`
+  postion: relative;
   display: flex;
   align-items: center;
   ${(props) =>
@@ -48,12 +49,11 @@ export const StyledInputFlex = styled.div<InputFlexType>`
 `;
 
 export const StyledInputPrefix = styled.div`
-  left: 40px;
+  left: 30px;
   position: absolute;
 `;
 
 export const StyledInputSuffix = styled.div`
-  margin-left: 40px;
   position: absolute;
   right: 40px;
 `;
