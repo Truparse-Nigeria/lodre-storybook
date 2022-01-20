@@ -57,13 +57,7 @@ const ProductShowcase: FC<ProductShowcaseProps> = ({
 
   useEffect(() => {
     setSelected(pictures[key]);
-
-    if (typeof window !== "undefined" && autoplay) {
-      setTimeout(() => {
-        goForward();
-      }, timeout);
-    }
-  }, [autoplay, goForward, key, pictures, timeout]);
+  }, [key, pictures]);
 
   return (
     <div>
