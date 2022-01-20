@@ -13,6 +13,10 @@ type InputFlexType = {
   leading?: ElementType | String;
 };
 
+type InputContainerType = {
+  margin: boolean;
+}
+
 export const StyledInput = styled.input<InputType>`
   border-radius: 4px;
   border: 1px solid ${PALETTE.ash};
@@ -58,8 +62,8 @@ export const StyledInputSuffix = styled.div`
   right: 40px;
 `;
 
-export const StyledInputContainer = styled.div`
-  margin-bottom: 20px;
+export const StyledInputContainer = styled.div<InputContainerType>`
+  margin-bottom:  ${(props) => props.margin ? '20px' : '0px'};
 `;
 
 export const StyledSearchInput = styled.input`

@@ -1,6 +1,7 @@
-import styled from "styled-components";
-import { PALETTE, PaletteType } from "../../tokens/color";
-import { SIDE_PADDINGS } from "../../tokens/sizes";
+import styled from 'styled-components';
+import { PALETTE, PaletteType } from '../../tokens/color';
+import { FONT_WEIGHT } from '../../tokens/font';
+import { SIDE_PADDINGS } from '../../tokens/sizes';
 
 interface TabProps {
   active: boolean;
@@ -16,9 +17,8 @@ interface TabsProps {
 
 export const StyledTabTitle = styled.button<TabProps>`
   font-size: 20px;
-  padding: 20px 40px;
+  padding: 15px;
   cursor: pointer;
-  opacity: 0.6;
   background: transparent;
   border: 0;
   outline: 0;
@@ -26,7 +26,9 @@ export const StyledTabTitle = styled.button<TabProps>`
     props.active &&
     `
     border-bottom: 3px solid ${PALETTE.primary};
-    opacity: 1;
+    & p {
+      font-weight: ${FONT_WEIGHT.w700} !important;
+    }
   `}
   color: ${(props) =>
     props.foreground ? PALETTE[props.foreground] : PALETTE.dark};
@@ -36,8 +38,8 @@ export const TabGroup = styled.div<TabsProps>`
   display: flex;
   flex-direction: row;
   background: ${(props) =>
-    props.background ? PALETTE[props.background] : "transparent"};
-  border-radius: ${(props) => props.radius && "4px"};
+    props.background ? PALETTE[props.background] : 'transparent'};
+  border-radius: ${(props) => props.radius && '4px'};
   overflow: hidden;
   margin-bottom: ${SIDE_PADDINGS.default}px;
 `;
@@ -45,6 +47,6 @@ export const TabGroup = styled.div<TabsProps>`
 export const TabContainer = styled.div<TabsProps>`
   display: flex;
   flex-direction: column;
-  align-items: ${(props) => props.centered && "center"};
-  background: "transparent";
+  align-items: ${(props) => props.centered && 'center'};
+  background: 'transparent';
 `;

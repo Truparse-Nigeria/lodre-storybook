@@ -31,7 +31,7 @@ export const StyledButton = styled.button<StyledButtonProps>`
   font-size: ${FONT_SIZE.pSmall}px;
   font-weight: ${FONT_WEIGHT.w700};
   height: ${(props) => HEIGHTS.buttons[props.size] || 0}px;
-  color: ${PALETTE.dark};
+  color: ${props => PALETTE[props.usage] === PALETTE.dark ?  PALETTE.light: PALETTE.dark };
   background-color: ${(props) =>
     props.variant === "block" ? PALETTE[props.usage] : "transparent"};
   min-width: ${(props) => (props.iconOnly ? 0 : 140)}px;

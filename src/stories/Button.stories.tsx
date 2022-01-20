@@ -23,3 +23,10 @@ Outline.args = {
   children: "Outline Button",
   variant: "outline",
 };
+
+
+export const Usage = Template.bind({});
+Usage.args = {
+  children: "Outline Button",
+  usage: "dark",
+};

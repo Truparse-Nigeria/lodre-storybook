@@ -19,6 +19,7 @@ export interface IInput {
   type: string;
   placeholder: string;
   width?: string;
+  margin?: boolean;
   onSubmit?: () => void;
 }
 
@@ -28,11 +29,12 @@ const Input: FC<IInput & HTMLAttributes<HTMLInputElement>> = ({
   leading,
   type,
   placeholder,
+  margin = true,
   width = '100%',
   ...rest
 }) => {
   return (
-    <StyledInputContainer>
+    <StyledInputContainer margin={margin}>
       <StyledInputFlex leading={leading} trailing={trailing}>
         {leading && <StyledInputPrefix>{leading}</StyledInputPrefix>}
         <StyledInput
