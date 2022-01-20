@@ -17,6 +17,11 @@ const Template: Story<ProductShowcaseProps> = (args) => (
 
 export const PrimaryProductShowcase = Template.bind({});
 PrimaryProductShowcase.args = {
+  height: "400px",
+  autoplay: true,
+  showButtons: true,
+  showThumbs: true,
+  showIndicators: true,
   pictures: [
     "https://images.unsplash.com/photo-1571781926291-c477ebfd024b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=688&q=80",
     "https://images.unsplash.com/photo-1571779719707-0f24f62ab4fc?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1121&q=80",

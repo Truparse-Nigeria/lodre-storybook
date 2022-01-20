@@ -36,6 +36,8 @@ import {
   Facebook,
   Twitter,
   ArrowDown,
+  CaretLeft,
+  CaretRight,
 } from "./";
 
 export {
@@ -76,4 +78,6 @@ export {
   Facebook,
   Twitter,
   ArrowDown,
+  CaretLeft,
+  CaretRight,
 };
