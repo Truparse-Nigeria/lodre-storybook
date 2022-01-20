@@ -1,4 +1,4 @@
-import React, { FC, useEffect, useState } from "react";
+import React, { FC, useCallback, useEffect, useState } from "react";
 import { Button } from "..";
 import { CaretLeft, CaretRight } from "../../icons";
 
@@ -15,7 +15,6 @@ export interface ProductShowcaseProps {
   pictures: string[];
   height?: string;
   timeout?: number;
-  autoplay?: boolean;
   showThumbs?: boolean;
   showButtons?: boolean;
   showIndicators?: boolean;
@@ -24,8 +23,7 @@ export interface ProductShowcaseProps {
 const ProductShowcase: FC<ProductShowcaseProps> = ({
   pictures,
   height,
-  timeout = 5000,
-  autoplay = false,
+  timeout = 3000,
   showButtons = true,
   showThumbs = true,
   showIndicators = true,
@@ -33,31 +31,35 @@ const ProductShowcase: FC<ProductShowcaseProps> = ({
   const [key, setKey] = useState<number>(0);
   const [selected, setSelected] = useState<string>(pictures[key]);
 
-  const goForward = () => {
+  const goForward = useCallback(() => {
     if (key === pictures.length - 1) {
       setKey(0);
     } else {
       setKey(key + 1);
     }
-  };
+  }, [key, pictures.length]);
 
-  const goBack = () => {
+  const goBack = useCallback(() => {
     if (key === 0) {
       setKey(pictures.length - 1);
     } else {
       setKey(key - 1);
     }
-  };
-
-  if (typeof window !== "undefined" && autoplay) {
-    setTimeout(() => {
-      goForward();
-    }, timeout);
-  }
+  }, [key, pictures.length]);
 
   useEffect(() => {
     setSelected(pictures[key]);
   }, [key, pictures]);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      goForward();
+    }, timeout);
+
+    return () => {
+      clearTimeout(timer);
+    };
+  }, [goForward, timeout]);
 
   return (
     <div>
@@ -80,8 +82,8 @@ const ProductShowcase: FC<ProductShowcaseProps> = ({
         {showIndicators && (
           <StyledIndicatorsContainer>
             {Array(pictures.length)
-              .fill("")
-              .map((item, index: number) => (
+              .fill("indicator")
+              .map((item: any, index: number) => (
                 <StyledIndicators
                   onClick={() => setKey(index)}
                   key={index}
@@ -100,7 +102,7 @@ const ProductShowcase: FC<ProductShowcaseProps> = ({
               src={item}
               key={index}
               alt="product showcase thumbnail"
-              onClick={() => setSelected(item)}
+              onClick={() => setKey(index)}
             />
           ))}
         </StyledImageSelectFlex>

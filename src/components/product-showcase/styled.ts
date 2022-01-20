@@ -60,13 +60,13 @@ export const StyledSelectedImageContainer = styled.div`
 
   .left {
     position: absolute;
-    left: 0px;
+    left: 5px;
     min-width: 20px !important;
-    height: 100%;
+    height: 20px;
     padding: 0 !important;
     background: rgba(0, 0, 0, 0.1);
     border: none;
-    border-radius: none !important;
+    border-radius: 50% !important;
 
     svg {
       path {
@@ -77,13 +77,13 @@ export const StyledSelectedImageContainer = styled.div`
 
   .right {
     position: absolute;
-    right: 0px;
+    right: 5px;
     min-width: 20px !important;
-    height: 100%;
+    height: 20px;
     padding: 0 !important;
     background: rgba(0, 0, 0, 0.1);
     border: none;
-    border-radius: none !important;
+    border-radius: 50% !important;
 
     svg {
       path {

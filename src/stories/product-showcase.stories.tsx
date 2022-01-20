@@ -18,7 +18,7 @@ const Template: Story<ProductShowcaseProps> = (args) => (
 export const PrimaryProductShowcase = Template.bind({});
 PrimaryProductShowcase.args = {
   height: "400px",
-  autoplay: true,
+  timeout: 5000,
   showButtons: true,
   showThumbs: true,
   showIndicators: true,

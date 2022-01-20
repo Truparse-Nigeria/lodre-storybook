@@ -19,7 +19,7 @@ const Template: Story<LodreCarouselProps> = (args) => (
 export const PrimaryCarousel = Template.bind({});
 PrimaryCarousel.args = {
   height: "400px",
-  autoplay: true,
+  timeout: 4000,
   showButtons: false,
   showThumbs: false,
   showIndicators: true,
