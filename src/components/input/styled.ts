@@ -9,13 +9,13 @@ type InputType = {
 };
 
 type InputFlexType = {
-  trailing?: ElementType | String;
-  leading?: ElementType | String;
+  trailing?: JSX.Element | ElementType | String;
+  leading?: JSX.Element | ElementType | String;
 };
 
 type InputContainerType = {
   margin: boolean;
-}
+};
 
 export const StyledInput = styled.input<InputType>`
   border-radius: 4px;
@@ -35,7 +35,7 @@ export const StyledInput = styled.input<InputType>`
 `;
 
 export const StyledInputFlex = styled.div<InputFlexType>`
-  postion: relative;
+  position: relative;
   display: flex;
   align-items: center;
   ${(props) =>
@@ -63,7 +63,7 @@ export const StyledInputSuffix = styled.div`
 `;
 
 export const StyledInputContainer = styled.div<InputContainerType>`
-  margin-bottom:  ${(props) => props.margin ? '20px' : '0px'};
+  margin-bottom: ${(props) => (props.margin ? "20px" : "0px")};
 `;
 
 export const StyledSearchInput = styled.input`

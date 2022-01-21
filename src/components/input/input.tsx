@@ -1,7 +1,6 @@
-import React, { ElementType, FC, HTMLAttributes, InputHTMLAttributes } from 'react';
-import { Flex } from '..';
-import { EyeClose } from '../../icons';
-import SvgSearch from '../../icons/Search';
+import React, { ElementType, FC, HTMLAttributes } from "react";
+import { Flex } from "..";
+import SvgSearch from "../../icons/Search";
 import {
   StyledInputContainer,
   StyledInput,
@@ -10,12 +9,12 @@ import {
   StyledInputPrefix,
   StyledSearchButton,
   StyledSearchInput,
-} from './styled';
+} from "./styled";
 
 export interface IInput {
   subText?: string;
-  trailing?: ElementType | string;
-  leading?: ElementType | string;
+  trailing?: JSX.Element | ElementType | string;
+  leading?: JSX.Element | ElementType | string;
   type: string;
   placeholder: string;
   width?: string;
@@ -30,7 +29,7 @@ const Input: FC<IInput & HTMLAttributes<HTMLInputElement>> = ({
   type,
   placeholder,
   margin = true,
-  width = '100%',
+  width = "100%",
   ...rest
 }) => {
   return (
