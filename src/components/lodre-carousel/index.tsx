@@ -3,12 +3,33 @@ import { ProductShowcase } from "..";
 
 export interface LodreCarouselProps {
   pictures: string[];
+  height?: string;
+  timeout?: number;
+  showThumbs?: boolean;
+  showButtons?: boolean;
+  showIndicators?: boolean;
 }
 
-const LodreCarousel: FC<LodreCarouselProps> = ({ pictures, ...props }) => {
+const LodreCarousel: FC<LodreCarouselProps> = ({
+  pictures,
+  height,
+  timeout,
+  showThumbs,
+  showButtons,
+  showIndicators,
+  ...props
+}) => {
   return (
     <>
-      <ProductShowcase pictures={pictures} {...props} />
+      <ProductShowcase
+        pictures={pictures}
+        height={height}
+        showIndicators={showIndicators}
+        showButtons={showIndicators}
+        timeout={timeout}
+        showThumbs={showThumbs}
+        {...props}
+      />
     </>
   );
 };

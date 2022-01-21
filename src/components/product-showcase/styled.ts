@@ -44,7 +44,7 @@ export const StyledSmallImages = styled.img<StyledSmallImageProps>`
 
 export const StyledSelectedImage = styled.img<StyledSelectedImageProps>`
   width: 100%;
-  height: ${(props) => (props.height ? props.height : "400px")};
+  height: ${(props) => (props.height ? props.height : "100%")};
   border-radius: 10px;
   object-fit: cover;
 `;

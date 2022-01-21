@@ -1,13 +1,14 @@
 import React, { FC, ReactChild, ReactChildren } from "react";
 import { Card, Grid } from "..";
 
-import { StyledGrid, StyledNavbar } from "./styled";
+import { StyledGrid, StyledMain, StyledNavbar } from "./styled";
 
 export interface INavbar {
   nav?: JSX.Element | JSX.Element[];
   logo?: JSX.Element;
   sideNavSize?: number;
   children?: ReactChild | ReactChildren | JSX.Element | JSX.Element[];
+  navChildren?: ReactChild | ReactChildren | JSX.Element | JSX.Element[];
 }
 
 const MerchantNavbar: FC<INavbar> = ({
@@ -15,6 +16,7 @@ const MerchantNavbar: FC<INavbar> = ({
   nav,
   sideNavSize = 250,
   children,
+  navChildren,
 }) => {
   return (
     <div>
@@ -24,16 +26,16 @@ const MerchantNavbar: FC<INavbar> = ({
           <div>{nav}</div>
         </StyledGrid>
       </StyledNavbar>
-      <main>
+      <StyledMain>
         <Grid
           xl={`${sideNavSize}px auto`}
           lg={`${sideNavSize}px auto`}
           md={`${sideNavSize}px auto`}
         >
-          <Card className="nav">Hello</Card>
+          <Card className="nav">{navChildren}</Card>
           <>{children}</>
         </Grid>
-      </main>
+      </StyledMain>
     </div>
   );
 };

@@ -28,11 +28,14 @@ export const StyledGrid = styled.div`
         display:block;
     }
     `)}
+`;
 
-  main {
-    .nav {
-      border-radius: none;
-    }
+export const StyledMain = styled.main`
+  .nav {
+    border-radius: 0px !important;
+    padding: 10px 0;
+    height: 100vh;
+    overflow-y: auto;
   }
 `;
 
