@@ -1,26 +1,27 @@
 import React from "react";
 import { Story, Meta } from "@storybook/react/types-6-0";
 
-import { Grid, ProductShowcase } from "../components";
-import { ProductShowcaseProps } from "../components/product-showcase";
+import { Grid, LodreCarousel } from "../components";
+import { Carousel } from "react-responsive-carousel";
+import { LodreCarouselProps } from "../components/lodre-carousel";
 
 export default {
-  title: "Components/Product Showcase",
-  component: ProductShowcase,
+  title: "Components/Lodre Carousel",
+  component: Carousel,
 } as Meta;
 
-const Template: Story<ProductShowcaseProps> = (args) => (
-  <Grid xl="400px" lg="400px">
-    <ProductShowcase {...args} />
+const Template: Story<LodreCarouselProps> = (args) => (
+  <Grid xl="600px" lg="600px">
+    <LodreCarousel {...args} />
   </Grid>
 );
 
-export const PrimaryProductShowcase = Template.bind({});
-PrimaryProductShowcase.args = {
+export const PrimaryCarousel = Template.bind({});
+PrimaryCarousel.args = {
   height: "400px",
-  timeout: 5000,
-  showButtons: true,
-  showThumbs: true,
+  timeout: 4000,
+  showButtons: false,
+  showThumbs: false,
   showIndicators: true,
   pictures: [
     "https://images.unsplash.com/photo-1571781926291-c477ebfd024b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=688&q=80",

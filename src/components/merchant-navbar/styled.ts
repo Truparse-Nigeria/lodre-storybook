@@ -28,6 +28,12 @@ export const StyledGrid = styled.div`
         display:block;
     }
     `)}
+
+  main {
+    .nav {
+      border-radius: none;
+    }
+  }
 `;
 
 export const StyledSearchInput = styled.input`
@@ -44,30 +50,4 @@ export const StyledSearchInput = styled.input`
     color: ${PALETTE.ash};
     font-size: ${FONT_SIZE.pSmall};
   }
-`;
-
-export const StyledSearchButton = styled.button`
-  border-radius: 0 4px 4px 0;
-  height: ${HEIGHTS.inputs.default}px;
-  padding: 0 20px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border: 2px solid ${PALETTE.primary};
-  background: ${PALETTE.primary};
-`;
-
-export const StyledBottomNav = styled.div`
-  bottom: 0;
-  left: 0;
-  position: fixed;
-  background-color: ${PALETTE.light};
-  border-top: 1px solid ${PALETTE.border};
-  width: 100%;
-  height: 65px;
-  padding: 10px 0;
-  display: block;
-  ${mediaQueries("lg")(`
-  display: none;
-  `)}
 `;

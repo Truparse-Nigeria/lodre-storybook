@@ -22,7 +22,7 @@ export default {
 
 const Template: Story = (args) => (
   <MerchantNavbar {...args}>
-    <Container className="my-30">
+    <Container className="mt-30">
       <Card bgColor="grey">
         <CardBody>Basic Card</CardBody>
       </Card>

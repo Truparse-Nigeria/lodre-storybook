@@ -5,6 +5,10 @@ interface StyledSmallImageProps {
   selected: boolean;
 }
 
+interface StyledSelectedImageProps {
+  height?: string;
+}
+
 export const StyledImageSelectFlex = styled.div`
   display: flex;
   padding: 10px 5px;
@@ -38,9 +42,74 @@ export const StyledSmallImages = styled.img<StyledSmallImageProps>`
   cursor: pointer;
 `;
 
-export const StyledSelectedImage = styled.img`
+export const StyledSelectedImage = styled.img<StyledSelectedImageProps>`
   width: 100%;
-  height: 400px;
+  height: ${(props) => (props.height ? props.height : "400px")};
   border-radius: 10px;
   object-fit: cover;
+`;
+
+export const StyledSelectedImageContainer = styled.div`
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  border-radius: 10px;
+
+  .left {
+    position: absolute;
+    left: 5px;
+    min-width: 20px !important;
+    height: 20px;
+    padding: 0 !important;
+    background: rgba(0, 0, 0, 0.1);
+    border: none;
+    border-radius: 50% !important;
+
+    svg {
+      path {
+        fill: ${PALETTE.light};
+      }
+    }
+  }
+
+  .right {
+    position: absolute;
+    right: 5px;
+    min-width: 20px !important;
+    height: 20px;
+    padding: 0 !important;
+    background: rgba(0, 0, 0, 0.1);
+    border: none;
+    border-radius: 50% !important;
+
+    svg {
+      path {
+        fill: ${PALETTE.light};
+      }
+    }
+  }
+`;
+
+export const StyledIndicatorsContainer = styled.div`
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  bottom: 10px;
+  margin: 0 auto;
+`;
+
+export const StyledIndicators = styled.div<StyledSmallImageProps>`
+  width: 10px;
+  height: 10px;
+  background: ${(props) =>
+    props.selected ? `${PALETTE.light}` : `rgba(0, 0, 0, 0.1)`};
+  border: 1px solid ${PALETTE.light};
+  border-radius: 50%;
+  margin: 0 2.5px;
+  cursor: pointer;
 `;

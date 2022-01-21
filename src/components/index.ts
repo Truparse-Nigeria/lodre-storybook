@@ -28,3 +28,4 @@ export { default as ProfileNavItem } from "./profile-nav-items";
 export { default as ProfilePicture } from "./profile-picture";
 export { default as Select } from "./select";
 export { default as ProductShowcase } from "./product-showcase";
+export { default as LodreCarousel } from "./lodre-carousel";

@@ -1,5 +1,7 @@
 export { default as Address } from "./Address";
 export { default as ArrowDown } from "./ArrowDown";
+export { default as CaretLeft } from "./CaretLeft";
+export { default as CaretRight } from "./CaretRight";
 export { default as Cart } from "./Cart";
 export { default as CheckCircle } from "./CheckCircle";
 export { default as CheckGreenCircle } from "./CheckGreenCircle";
