@@ -1,1 +1,0 @@
-{"version":3,"file":"index.d.ts","sourceRoot":"","sources":["../../../src/components/checkbox/index.tsx"],"names":[],"mappings":"AAAA,OAAc,EAAE,EAAE,EAAE,mBAAmB,EAAE,MAAM,OAAO,CAAC;AAIvD,MAAM,WAAW,oBAAoB;IACnC,KAAK,CAAC,EAAE,MAAM,CAAC;CAChB;AAED,QAAA,MAAM,QAAQ,EAAE,EAAE,CAChB,oBAAoB,GAAG,mBAAmB,CAAC,gBAAgB,GAAG,UAAU,CAAC,CAS1E,CAAC;AAEF,eAAe,QAAQ,CAAC"}
