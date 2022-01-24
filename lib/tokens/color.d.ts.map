@@ -1,0 +1,1 @@
+{"version":3,"file":"color.d.ts","sourceRoot":"","sources":["../../src/tokens/color.ts"],"names":[],"mappings":"AAAA,oBAAY,WAAW,GACnB,OAAO,GACP,SAAS,GACT,MAAM,GACN,KAAK,GACL,MAAM,GACN,OAAO,GACP,QAAQ,GACR,eAAe,CAAC;AAEpB,eAAO,MAAM,OAAO,EAAE;KAAG,GAAG,IAAI,WAAW,CAAC,CAAC,EAAE,MAAM;CASpD,CAAC"}

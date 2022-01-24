@@ -28,11 +28,11 @@ const MerchantNavbar: FC<INavbar> = ({
       </StyledNavbar>
       <StyledMain>
         <Grid
-          xl={`${sideNavSize}px auto`}
-          lg={`${sideNavSize}px auto`}
-          md={`${sideNavSize}px auto`}
+          xl={`${sideNavSize}px 1fr`}
+          lg={`${sideNavSize}px 1fr`}
+          md={`${sideNavSize}px 1fr`}
         >
-          <Card className="nav">{navChildren}</Card>
+          <Card className="nav open">{navChildren}</Card>
           <>{children}</>
         </Grid>
       </StyledMain>

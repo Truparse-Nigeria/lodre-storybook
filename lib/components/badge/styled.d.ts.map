@@ -1,0 +1,1 @@
+{"version":3,"file":"styled.d.ts","sourceRoot":"","sources":["../../../src/components/badge/styled.ts"],"names":[],"mappings":"AACA,OAAO,EAAW,WAAW,EAAE,MAAM,oBAAoB,CAAC;AAE1D,MAAM,WAAW,gBAAgB;IAC/B,WAAW,CAAC,EAAE,WAAW,CAAC;IAC1B,SAAS,CAAC,EAAE,WAAW,CAAC;IACxB,KAAK,CAAC,EAAE,WAAW,CAAC;CACrB;AAED,eAAO,MAAM,WAAW,kFASvB,CAAC"}

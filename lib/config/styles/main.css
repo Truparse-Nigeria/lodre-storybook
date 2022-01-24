@@ -1,0 +1,8 @@
+@import '../fonts/styles.css';
+
+* {
+  font-family:  'Montserrat', san-serif;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
