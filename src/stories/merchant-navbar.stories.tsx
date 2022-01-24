@@ -68,6 +68,7 @@ const Nav = () => (
 );
 
 Main.args = {
+  sideNavSize: 250,
   logo: <SvgEyeClose />,
   nav: <Nav />,
 };

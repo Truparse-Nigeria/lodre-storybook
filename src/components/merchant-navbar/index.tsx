@@ -14,7 +14,7 @@ export interface INavbar {
 const MerchantNavbar: FC<INavbar> = ({
   logo,
   nav,
-  sideNavSize = 250,
+  sideNavSize,
   children,
   navChildren,
 }) => {
@@ -28,9 +28,9 @@ const MerchantNavbar: FC<INavbar> = ({
       </StyledNavbar>
       <StyledMain>
         <Grid
-          xl={`${sideNavSize}px auto`}
-          lg={`${sideNavSize}px auto`}
-          md={`${sideNavSize}px auto`}
+          xl={`${sideNavSize}px 1fr`}
+          lg={`${sideNavSize}px 1fr`}
+          md={`${sideNavSize}px 1fr`}
         >
           <Card className="nav">{navChildren}</Card>
           <>{children}</>

@@ -25,7 +25,7 @@ const LodreCarousel: FC<LodreCarouselProps> = ({
         pictures={pictures}
         height={height}
         showIndicators={showIndicators}
-        showButtons={showIndicators}
+        showButtons={showButtons}
         timeout={timeout}
         showThumbs={showThumbs}
         {...props}

@@ -9,7 +9,12 @@ export interface BadgeProps {
   children?: ReactChild | ReactChildren | JSX.Element | JSX.Element[];
 }
 
-const Badge: FC<BadgeProps> = ({ borderColor, fillColor, color, children }) => {
+const Badge: FC<BadgeProps> = ({
+  borderColor = "primary",
+  fillColor = "light",
+  color = "dark",
+  children,
+}) => {
   return (
     <>
       <StyledBadge
