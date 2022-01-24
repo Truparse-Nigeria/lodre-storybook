@@ -1,7 +1,17 @@
 import styled from "styled-components";
 import { PALETTE } from "../../tokens/color";
 import { FONT_SIZE } from "../../tokens/font";
-import { HEIGHTS, mediaQueries, SIDE_PADDINGS } from "../../tokens/sizes";
+import {
+  HEIGHTS,
+  mediaQueries,
+  SIDE_PADDINGS,
+  VIEWPORT,
+} from "../../tokens/sizes";
+
+interface SideNavProps {
+  width?: number;
+  open: boolean;
+}
 
 export const StyledNavbar = styled.section`
   background-color: ${PALETTE.light};
@@ -28,14 +38,45 @@ export const StyledGrid = styled.div`
         display:block;
     }
     `)}
+
+  .menu-icon {
+    display: none;
+    cursor: pointer;
+
+    @media (max-width: ${VIEWPORT.sm}px) {
+      display: initial;
+    }
+  }
 `;
 
 export const StyledMain = styled.main`
-  .nav {
-    border-radius: 0px !important;
-    padding: 10px 0;
-    height: 100vh;
-    overflow-y: auto;
+  position: relative;
+`;
+
+export const StyledSideNav = styled.div<SideNavProps>`
+  border-radius: 0px !important;
+  padding: 10px 0;
+  height: 100vh;
+  overflow-y: auto;
+  top: 0;
+  width: ${(props) => props.width}px;
+  background: ${PALETTE.light};
+  position: relative;
+
+  @media (max-width: ${VIEWPORT.sm}px) {
+    position: absolute;
+    top: 0;
+    overflow-x: hidden;
+    left: ${(props) => (props.open ? `0%` : `-${VIEWPORT.sm}px`)};
+    transition: all ease-in-out 0.3s;
+  }
+
+  @media (max-width: ${VIEWPORT.md}px) {
+    position: absolute;
+    top: 0;
+    overflow-x: hidden;
+    left: ${(props) => (props.open ? `0%` : `-${VIEWPORT.md}px`)};
+    transition: all ease-in-out 0.3s;
   }
 `;
 

@@ -1,7 +1,8 @@
-import React, { FC, ReactChild, ReactChildren } from "react";
-import { Card, Grid } from "..";
+import React, { FC, ReactChild, ReactChildren, useState } from "react";
+import { Flex, Grid } from "..";
+import { MenuLine } from "../../icons";
 
-import { StyledGrid, StyledMain, StyledNavbar } from "./styled";
+import { StyledGrid, StyledMain, StyledNavbar, StyledSideNav } from "./styled";
 
 export interface INavbar {
   nav?: JSX.Element | JSX.Element[];
@@ -18,21 +19,34 @@ const MerchantNavbar: FC<INavbar> = ({
   children,
   navChildren,
 }) => {
+  const [open, setOpen] = useState<boolean>(false);
   return (
     <div>
       <StyledNavbar>
         <StyledGrid>
-          <div>{logo}</div>
+          <Flex alignItems="center">
+            <MenuLine
+              width={24}
+              height={24}
+              className="menu-icon"
+              onClick={() => setOpen(!open)}
+            />
+            <>{logo}</>
+          </Flex>
+
           <div>{nav}</div>
         </StyledGrid>
       </StyledNavbar>
       <StyledMain>
         <Grid
+          className="main"
           xl={`${sideNavSize}px 1fr`}
           lg={`${sideNavSize}px 1fr`}
           md={`${sideNavSize}px 1fr`}
         >
-          <Card className="nav open">{navChildren}</Card>
+          <StyledSideNav width={sideNavSize} open={open}>
+            {navChildren}
+          </StyledSideNav>
           <>{children}</>
         </Grid>
       </StyledMain>

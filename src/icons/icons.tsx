@@ -38,6 +38,7 @@ import {
   ArrowDown,
   CaretLeft,
   CaretRight,
+  MenuLine,
 } from "./";
 
 export {
@@ -80,4 +81,5 @@ export {
   ArrowDown,
   CaretLeft,
   CaretRight,
+  MenuLine,
 };

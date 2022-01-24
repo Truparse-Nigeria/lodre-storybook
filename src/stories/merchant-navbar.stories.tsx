@@ -5,7 +5,6 @@ import {
   Card,
   CardBody,
   Col,
-  Container,
   Flex,
   MerchantNavbar,
   Paragraph,
@@ -22,11 +21,9 @@ export default {
 
 const Template: Story = (args) => (
   <MerchantNavbar {...args}>
-    <Container className="mt-30">
-      <Card bgColor="grey">
-        <CardBody>Basic Card</CardBody>
-      </Card>
-    </Container>
+    <Card className="my-20" bgColor="grey">
+      <CardBody>Basic Card</CardBody>
+    </Card>
   </MerchantNavbar>
 );
 
