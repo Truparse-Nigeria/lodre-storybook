@@ -15,7 +15,7 @@ export interface INavbar {
 const MerchantNavbar: FC<INavbar> = ({
   logo,
   nav,
-  sideNavSize = 250,
+  sideNavSize,
   children,
   navChildren,
 }) => {

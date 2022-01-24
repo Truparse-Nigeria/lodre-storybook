@@ -8,12 +8,15 @@ export interface StyledBadgeProps {
 }
 
 export const StyledBadge = styled.div<StyledBadgeProps>`
-  padding: 10px;
+  padding: 5px 10px;
   border-radius: 10px;
-  outline: 1px solid
-    ${(props) =>
-      props.borderColor ? PALETTE[props.borderColor] : PALETTE.primary};
-  background: ${(props) =>
-    props.fillColor ? PALETTE[props.fillColor] : PALETTE.light};
-  color: ${(props) => (props.color ? PALETTE[props.color] : PALETTE.dark)};
+  outline: 2px solid
+    ${(props) => props.borderColor && PALETTE[props.borderColor]};
+  outline-offset: 0px;
+  background: ${(props) => props.fillColor && PALETTE[props.fillColor]};
+  color: ${(props) => props.color && PALETTE[props.color]};
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
 `;

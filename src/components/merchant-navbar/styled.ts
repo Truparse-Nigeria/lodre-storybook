@@ -23,6 +23,7 @@ export const StyledNavbar = styled.section`
 `;
 
 export const StyledGrid = styled.div`
+  position: relative;
   display: grid;
   align-items: center;
   justify-content: space-between;
