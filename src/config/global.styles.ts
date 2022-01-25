@@ -2,7 +2,7 @@
 import { createGlobalStyle, css } from "styled-components";
 import { PALETTE } from "../tokens/color";
 import { FONT_WEIGHT, TYPOGRAPHY } from "../tokens/font";
-import { RADIUS } from "../tokens/sizes";
+import { mediaQueries, RADIUS, ViewportType } from "../tokens/sizes";
 import "./fonts/styles.css";
 
 const space: number[] = [0, 5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 75, 100];
@@ -74,6 +74,30 @@ const bg = () => {
   }
   return css`
     ${styles}
+  `;
+};
+
+export const Hidden = () => {
+  let hidden = "";
+  let size: string | ViewportType;
+
+  for (size of ["xs", "sm", "md", "lg", "xl"]) {
+    hidden += `
+      ${mediaQueries(size)(`
+        .hidden-${size}{
+          visible: hidden;
+          pointer-events: none;
+        }
+        .block-${size}{
+          visible: visible;
+          pointer-events: auto;
+        }
+      `)}
+    `;
+  }
+
+  return css`
+    ${hidden}
   `;
 };
 

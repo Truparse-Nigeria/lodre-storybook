@@ -1,6 +1,6 @@
 import React, { FC, ReactElement, useState } from "react";
 import { PaletteType } from "../../tokens/color";
-import { TabContainer, TabGroup } from "./styled";
+import { StyledFullWidthContainer, TabContainer, TabGroup } from "./styled";
 import { TabProps } from "./tab";
 import TabTitle from "./tab-title";
 
@@ -35,7 +35,7 @@ const Tabs: FC<TabsProps> = ({
           />
         ))}
       </TabGroup>
-      <div>{children[active]}</div>
+      <StyledFullWidthContainer>{children[active]}</StyledFullWidthContainer>
     </TabContainer>
   );
 };

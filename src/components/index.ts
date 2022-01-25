@@ -30,3 +30,4 @@ export { default as Select } from "./select";
 export { default as ProductShowcase } from "./product-showcase";
 export { default as LodreCarousel } from "./lodre-carousel";
 export { default as Badge } from "./badge";
+export { default as SideSelectField } from "./side-select";
