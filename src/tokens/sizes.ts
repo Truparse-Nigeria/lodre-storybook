@@ -1,8 +1,8 @@
-export type ComponentSize = 'default' | 'large' | 'small';
+export type ComponentSize = "default" | "large" | "small";
 
-type ComponentType = 'inputs' | 'buttons';
+type ComponentType = "inputs" | "buttons";
 type Elements = { [key in ComponentSize]: number };
-export type ViewportType = 'xl' | 'lg' | 'md' | 'sm' | 'xs';
+export type ViewportType = "xl" | "lg" | "md" | "sm" | "xs";
 
 export const VIEWPORT: { [key in ViewportType]?: number } = {
   sm: 575.98,
