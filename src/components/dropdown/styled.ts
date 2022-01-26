@@ -11,7 +11,7 @@ export const StyledDropdown = styled.div<DropdownProps>`
 
   .button {
     justify-content: space-between;
-    padding: 20px 20px;
+    padding: 30px 20px;
     text-align: left !important;
     width: 100%;
     border: ${(props) =>

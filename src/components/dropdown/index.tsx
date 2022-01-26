@@ -6,9 +6,10 @@ import { StyledDropdown } from "./styled";
 export interface DropdownProps {
   buttonChildren: ReactChild | ReactChild[] | JSX.Element | JSX.Element[];
   children: ReactChild | ReactChild[] | JSX.Element | JSX.Element[];
+  border?: boolean;
 }
 
-const Dropdown: FC<DropdownProps> = ({ buttonChildren, children }) => {
+const Dropdown: FC<DropdownProps> = ({ border, buttonChildren, children }) => {
   const [focus, setFocus] = useState<boolean>(false);
   const [atEnd, setAtEnd] = useState<boolean>(false);
 
@@ -28,7 +29,7 @@ const Dropdown: FC<DropdownProps> = ({ buttonChildren, children }) => {
   }, []);
 
   return (
-    <StyledDropdown focused={focus}>
+    <StyledDropdown border={border} focused={focus}>
       <Button
         usage="border"
         className="button"
