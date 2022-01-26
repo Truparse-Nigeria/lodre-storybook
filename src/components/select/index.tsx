@@ -57,7 +57,7 @@ const SelectField: FC<SelectFieldProps> = ({
         {options.filter((e) => value === e.value)[0]?.text || placeholder}
         <ArrowDown className="icon" />
       </Button>
-      <Card className={`dropdown ${atEnd ? "up" : "down"}`}>
+      <Card id="dropdown" className={`dropdown ${atEnd ? "up" : "down"}`}>
         {options.map((options: Options, index: number) => (
           <StyledOptions
             selected={value === options.value}
