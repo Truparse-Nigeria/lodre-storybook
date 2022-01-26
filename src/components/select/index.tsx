@@ -1,35 +1,81 @@
-import React, { FC, ReactChild, useState } from "react";
-import { Button, Card, CardBody } from "..";
+import React, { FC, useEffect, useState } from "react";
+import { Button, Card, Paragraph } from "..";
 import { ArrowDown } from "../../icons";
-import { StyledSelectField } from "./styled";
+import { PaletteType } from "../../tokens/color";
+import { StyledOptions, StyledSelectField } from "./styled";
 
-export interface SelectProps {
-  buttonChildren: ReactChild | ReactChild[] | JSX.Element | JSX.Element[];
-  children: ReactChild | ReactChild[] | JSX.Element | JSX.Element[];
+type Options = {
+  value: string;
+  text: string;
+};
+
+interface SelectFieldProps {
+  options: Options[];
+  placeholder?: string;
+  borderRadius?: string;
+  handleChange: Function;
+  background?: PaletteType;
+  defaultValue?: string;
 }
 
-const Select: FC<SelectProps> = ({ buttonChildren, children }) => {
-  const [focus, setFocus] = useState<boolean>(false);
+const SelectField: FC<SelectFieldProps> = ({
+  options,
+  borderRadius = "10px",
+  placeholder = "Select option",
+  background = "grey",
+  handleChange,
+  defaultValue = "",
+}) => {
+  const [focused, setFocused] = useState<boolean>(false);
+  const [value, setValue] = useState<string>(
+    defaultValue !== "" ? defaultValue : placeholder
+  );
+  const [atEnd, setAtEnd] = useState<boolean>(false);
+
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      window.addEventListener("scroll", () => {
+        const body = window.innerHeight;
+        const dropdown = (document.getElementById("dropdown") as HTMLElement)
+          .scrollHeight;
+        if (body - dropdown === 0) {
+          setAtEnd(true);
+        } else {
+          setAtEnd(false);
+        }
+      });
+    }
+  }, []);
 
   return (
-    <StyledSelectField focused={focus}>
-      <Button
-        usage="border"
-        className="button"
-        onClick={() => setFocus(!focus)}
-        variant="outline"
-      >
-        <>{buttonChildren}</>
-        <ArrowDown className="icon" width={18} height={18} />
+    <StyledSelectField
+      background={background}
+      borderRadius={borderRadius}
+      focused={focused}
+    >
+      <Button className="button" onClick={() => setFocused(!focused)}>
+        {options.filter((e) => value === e.value)[0]?.text || placeholder}
+        <ArrowDown className="icon" />
       </Button>
-
-      <Card border className="dropdown mt-10">
-        <CardBody>
-          <>{children}</>
-        </CardBody>
+      <Card className={`dropdown ${atEnd ? "up" : "down"}`}>
+        {options.map((options: Options, index: number) => (
+          <StyledOptions
+            selected={value === options.value}
+            onClick={() => {
+              setValue(options.value);
+              handleChange(options.value);
+              setFocused(!focused);
+            }}
+            key={index}
+          >
+            <Paragraph size="pSmall" weight="w500">
+              {options.text}
+            </Paragraph>
+          </StyledOptions>
+        ))}
       </Card>
     </StyledSelectField>
   );
 };
 
-export default Select;
+export default SelectField;
