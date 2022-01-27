@@ -5,6 +5,7 @@ export { default as CaretRight } from "./CaretRight";
 export { default as Cart } from "./Cart";
 export { default as CheckCircle } from "./CheckCircle";
 export { default as CheckGreenCircle } from "./CheckGreenCircle";
+export { default as CheckLine } from "./CheckLine";
 export { default as Clock } from "./Clock";
 export { default as CustomerCare } from "./CustomerCare";
 export { default as Delivery } from "./Delivery";

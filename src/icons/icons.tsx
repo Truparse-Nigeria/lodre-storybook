@@ -39,6 +39,7 @@ import {
   CaretLeft,
   CaretRight,
   MenuLine,
+  CheckLine,
 } from "./";
 
 export {
@@ -82,4 +83,5 @@ export {
   CaretLeft,
   CaretRight,
   MenuLine,
+  CheckLine,
 };
