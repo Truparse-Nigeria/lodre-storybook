@@ -12,6 +12,7 @@ const Template: ComponentStory<typeof Steps> = (args) => <Steps {...args} />;
 
 export const NormalSteps = Template.bind({});
 NormalSteps.args = {
+  showLine: false,
   steps: [
     { step: "Create Account", done: true },
     { step: "Verify Account", done: true },

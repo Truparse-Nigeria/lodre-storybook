@@ -2,7 +2,7 @@
 import { createGlobalStyle, css } from "styled-components";
 import { PALETTE } from "../tokens/color";
 import { FONT_WEIGHT, TYPOGRAPHY } from "../tokens/font";
-import { mediaQueries, RADIUS } from "../tokens/sizes";
+import { mediaQueries, RADIUS, VIEWPORT } from "../tokens/sizes";
 import "./fonts/styles.css";
 
 const space: number[] = [0, 5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 75, 100];
@@ -77,29 +77,29 @@ const bg = () => {
   `;
 };
 
-// export const Hidden = () => {
-//   let hidden = "";
-//   let size: string = [];
+export const Hidden = () => {
+  let hidden = "";
 
-//   for (size of ["xs", "sm", "md", "lg", "xl"]) {
-//     hidden += `
-//       ${mediaQueries(size)(`
-//         .hidden-${size}{
-//           visible: hidden;
-//           pointer-events: none;
-//         }
-//         .block-${size}{
-//           visible: visible;
-//           pointer-events: auto;
-//         }
-//       `)}
-//     `;
-//   }
+  for (let size of ["xs", "sm", "md", "lg", "xl"]) {
+    let newSize: keyof typeof VIEWPORT = size as keyof typeof VIEWPORT;
+    hidden += `
+      ${mediaQueries(newSize)(`
+        .hidden-${size}{
+          visible: hidden;
+          pointer-events: none;
+        }
+        .block-${size}{
+          visible: visible;
+          pointer-events: auto;
+        }
+      `)}
+    `;
+  }
 
-//   return css`
-//     ${hidden}
-//   `;
-// };
+  return css`
+    ${hidden}
+  `;
+};
 
 export const GlobalStyles = createGlobalStyle`
   * {
@@ -126,4 +126,5 @@ export const GlobalStyles = createGlobalStyle`
 
   ${spaces()};
   ${bg()};
+  ${Hidden()};
 `;

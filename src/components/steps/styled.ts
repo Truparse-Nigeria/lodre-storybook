@@ -12,7 +12,19 @@ interface StepProps {
 
 export const StyledStepContainer = styled.div<StepsProps>`
   display: flex;
+  flex-direction: row;
   align-items: center;
+
+  @media (max-width: ${VIEWPORT.sm}px) {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .number {
+    width: 100% !important;
+    text-align: center;
+    margin: 0 auto;
+  }
 
   .text {
     width: 100% !important;

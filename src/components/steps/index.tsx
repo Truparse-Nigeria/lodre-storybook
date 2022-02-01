@@ -10,15 +10,16 @@ export interface Step {
 
 export interface StepsProps {
   steps: Array<Step>;
+  showLine: boolean;
 }
 
-const Steps: FC<StepsProps> = ({ steps = [] }) => {
+const Steps: FC<StepsProps> = ({ steps = [], showLine = true }) => {
   return (
     <Grid
-      xl={`repeat(${steps.length}, 0.5fr)`}
-      lg={`repeat(${steps.length}, 0.5fr)`}
-      md="repeat(2, 1fr)"
-      sm="1fr"
+      xl={`repeat(${steps.length}, 1fr)`}
+      lg={`repeat(${steps.length}, 1fr)`}
+      md={`repeat(${steps.length}, 1fr)`}
+      sm={`repeat(${steps.length}, 1fr)`}
     >
       {steps.map((step: Step, index: number) => (
         <StyledStepContainer isLast={index === steps.length - 1}>
@@ -26,13 +27,15 @@ const Steps: FC<StepsProps> = ({ steps = [] }) => {
             {step.done ? (
               <CheckLine width={24} height={24} />
             ) : (
-              <Paragraph weight="w500">{index + 1}</Paragraph>
+              <Paragraph className="number" weight="w500">
+                {index + 1}
+              </Paragraph>
             )}
           </StyledStep>
           <Paragraph className="text" weight="w500">
             {step.step}
           </Paragraph>
-          <StyledStepLine isLast={index === steps.length - 1} />
+          {showLine && <StyledStepLine isLast={index === steps.length - 1} />}
         </StyledStepContainer>
       ))}
     </Grid>
