@@ -7,9 +7,15 @@ export interface DropdownProps {
   buttonChildren: ReactChild | ReactChild[] | JSX.Element | JSX.Element[];
   children: ReactChild | ReactChild[] | JSX.Element | JSX.Element[];
   border?: boolean;
+  width?: number;
 }
 
-const Dropdown: FC<DropdownProps> = ({ border, buttonChildren, children }) => {
+const Dropdown: FC<DropdownProps> = ({
+  border,
+  width,
+  buttonChildren,
+  children,
+}) => {
   const [focus, setFocus] = useState<boolean>(false);
   const [atEnd, setAtEnd] = useState<boolean>(false);
 
@@ -29,7 +35,7 @@ const Dropdown: FC<DropdownProps> = ({ border, buttonChildren, children }) => {
   }, []);
 
   return (
-    <StyledDropdown border={border} focused={focus}>
+    <StyledDropdown width={width} border={border} focused={focus}>
       <Button
         usage="border"
         className="button"

@@ -4,6 +4,7 @@ import { PALETTE } from "../../tokens/color";
 interface DropdownProps {
   focused: boolean;
   border?: boolean;
+  width?: number;
 }
 
 export const StyledDropdown = styled.div<DropdownProps>`
@@ -27,9 +28,11 @@ export const StyledDropdown = styled.div<DropdownProps>`
   }
 
   .dropdown {
+    width: ${(props) => (props.width ? `${props.width}px` : "auto")};
+    padding: 5px;
     position: absolute;
     top: 60px;
-    left: 0px;
+    ${(props) => (props.width ? `right: 0px` : `left: 0px`)};
     z-index: 99;
     visibility: ${(props) => (props.focused ? "visible" : "hidden")};
     pointer-events: ${(props) => (props.focused ? "auto" : "none")};

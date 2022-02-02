@@ -50,7 +50,8 @@ PrimaryDropdown.args = {
 
 export const NoBorderDropdown = Template.bind({});
 NoBorderDropdown.args = {
-  border: true,
+  border: false,
+  width: 350,
   buttonChildren: (
     <Flex alignItems="center">
       <User width={24} height={24} />
@@ -58,11 +59,9 @@ NoBorderDropdown.args = {
     </Flex>
   ),
   children: (
-    <div>
-      <Grid>
-        <Button>Login</Button>
-        <Button variant="outline">Register</Button>
-      </Grid>
-    </div>
+    <Grid>
+      <Button>Login</Button>
+      <Button variant="outline">Register</Button>
+    </Grid>
   ),
 };
