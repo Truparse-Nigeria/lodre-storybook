@@ -41,6 +41,7 @@ export const TabGroup = styled.div<TabsProps>`
     props.background ? PALETTE[props.background] : "transparent"};
   border-radius: ${(props) => props.radius && "4px"};
   overflow: hidden;
+  overflow-x: auto;
   margin-bottom: ${SIDE_PADDINGS.default}px;
 `;
 
@@ -49,6 +50,7 @@ export const TabContainer = styled.div<TabsProps>`
   flex-direction: column;
   align-items: ${(props) => props.centered && "center"};
   background: "transparent";
+  overflow-x: auto;
 `;
 
 export const StyledFullWidthContainer = styled.div`

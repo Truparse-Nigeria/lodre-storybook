@@ -18,6 +18,18 @@ const Template: Story<TabsProps> = ({ ...args }) => (
     <Tab title="Bye">
       <Paragraph>Bye!</Paragraph>
     </Tab>
+    <Tab title="Bye">
+      <Paragraph>Bye!</Paragraph>
+    </Tab>
+    <Tab title="Bye">
+      <Paragraph>Bye!</Paragraph>
+    </Tab>
+    <Tab title="Bye">
+      <Paragraph>Bye!</Paragraph>
+    </Tab>
+    <Tab title="Bye">
+      <Paragraph>Bye!</Paragraph>
+    </Tab>
   </Tabs>
 );
 
