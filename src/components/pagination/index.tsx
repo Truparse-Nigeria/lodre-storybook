@@ -31,20 +31,26 @@ const Pagination: FC<PaginationProps> = ({
         <CaretLeft width={24} height={24} />
       </StyledPageButton>
       <Flex alignItems="center" gap={1}>
-        {Array(pages)
-          .fill("")
-          .map((page: any, index: number) => (
-            <StyledPageNumber
-              onClick={() => {
-                goTo(index + 1);
-                setCurrentPage(index + 1);
-              }}
-              selected={index + 1 === currentPage}
-              key={index}
-            >
-              <SmallText weight="w500">{index + 1}</SmallText>
-            </StyledPageNumber>
-          ))}
+        {pages >= 5 ? (
+          <SmallText weight="w600">
+            Page <>{currentPage}</> of {pages}
+          </SmallText>
+        ) : (
+          Array(pages)
+            .fill("")
+            .map((page: any, index: number) => (
+              <StyledPageNumber
+                onClick={() => {
+                  goTo(index + 1);
+                  setCurrentPage(index + 1);
+                }}
+                selected={index + 1 === currentPage}
+                key={index}
+              >
+                <SmallText weight="w500">{index + 1}</SmallText>
+              </StyledPageNumber>
+            ))
+        )}
       </Flex>
       <StyledPageButton
         disabled={currentPage === pages}

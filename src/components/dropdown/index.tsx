@@ -32,6 +32,7 @@ const Dropdown: FC<DropdownProps> = ({
         }
       });
     }
+    return window.removeEventListener("scroll", () => {});
   }, []);
 
   return (

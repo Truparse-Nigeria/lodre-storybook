@@ -45,6 +45,7 @@ const SelectField: FC<SelectFieldProps> = ({
         }
       });
     }
+    return window.removeEventListener("scroll", () => {});
   }, []);
 
   return (
