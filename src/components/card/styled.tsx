@@ -1,6 +1,6 @@
-import styled from 'styled-components';
-import { PALETTE, PaletteType } from '../../tokens/color';
-import { ComponentSize, RADIUS, SIDE_PADDINGS } from '../../tokens/sizes';
+import styled from "styled-components";
+import { PALETTE, PaletteType } from "../../tokens/color";
+import { ComponentSize, RADIUS, SIDE_PADDINGS } from "../../tokens/sizes";
 
 type CardType = {
   bgColor: PaletteType;
@@ -17,14 +17,15 @@ type CardHeaderType = {
 };
 
 type ImageType = {
-    height?: number;
-  };
+  height?: number;
+};
 
 export const StyledCard = styled.div<CardType>`
   border-radius: ${RADIUS.default}px;
   background-color: ${(props) => PALETTE[props.bgColor]};
-  overflow: hidden;
-  ${props => props.border && `
+  ${(props) =>
+    props.border &&
+    `
   border: 1px solid ${PALETTE.border}
   `}
 `;
@@ -41,7 +42,7 @@ export const StyledCardHeader = styled.div<CardHeaderType>`
 export const StyledImage = styled.img<ImageType>`
   object-fit: cover;
   width: 100%;
-  height: ${props => props.height}px;
+  height: ${(props) => props.height}px;
 `;
 
 export const StyledImageRounded = styled(StyledImage)`

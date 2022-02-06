@@ -62,7 +62,7 @@ export const StyledSideNav = styled.div<SideNavProps>`
   top: 0;
   width: ${(props) => props.width}px;
   background: ${PALETTE.light};
-  position: relative;
+  position: fixed;
 
   @media (max-width: ${VIEWPORT.sm}px) {
     position: absolute;
