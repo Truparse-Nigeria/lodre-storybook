@@ -4,7 +4,7 @@ import { ComponentStory, ComponentMeta } from "@storybook/react";
 import { SelectField } from "../components";
 
 export default {
-  title: "Components/Form/Select Field",
+  title: "Components/Form/Select",
   component: SelectField,
 } as ComponentMeta<typeof SelectField>;
 

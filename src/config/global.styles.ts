@@ -77,7 +77,7 @@ const bg = () => {
   `;
 };
 
-export const Hidden = () => {
+export const hidden = () => {
   let hidden = "";
 
   for (let size of ["xs", "sm", "md", "lg", "xl"]) {
@@ -85,11 +85,11 @@ export const Hidden = () => {
     hidden += `
       ${mediaQueries(newSize)(`
         .hidden-${size}{
-          visible: hidden;
+          visibility: hidden;
           pointer-events: none;
         }
         .block-${size}{
-          visible: visible;
+          visibility: visible;
           pointer-events: auto;
         }
       `)}
@@ -126,5 +126,5 @@ export const GlobalStyles = createGlobalStyle`
 
   ${spaces()};
   ${bg()};
-  ${Hidden()};
+  ${hidden()};
 `;
