@@ -35,6 +35,7 @@ export const StyledTabTitle = styled.button<TabProps>`
 `;
 
 export const TabGroup = styled.div<TabsProps>`
+  width: 100%;
   display: flex;
   flex-direction: row;
   background: ${(props) =>
@@ -46,6 +47,7 @@ export const TabGroup = styled.div<TabsProps>`
 `;
 
 export const TabContainer = styled.div<TabsProps>`
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: ${(props) => props.centered && "center"};
