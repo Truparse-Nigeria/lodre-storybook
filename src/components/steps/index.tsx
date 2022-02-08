@@ -25,7 +25,7 @@ const Steps: FC<StepsProps> = ({ steps = [], showLine = true }) => {
         <StyledStepContainer isLast={index === steps.length - 1}>
           <StyledStep done={step.done}>
             {step.done ? (
-              <CheckLine width={24} height={24} />
+              <CheckLine width={30} height={30} />
             ) : (
               <Paragraph className="number" weight="w500">
                 {index + 1}

@@ -1,34 +1,36 @@
-import React from 'react';
-import { Story, Meta } from '@storybook/react';
+import React from "react";
+import { Story, Meta } from "@storybook/react";
 
 import {
+  Button,
   Card,
   CardBody,
   Col,
   Container,
+  Dropdown,
   Flex,
+  Grid,
   Navbar,
   Paragraph,
   SearchInput,
-} from '../components';
-import SvgEyeClose from '../icons/EyeClose';
-import SvgCart from '../icons/Cart';
-import SvgHelp from '../icons/Help';
-import SvgUser from '../icons/User';
+} from "../components";
+import SvgEyeClose from "../icons/EyeClose";
+import SvgCart from "../icons/Cart";
+import SvgHelp from "../icons/Help";
+import SvgUser from "../icons/User";
+import User from "../icons/User";
 
 export default {
-  title: 'Layout/Nav bar',
+  title: "Layout/Nav bar",
   component: Navbar,
 } as Meta;
 
 const Template: Story = (args) => (
   <Navbar {...args}>
     <Container className="my-30">
-    <Card bgColor="grey">
-      <CardBody>
-      Basic Card
-      </CardBody>
-    </Card>
+      <Card bgColor="grey">
+        <CardBody>Basic Card</CardBody>
+      </Card>
     </Container>
   </Navbar>
 );
@@ -36,7 +38,7 @@ const Template: Story = (args) => (
 export const Main = Template.bind({});
 
 const Nav = () => (
-  <Flex gap={2}>
+  <Flex alignItems="center" gap={2}>
     <Col>
       <Flex gap={0.5} alignItems="center">
         <Col>
@@ -48,14 +50,23 @@ const Nav = () => (
       </Flex>
     </Col>
     <Col>
-      <Flex gap={0.5} alignItems="center">
-        <Col>
-          <SvgUser width="20" height="20" />
-        </Col>
-        <Col>
-          <Paragraph weight="w600">My Account</Paragraph>
-        </Col>
-      </Flex>
+      <Col>
+        <Dropdown
+          width={350}
+          buttonChildren={
+            <Flex alignItems="center">
+              <User width={24} height={24} />
+              <Paragraph weight="w500">My Account</Paragraph>
+            </Flex>
+          }
+        >
+          {" "}
+          <Grid>
+            <Button>Login</Button>
+            <Button variant="outline">Register</Button>
+          </Grid>
+        </Dropdown>
+      </Col>
     </Col>
     <Col>
       <Flex gap={0.5} alignItems="center">

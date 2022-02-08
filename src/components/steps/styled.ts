@@ -35,7 +35,7 @@ export const StyledStepContainer = styled.div<StepsProps>`
 export const StyledStep = styled.div<StepProps>`
   width: 45px;
   height: 45px;
-  padding: 10px;
+  padding: 15px;
   background: ${(props) =>
     props.done ? PALETTE["primary"] : PALETTE["light"]};
   border: 1px solid ${PALETTE["primary"]};

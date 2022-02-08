@@ -36,7 +36,12 @@ const Dropdown: FC<DropdownProps> = ({
   }, []);
 
   return (
-    <StyledDropdown width={width} border={border} focused={focus}>
+    <StyledDropdown
+      width={width}
+      border={border}
+      onMouseLeave={() => setFocus(false)}
+      focused={focus}
+    >
       <Button
         usage="border"
         className="button"
@@ -51,6 +56,7 @@ const Dropdown: FC<DropdownProps> = ({
         border
         id="dropdown"
         className={`dropdown mt-10 ${atEnd ? "up" : "down"}`}
+        onMouseLeave={() => setFocus(false)}
       >
         <CardBody>
           <>{children}</>

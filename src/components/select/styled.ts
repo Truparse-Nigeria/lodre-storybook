@@ -44,7 +44,7 @@ export const StyledSelectField = styled.div<SideSelectFieldProps>`
     box-shadow: 0 0 7px 2px ${PALETTE.grey};
     background: ${PALETTE.light};
     padding: 10px 0;
-    height: 180px;
+    height: ${(props) => (props.focused ? "180px" : "0px")};
     overflow-y: auto;
 
     ::-webkit-scrollbar {

@@ -1,16 +1,5 @@
-import React, { ElementType, FC, ReactChild, ReactChildren } from 'react';
-import { Col, Container, Flex, Grid, Paragraph } from '..';
-import SvgCart from '../../icons/Cart';
-import SvgHelp from '../../icons/Help';
-import SvgSearch from '../../icons/Search';
-import SvgUser from '../../icons/User';
-import {
-  StyledBottomNav,
-  StyledGrid,
-  StyledNavbar,
-  StyledSearchButton,
-  StyledSearchInput,
-} from './styled';
+import React, { FC, ReactChild, ReactChildren } from "react";
+import { StyledBottomNav, StyledGrid, StyledNavbar } from "./styled";
 
 export interface INavbar {
   search?: JSX.Element;
@@ -24,13 +13,11 @@ const Navbar: FC<INavbar> = ({ logo, nav, search, bottomNav, children }) => {
   return (
     <div>
       <StyledNavbar>
-        <Container>
-          <StyledGrid>
-            <div>{logo}</div>
-            {search}
-            <div>{nav}</div>
-          </StyledGrid>
-        </Container>
+        <StyledGrid>
+          <div>{logo}</div>
+          {search}
+          <div>{nav}</div>
+        </StyledGrid>
       </StyledNavbar>
       <main>{children}</main>
       <StyledBottomNav>{bottomNav}</StyledBottomNav>
