@@ -1,10 +1,11 @@
-export type ComponentSize = "default" | "large" | "small";
+export type ComponentSize = 'default' | 'large' | 'small';
 
-type ComponentType = "inputs" | "buttons";
+type ComponentType = 'inputs' | 'buttons';
 type Elements = { [key in ComponentSize]: number };
-export type ViewportType = "xl" | "lg" | "md" | "sm" | "xs";
+export type ViewportType = 'xl' | 'lg' | 'md' | 'sm' | 'xs';
 
 export const VIEWPORT: { [key in ViewportType]?: number } = {
+  xs: 0,
   sm: 575.98,
   md: 767.98,
   lg: 991.98,
