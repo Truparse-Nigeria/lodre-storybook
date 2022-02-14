@@ -13,6 +13,7 @@ interface StepProps {
 export const StyledStepContainer = styled.div<StepsProps>`
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
   align-items: center;
 
   @media (max-width: ${VIEWPORT.sm}px) {
@@ -33,9 +34,8 @@ export const StyledStepContainer = styled.div<StepsProps>`
 `;
 
 export const StyledStep = styled.div<StepProps>`
-  width: 45px;
-  height: 45px;
-  padding: 15px;
+  width: 50px;
+  height: 50px;
   background: ${(props) =>
     props.done ? PALETTE["primary"] : PALETTE["light"]};
   border: 1px solid ${PALETTE["primary"]};
