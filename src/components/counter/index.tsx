@@ -1,25 +1,30 @@
 import React, { useState } from "react";
-import { Flex } from "..";
-import { Minus, Plus } from "../../icons";
-import { StyledCounterButton, StyledCounterValue } from "./styled";
+import { Paragraph } from "..";
+import { StyledCounterContainer, StyledCounterValue } from "./styled";
 
 export interface CounterControlProps {
   maxValue: number;
+  handleChange: Function;
 }
 
-const Counter = ({ maxValue, ...props }: CounterControlProps) => {
+const Counter = ({ maxValue, handleChange, ...props }: CounterControlProps) => {
   const [count, setCount] = useState(0);
 
   return (
-    <Flex gap={0.4} alignItems="center">
+    <StyledCounterContainer overTheLimit={count > maxValue}>
       <StyledCounterValue
         type={"number"}
         min={1}
         max={maxValue}
+        onChange={(e) => {
+          setCount(parseInt(e.target.value));
+          handleChange(count);
+        }}
         defaultValue={count}
         {...props}
       />
-    </Flex>
+      {count > maxValue && <Paragraph>You above the stocked number</Paragraph>}
+    </StyledCounterContainer>
   );
 };
 

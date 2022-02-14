@@ -13011,7 +13011,7 @@ prompts@^2.4.0:
     kleur "^3.0.3"
     sisteransi "^1.0.5"
 
-prop-types@^15.0.0, prop-types@^15.6.0, prop-types@^15.7.2:
+prop-types@15.7.2, prop-types@^15.0.0, prop-types@^15.6.0, prop-types@^15.7.2:
   version "15.7.2"
   resolved "https://registry.yarnpkg.com/prop-types/-/prop-types-15.7.2.tgz#52c41e75b8c87e72b9d9360e0206b99dcbffa6c5"
   integrity sha512-8QQikdH7//R2vurIJSutZ1smHYTcLpRWEOlHnzcWHmBYrOGUysKwSsrC89BCiFj3CbrfJ/nXFdJepOVrY1GCHQ==
@@ -13227,6 +13227,13 @@ react-colorful@^5.1.2:
   version "5.5.1"
   resolved "https://registry.yarnpkg.com/react-colorful/-/react-colorful-5.5.1.tgz#29d9c4e496f2ca784dd2bb5053a3a4340cfaf784"
   integrity sha512-M1TJH2X3RXEt12sWkpa6hLc/bbYS0H6F4rIqjQZ+RxNBstpY67d9TrFXtqdZwhpmBXcCwEi7stKqFue3ZRkiOg==
+
+react-counter-input@^0.2.1:
+  version "0.2.1"
+  resolved "https://registry.yarnpkg.com/react-counter-input/-/react-counter-input-0.2.1.tgz#e3363e6c98125bcc106373b74c32ed6d7e409749"
+  integrity sha512-f/je5dNgK0GATcWbICeUhodeTmu59SXoTXFf23jZI1xaR5PeqnqZPMsYaG4lZQBN4YRrN2n6pFzW0ehciWk7tQ==
+  dependencies:
+    prop-types "15.7.2"
 
 react-dev-utils@^11.0.3, react-dev-utils@^11.0.4:
   version "11.0.4"

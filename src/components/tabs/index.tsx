@@ -23,7 +23,12 @@ const Tabs: FC<TabsProps> = ({
 
   return (
     <TabContainer centered={centered}>
-      <TabGroup background={background} foreground={foreground} radius={radius}>
+      <TabGroup
+        background={background}
+        foreground={foreground}
+        radius={radius}
+        number={children.length}
+      >
         {children.map((item: ReactElement<TabProps>, index: number) => (
           <TabTitle
             key={index}

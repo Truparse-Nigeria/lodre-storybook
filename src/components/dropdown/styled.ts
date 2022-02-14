@@ -7,6 +7,10 @@ interface DropdownProps {
   width?: number;
 }
 
+export const StyledDropdownContainer = styled.div`
+  width: 100%;
+`;
+
 export const StyledDropdown = styled.div<DropdownProps>`
   position: relative;
 

@@ -13,6 +13,7 @@ interface TabsProps {
   background?: PaletteType;
   foreground?: PaletteType;
   radius?: boolean;
+  number?: number;
 }
 
 export const StyledTabTitle = styled.button<TabProps>`
@@ -35,24 +36,25 @@ export const StyledTabTitle = styled.button<TabProps>`
 `;
 
 export const TabGroup = styled.div<TabsProps>`
-  width: 100%;
-  display: flex;
-  flex-direction: row;
+  display: grid;
+  align-items: center;
+  grid-template-columns: repeat(
+    ${(props) => (props.number ? props.number : "1")},
+    1fr
+  );
+  justify-content: ${(props) => (props.centered ? "center" : "flex-start")};
   background: ${(props) =>
     props.background ? PALETTE[props.background] : "transparent"};
   border-radius: ${(props) => props.radius && "4px"};
-  overflow: hidden;
   overflow-x: auto;
   margin-bottom: ${SIDE_PADDINGS.default}px;
 `;
 
 export const TabContainer = styled.div<TabsProps>`
-  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: ${(props) => props.centered && "center"};
   background: "transparent";
-  overflow-x: auto;
 `;
 
 export const StyledFullWidthContainer = styled.div`

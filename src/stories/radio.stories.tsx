@@ -38,3 +38,14 @@ ColorRadio.args = {
   name: "colors",
   onChange: () => {},
 };
+
+export const DismissableColorRadio = Template.bind({});
+DismissableColorRadio.args = {
+  hexColor: "#51408C",
+  forColor: true,
+  fullWidth: false,
+  name: "colors",
+  dismissable: true,
+  callback: () => console.log("dismissed"),
+  onChange: () => {},
+};

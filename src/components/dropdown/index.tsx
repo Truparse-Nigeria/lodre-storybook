@@ -1,7 +1,7 @@
 import React, { FC, ReactChild, useEffect, useState } from "react";
 import { Button, Card, CardBody } from "..";
 import { ArrowDown } from "../../icons";
-import { StyledDropdown } from "./styled";
+import { StyledDropdown, StyledDropdownContainer } from "./styled";
 
 export interface DropdownProps {
   buttonChildren: ReactChild | ReactChild[] | JSX.Element | JSX.Element[];
@@ -32,37 +32,40 @@ const Dropdown: FC<DropdownProps> = ({
         }
       });
     }
+
     return window.removeEventListener("scroll", () => {});
   }, []);
 
   return (
-    <StyledDropdown
-      width={width}
-      border={border}
-      onMouseLeave={() => setFocus(false)}
-      focused={focus}
-    >
-      <Button
-        usage="border"
-        className="button"
-        onClick={() => setFocus(!focus)}
-        variant="outline"
+    <StyledDropdownContainer>
+      <StyledDropdown
+        width={width}
+        border={border}
+        focused={focus}
+        id="dropdown-component"
       >
-        <>{buttonChildren}</>
-        <ArrowDown className="icon" width={18} height={18} />
-      </Button>
+        <Button
+          usage="border"
+          className="button"
+          onClick={() => setFocus(!focus)}
+          variant="outline"
+        >
+          <>{buttonChildren}</>
+          <ArrowDown className="icon" width={18} height={18} />
+        </Button>
 
-      <Card
-        border
-        id="dropdown"
-        className={`dropdown mt-10 ${atEnd ? "up" : "down"}`}
-        onMouseLeave={() => setFocus(false)}
-      >
-        <CardBody>
-          <>{children}</>
-        </CardBody>
-      </Card>
-    </StyledDropdown>
+        <Card
+          border
+          id="dropdown"
+          className={`dropdown mt-10 ${atEnd ? "up" : "down"}`}
+          onMouseLeave={() => setFocus(false)}
+        >
+          <CardBody>
+            <>{children}</>
+          </CardBody>
+        </Card>
+      </StyledDropdown>
+    </StyledDropdownContainer>
   );
 };
 

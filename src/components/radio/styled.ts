@@ -1,30 +1,38 @@
 import styled from "styled-components";
-import { PALETTE } from "../../tokens/color";
+import { PALETTE, PaletteType } from "../../tokens/color";
 import { FONT_WEIGHT } from "../../tokens/font";
-import StyledCheckbox from "../checkbox/styled";
 
 interface StyledRadioProps {
   fullWidth?: boolean;
   forColor?: boolean;
   hexColor?: string;
+  dismissable?: boolean;
+}
+
+interface StyledDismissableProps {
+  background?: PaletteType;
+  foreground?: PaletteType;
 }
 
 export const StyledRadioContainer = styled.label<StyledRadioProps>`
   display: flex;
   align-items: ${(props) => (props.fullWidth ? "flex-start" : "center")};
-  width: ${(props) => (props.fullWidth ? "100%" : "auto")};
+  width: ${(props) => (props.fullWidth ? "100%" : "fit-content")};
   border: ${(props) =>
     props.fullWidth ? `1.5px solid ${PALETTE.border}` : `none`};
   padding: ${(props) => (props.fullWidth ? "20px" : "0px")};
   border-radius: ${(props) => props.fullWidth && "5px"};
   cursor: pointer;
+  position: relative;
 `;
 
 export const StyledRadioText = styled.div<StyledRadioProps>`
+  width: ${(props) => (props.fullWidth ? "100%" : "fit-content")};
   display: flex;
   flex-direction: column;
   margin: 0 5px;
-  font-weight: ${(props) => (props.fullWidth ? FONT_WEIGHT.w500 : FONT_WEIGHT.w400)};
+  font-weight: ${(props) =>
+    props.fullWidth ? FONT_WEIGHT.w500 : FONT_WEIGHT.w400};
 `;
 
 export const StyledColorRadio = styled.div<StyledRadioProps>`
@@ -78,6 +86,31 @@ export const StyledRadio = styled.input<StyledRadioProps>`
   &:checked + ${StyledColorRadio} {
     outline: 3px solid ${PALETTE.primary};
     outline-offset: 3px;
+  }
+`;
+
+export const StyledDismissable = styled.button<StyledDismissableProps>`
+  position: absolute;
+  top: -5px;
+  right: 5px;
+  padding: 0;
+  width: 20px;
+  height: 20px;
+  border: none;
+  outline: none;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  background: ${(props) =>
+    props.background ? PALETTE[props.background] : PALETTE["dark"]};
+
+  svg {
+    path {
+      fill: ${(props) =>
+        props.background ? PALETTE[props.background] : PALETTE["light"]};
+    }
   }
 `;
 

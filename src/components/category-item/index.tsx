@@ -1,7 +1,7 @@
-import React, { useState } from "react";
-import { Card } from "..";
+import React, { ReactChild, useState } from "react";
 import {
   StyledCategory,
+  StyledCategoryIcon,
   StyledCategoryItemButton,
   StyledCategoryItemContainer,
   StyledCategoryItemMenu,
@@ -14,9 +14,14 @@ interface CategoryItemProps {
     | React.ReactElement[]
     | React.ReactChild
     | React.ReactChild[];
+  icon?: JSX.Element | SVGElement | ReactChild;
 }
 
-const CategoryItem: React.FC<CategoryItemProps> = ({ title, children }) => {
+const CategoryItem: React.FC<CategoryItemProps> = ({
+  title,
+  icon,
+  children,
+}) => {
   const [focused, setFocused] = useState<boolean>(false);
 
   return (
@@ -25,14 +30,14 @@ const CategoryItem: React.FC<CategoryItemProps> = ({ title, children }) => {
       onMouseLeave={() => setFocused(false)}
     >
       <StyledCategory>
-        <StyledCategoryItemButton>{title}</StyledCategoryItemButton>
+        <StyledCategoryItemButton>
+          {icon && <StyledCategoryIcon>{icon}</StyledCategoryIcon>} {title}
+        </StyledCategoryItemButton>
         <StyledCategoryItemMenu
           onMouseLeave={() => setFocused(false)}
           visible={focused}
         >
-          <Card>
-            <>{children}</>
-          </Card>
+          <>{children}</>
         </StyledCategoryItemMenu>
       </StyledCategory>
     </StyledCategoryItemContainer>
