@@ -1,6 +1,5 @@
 import React, { ReactChild, useState } from "react";
 import {
-  StyledCategory,
   StyledCategoryIcon,
   StyledCategoryItemButton,
   StyledCategoryItemContainer,
@@ -29,17 +28,15 @@ const CategoryItem: React.FC<CategoryItemProps> = ({
       onMouseEnter={() => setFocused(true)}
       onMouseLeave={() => setFocused(false)}
     >
-      <StyledCategory>
-        <StyledCategoryItemButton>
-          {icon && <StyledCategoryIcon>{icon}</StyledCategoryIcon>} {title}
-        </StyledCategoryItemButton>
-        <StyledCategoryItemMenu
-          onMouseLeave={() => setFocused(false)}
-          visible={focused}
-        >
-          <>{children}</>
-        </StyledCategoryItemMenu>
-      </StyledCategory>
+      <StyledCategoryItemButton>
+        {icon && <StyledCategoryIcon>{icon}</StyledCategoryIcon>} {title}
+      </StyledCategoryItemButton>
+      <StyledCategoryItemMenu
+        onMouseLeave={() => setFocused(false)}
+        visible={focused}
+      >
+        <>{children}</>
+      </StyledCategoryItemMenu>
     </StyledCategoryItemContainer>
   );
 };

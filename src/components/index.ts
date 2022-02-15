@@ -34,3 +34,4 @@ export { default as SelectField } from "./select";
 export { default as Steps } from "./steps";
 export { default as Pagination } from "./pagination";
 export { default as CategoryItem } from "./category-item";
+export { default as CategoryContainer } from "./category-item/category";

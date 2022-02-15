@@ -3,6 +3,7 @@ import { ComponentStory, ComponentMeta } from "@storybook/react";
 
 import { CategoryItem, Flex, Paragraph } from "../components";
 import { Help } from "../icons";
+import { StyledCategoryContainer } from "../components/category-item/styled";
 
 export default {
   title: "Components/Category Item",
@@ -10,7 +11,9 @@ export default {
 } as ComponentMeta<typeof CategoryItem>;
 
 const Template: ComponentStory<typeof CategoryItem> = (args) => (
-  <CategoryItem {...args} />
+  <StyledCategoryContainer>
+    <CategoryItem {...args} />
+  </StyledCategoryContainer>
 );
 
 export const NormalCategoryItem = Template.bind({});
