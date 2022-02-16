@@ -21,6 +21,7 @@ export { default as Help } from "./Help";
 export { default as Home } from "./Home";
 export { default as List } from "./List";
 export { default as LocationPin } from "./LocationPin";
+export { default as Logo } from "./Logo";
 export { default as Menu } from "./Menu";
 export { default as MenuLine } from "./MenuLine";
 export { default as Minus } from "./Minus";

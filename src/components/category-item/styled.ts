@@ -47,7 +47,7 @@ export const StyledCategoryItemMenu = styled.div<MenuProps>`
   background: ${PALETTE.light};
   display: ${(props) => (props.visible ? "initial" : "none")};
   pointer-events: ${(props) => (props.visible ? "auto" : "none")};
-  box-shadow: 0 0 15px 7px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 0 15px 7px rgba(0, 0, 0, 0.1);
 `;
 
 export const StyledCategoryIcon = styled.div`

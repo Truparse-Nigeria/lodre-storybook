@@ -2,12 +2,11 @@ import React from "react";
 import { Story, Meta } from "@storybook/react/types-6-0";
 
 import { Grid, LodreCarousel } from "../components";
-import { Carousel } from "react-responsive-carousel";
 import { LodreCarouselProps } from "../components/lodre-carousel";
 
 export default {
   title: "Components/Lodre Carousel",
-  component: Carousel,
+  component: LodreCarousel,
 } as Meta;
 
 const Template: Story<LodreCarouselProps> = (args) => (

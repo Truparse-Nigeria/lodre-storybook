@@ -1,6 +1,6 @@
 {
   "name": "truparse-lodre",
-  "version": "1.3.28",
+  "version": "1.4.0",
   "private": false,
   "main": "lib/index.js",
   "files": [
@@ -17,8 +17,6 @@
   },
   "dependencies": {
     "@types/react-stars": "^2.2.1",
-    "react-counter-input": "^0.2.1",
-    "react-responsive-carousel": "^3.2.22",
     "react-stars": "^2.2.5",
     "styled-components": "^5.3.3"
   },

@@ -1,4 +1,5 @@
 import React, { ReactChild, useState } from "react";
+import { Heading } from "..";
 import {
   StyledCategoryIcon,
   StyledCategoryItemButton,
@@ -35,6 +36,9 @@ const CategoryItem: React.FC<CategoryItemProps> = ({
         onMouseLeave={() => setFocused(false)}
         visible={focused}
       >
+        <Heading weight="w700" className="px-10 pt-10">
+          {title}
+        </Heading>
         <>{children}</>
       </StyledCategoryItemMenu>
     </StyledCategoryItemContainer>
