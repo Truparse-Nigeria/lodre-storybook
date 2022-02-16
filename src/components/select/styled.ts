@@ -20,7 +20,7 @@ export const StyledSelectField = styled.div<SideSelectFieldProps>`
     text-align: left !important;
     width: 100%;
     font-weight: ${FONT_WEIGHT.w400};
-    border: 1.5px solid ${PALETTE.border} !important;
+    border: 1.5px solid ${PALETTE.ash} !important;
     background: ${(props) => PALETTE[props.background]};
     border-radius: ${(props) => props.borderRadius} !important;
 
