@@ -10,7 +10,6 @@ export const StyledCategoryContainer = styled.div({
   width: "100%",
   height: "100%",
   background: PALETTE.light,
-  padding: "25px 10px",
   borderRadius: "10px",
 });
 
