@@ -1,7 +1,8 @@
 import React, { FC, HTMLAttributes, ReactChild, ReactChildren } from 'react';
-import { Grid } from '..';
+import { Grid, Rounded } from '..';
 import { PaletteType } from '../../tokens/color';
 import { ComponentSize } from '../../tokens/sizes';
+
 import {
   StyledCard,
   StyledCardBody,
@@ -68,10 +69,12 @@ export const ProductCard: FC<IProductCard & HTMLAttributes<HTMLDivElement>> = ({
   height = 215,
 }) => {
   return (
-    <StyledCard bgColor={bgColor}>
-      <StyledImage height={height} src={src} />
-      <StyledCardBody padding={padding}>{children}</StyledCardBody>
-    </StyledCard>
+    <Rounded>
+      <StyledCard bgColor={bgColor}>
+        <StyledImage height={height} src={src} />
+        <StyledCardBody padding={padding}>{children}</StyledCardBody>
+      </StyledCard>
+    </Rounded>
   );
 };
 
@@ -97,11 +100,13 @@ export const SideProductCard: FC<
   );
 };
 
-export const RoundedImg: FC<IProductCard & HTMLAttributes<HTMLImageElement>> = ({ height, src, ...rest }) => (
-  <StyledImageRounded height={height} src={src}  {...rest}/>
+export const RoundedImg: FC<
+  IProductCard & HTMLAttributes<HTMLImageElement>
+> = ({ height, src, ...rest }) => (
+  <StyledImageRounded height={height} src={src} {...rest} />
 );
 
 export const Img: FC<IProductCard> = ({ height, src, ...rest }) => (
-  <StyledImage height={height} src={src}   {...rest}/>
+  <StyledImage height={height} src={src} {...rest} />
 );
 export default Card;

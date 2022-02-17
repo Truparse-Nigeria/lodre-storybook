@@ -1,8 +1,8 @@
-import { ElementType } from "react";
-import styled from "styled-components";
-import { PALETTE } from "../../tokens/color";
-import { FONT_SIZE } from "../../tokens/font";
-import { HEIGHTS } from "../../tokens/sizes";
+import { ElementType } from 'react';
+import styled from 'styled-components';
+import { PALETTE } from '../../tokens/color';
+import { FONT_SIZE } from '../../tokens/font';
+import { HEIGHTS, RADIUS } from '../../tokens/sizes';
 
 type InputType = {
   width: string;
@@ -18,7 +18,7 @@ type InputContainerType = {
 };
 
 export const StyledInput = styled.input<InputType>`
-  border-radius: 4px;
+  border-radius: ${RADIUS.small}px;
   border: 1px solid ${PALETTE.ash};
   height: ${HEIGHTS.inputs.default}px;
   padding: 0 20px;
@@ -63,11 +63,11 @@ export const StyledInputSuffix = styled.div`
 `;
 
 export const StyledInputContainer = styled.div<InputContainerType>`
-  margin-bottom: ${(props) => (props.margin ? "20px" : "0px")};
+  margin-bottom: ${(props) => (props.margin ? '20px' : '0px')};
 `;
 
 export const StyledSearchInput = styled.input`
-  border-radius: 4px 0 0 4px;
+  border-radius: ${RADIUS.small}px 0 0 ${RADIUS.small}px;
   height: ${HEIGHTS.inputs.default}px;
   padding: 0 20px;
   width: 100%;
@@ -83,7 +83,7 @@ export const StyledSearchInput = styled.input`
 `;
 
 export const StyledSearchButton = styled.button`
-  border-radius: 0 4px 4px 0;
+  border-radius: 0 ${RADIUS.small}px ${RADIUS.small}px 0;
   height: ${HEIGHTS.inputs.default}px;
   padding: 0 20px;
   display: flex;
