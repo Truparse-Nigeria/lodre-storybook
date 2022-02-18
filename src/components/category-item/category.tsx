@@ -1,16 +1,16 @@
-import React from "react";
-import { StyledCategoryContainer } from "./styled";
+import React, { ReactChild, ReactElement } from "react";
+import { StyledCategory, StyledCategoryContainer } from "./styled";
 
-interface CategoryContainerProps {
-  children:
-    | React.ReactElement
-    | React.ReactElement[]
-    | React.ReactChild
-    | React.ReactChild[];
+interface CategoryProps {
+  children: ReactElement | ReactElement[] | ReactChild | ReactChild[];
 }
 
-const CategoryContainer: React.FC<CategoryContainerProps> = ({ children }) => {
-  return <StyledCategoryContainer>{children}</StyledCategoryContainer>;
+const Category: React.FC<CategoryProps> = ({ children }) => {
+  return (
+    <StyledCategory>
+      <StyledCategoryContainer>{children}</StyledCategoryContainer>
+    </StyledCategory>
+  );
 };
 
-export default CategoryContainer;
+export default Category;

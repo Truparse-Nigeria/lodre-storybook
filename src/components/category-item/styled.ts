@@ -6,8 +6,6 @@ interface MenuProps {
 }
 
 export const StyledCategoryContainer = styled.div({
-  position: "relative",
-  width: "100%",
   height: "100%",
   background: PALETTE.light,
   borderRadius: "10px",
@@ -20,12 +18,15 @@ export const StyledCategoryItemContainer = styled.div`
 `;
 
 export const StyledCategory = styled.div`
+  height: 100%;
   position: relative;
-  display: flex;
-  align-item: flex-start;
+  display: grid;
+  grid-template-columns: 100% 1fr;
+  align-item: start;
 `;
 
 export const StyledCategoryItemButton = styled.button`
+  width: 100%;
   border: none;
   outline: none;
   background: none;
@@ -37,14 +38,15 @@ export const StyledCategoryItemButton = styled.button`
 `;
 
 export const StyledCategoryItemMenu = styled.div<MenuProps>`
+  width: 50vw;
   padding: 10px;
   border-radius: 10px;
   position: absolute;
   z-index: 9999;
   top: 0%;
-  right: -100%;
+  left: 100%;
   background: ${PALETTE.light};
-  display: ${(props) => (props.visible ? "initial" : "none")};
+  visibility: ${(props) => (props.visible ? "visible" : "hidden")};
   pointer-events: ${(props) => (props.visible ? "auto" : "none")};
   box-shadow: 0 0 15px 7px rgba(0, 0, 0, 0.1);
 `;
@@ -54,7 +56,6 @@ export const StyledCategoryIcon = styled.div`
   align-items: center;
   justify-content: center;
   padding: 7.5px;
-  margin-right: 10px;
   border-radius: 50%;
   background: ${PALETTE.primary};
 `;
