@@ -38,8 +38,8 @@ export const StyledCategoryItemButton = styled.button`
 `;
 
 export const StyledCategoryItemMenu = styled.div<MenuProps>`
-  width: 50vw;
-  padding: 10px;
+  width: 800px;
+  padding: 20px;
   border-radius: 10px;
   position: absolute;
   z-index: 9999;
