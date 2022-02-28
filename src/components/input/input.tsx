@@ -1,4 +1,10 @@
-import React, { ElementType, FC, HTMLAttributes } from "react";
+import React, {
+  ChangeEventHandler,
+  ElementType,
+  FC,
+  HTMLAttributes,
+  InputHTMLAttributes,
+} from "react";
 import { Flex } from "..";
 import SvgSearch from "../../icons/Search";
 import {
@@ -22,7 +28,7 @@ export interface IInput {
   onSubmit?: () => void;
 }
 
-const Input: FC<IInput & HTMLAttributes<HTMLInputElement>> = ({
+const Input: FC<IInput & InputHTMLAttributes<HTMLInputElement>> = ({
   subText,
   trailing,
   leading,
@@ -49,12 +55,9 @@ const Input: FC<IInput & HTMLAttributes<HTMLInputElement>> = ({
   );
 };
 
-export const SearchInput: FC<IInput & HTMLAttributes<HTMLInputElement>> = ({
-  type,
-  placeholder,
-  onSubmit,
-  ...rest
-}) => (
+export const SearchInput: FC<
+  IInput & InputHTMLAttributes<HTMLInputElement>
+> = ({ type, placeholder, onSubmit, ...rest }) => (
   <Flex gap={0}>
     <StyledSearchInput type={type} placeholder={placeholder} {...rest} />
     <StyledSearchButton onClick={() => onSubmit}>

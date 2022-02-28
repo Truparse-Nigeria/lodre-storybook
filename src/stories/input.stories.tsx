@@ -9,7 +9,7 @@ export default {
   component: Input,
 } as Meta;
 
-const Template: Story<IInput> = (args) => <Input {...args} />;
+const Template: Story<IInput> = (args) => <Input name="hello" {...args} />;
 
 export const TextInput = Template.bind({});
 TextInput.args = {

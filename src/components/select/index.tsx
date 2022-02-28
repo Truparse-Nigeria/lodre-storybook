@@ -32,21 +32,21 @@ const SelectField: FC<SelectFieldProps> = ({
   );
   const [atEnd, setAtEnd] = useState<boolean>(false);
 
-  useEffect(() => {
-    if (typeof window !== "undefined") {
-      window.addEventListener("scroll", () => {
-        const body = window.innerHeight;
-        const dropdown = (document.getElementById("dropdown") as HTMLElement)
-          .scrollHeight;
-        if (body - dropdown === 0) {
-          setAtEnd(true);
-        } else {
-          setAtEnd(false);
-        }
-      });
-    }
-    return window.removeEventListener("scroll", () => {});
-  }, []);
+  // useEffect(() => {
+  //   if (typeof window !== "undefined") {
+  //     window.addEventListener("scroll", () => {
+  //       const body = window.innerHeight;
+  //       const dropdown = (document.getElementById("dropdown") as HTMLElement)
+  //         .scrollHeight;
+  //       if (body - dropdown === 0) {
+  //         setAtEnd(true);
+  //       } else {
+  //         setAtEnd(false);
+  //       }
+  //     });
+  //   }
+  //   return window.removeEventListener("scroll", () => {});
+  // }, []);
 
   return (
     <StyledSelectField

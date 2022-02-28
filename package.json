@@ -1,6 +1,6 @@
 {
   "name": "truparse-lodre",
-  "version": "1.5.6",
+  "version": "1.5.17",
   "private": false,
   "main": "lib/index.js",
   "files": [

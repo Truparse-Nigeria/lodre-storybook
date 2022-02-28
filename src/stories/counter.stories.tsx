@@ -14,6 +14,6 @@ const Template: Story = ({
 
 export const PrimaryCounter = Template.bind({});
 PrimaryCounter.args = {
-  onChange: (e) => console.log(e.target.value),
+  handleChange: (count: number) => console.log(count),
   maxValue: 20,
 };
