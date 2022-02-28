@@ -1,5 +1,4 @@
 import React, {
-  ChangeEventHandler,
   ElementType,
   FC,
   HTMLAttributes,
