@@ -1,7 +1,7 @@
-import React, { FC } from 'react';
-import { Grid, Paragraph } from '..';
-import { CheckLine } from '../../icons';
-import { StyledStep, StyledStepContainer, StyledStepLine } from './styled';
+import React, { FC } from "react";
+import { Grid, Paragraph } from "..";
+import { CheckLine } from "../../icons";
+import { StyledStep, StyledStepContainer, StyledStepLine } from "./styled";
 
 export interface Step {
   step: string;
@@ -23,8 +23,8 @@ const Steps: FC<StepsProps> = ({ steps = [], showLine = true }) => {
       justifyContent="space-between"
     >
       {steps.map((step: Step, index: number) => (
-        <StyledStepContainer isLast={index === steps.length - 1}>
-          <Grid sm="50px 1fr"  xs="50px 1fr" gap={0.2} alignItems="center">
+        <StyledStepContainer isLast={index === steps.length - 1} key={index}>
+          <Grid sm="50px 1fr" xs="50px 1fr" gap={0.2} alignItems="center">
             <StyledStep done={step.done}>
               {step.done ? (
                 <CheckLine width={16} height={16} />
