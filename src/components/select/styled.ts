@@ -6,6 +6,7 @@ interface SideSelectFieldProps {
   focused: boolean;
   borderRadius?: string;
   background: PaletteType;
+  height?: number;
 }
 
 interface Options {
@@ -32,36 +33,36 @@ export const StyledSelectField = styled.div<SideSelectFieldProps>`
       transition: all ease-in-out 0.2s;
     }
   }
+`;
 
-  .dropdown {
-    position: absolute;
-    width: 100%;
-    left: 0px;
-    top: 60px;
-    z-index: 99;
-    visibility: ${(props) => (props.focused ? "visible" : "hidden")};
-    pointer-events: ${(props) => (props.focused ? "auto" : "none")};
-    box-shadow: 0 0 7px 2px ${PALETTE.grey};
-    background: ${PALETTE.light};
-    padding: 10px 0;
-    height: ${(props) => (props.focused ? "180px" : "0px")};
-    overflow-y: auto;
+export const StyledOptionsContainer = styled.div<SideSelectFieldProps>`
+  position: absolute;
+  width: 100%;
+  left: 0px;
+  top: 60px;
+  z-index: 99;
+  visibility: ${(props) => (props.focused ? "visible" : "hidden")};
+  pointer-events: ${(props) => (props.focused ? "auto" : "none")};
+  box-shadow: 0 0 7px 2px ${PALETTE.grey};
+  background: ${PALETTE.light};
+  padding: 10px 0;
+  height: ${(props) =>
+    props.focused ? `${props.height && props.height}px` : "180px"};
+  overflow-y: auto;
 
-    ::-webkit-scrollbar {
-      width: 7px;
-    }
-
-    ::-webkit-scrollbar-track {
-      box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
-      border-radius: 15px;
-    }
-
-    ::-webkit-scrollbar-thumb {
-      background-color: ${PALETTE.primary};
-      border-radius: 15px;
-    }
+  ::-webkit-scrollbar {
+    width: 7px;
   }
 
+  ::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    border-radius: 15px;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background-color: ${PALETTE.primary};
+    border-radius: 15px;
+  }
   &.up {
     top: -140px;
   }

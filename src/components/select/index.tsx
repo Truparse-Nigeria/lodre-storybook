@@ -2,7 +2,11 @@ import React, { FC, useEffect, useState } from "react";
 import { Button, Card, Paragraph } from "..";
 import { ArrowDown } from "../../icons";
 import { PaletteType } from "../../tokens/color";
-import { StyledOptions, StyledSelectField } from "./styled";
+import {
+  StyledOptions,
+  StyledOptionsContainer,
+  StyledSelectField,
+} from "./styled";
 
 type Options = {
   value: string;
@@ -16,6 +20,7 @@ interface SelectFieldProps {
   handleChange: Function;
   background?: PaletteType;
   defaultValue?: string;
+  height?: number;
 }
 
 const SelectField: FC<SelectFieldProps> = ({
@@ -25,6 +30,7 @@ const SelectField: FC<SelectFieldProps> = ({
   background = "grey",
   handleChange,
   defaultValue = "",
+  height,
 }) => {
   const [focused, setFocused] = useState<boolean>(false);
   const [value, setValue] = useState<string>(
@@ -58,7 +64,11 @@ const SelectField: FC<SelectFieldProps> = ({
         {options.filter((e) => value === e.value)[0]?.text || placeholder}
         <ArrowDown className="icon" />
       </Button>
-      <Card id="dropdown" className={`dropdown ${atEnd ? "up" : "down"}`}>
+      <StyledOptionsContainer
+        height={height}
+        background="light"
+        focused={focused}
+      >
         {options.map((options: Options, index: number) => (
           <StyledOptions
             selected={value === options.value}
@@ -74,7 +84,7 @@ const SelectField: FC<SelectFieldProps> = ({
             </Paragraph>
           </StyledOptions>
         ))}
-      </Card>
+      </StyledOptionsContainer>
     </StyledSelectField>
   );
 };

@@ -43,5 +43,6 @@ DefaultValueSelectField.args = {
   placeholder: "Select Price Range",
   background: "light",
   borderRadius: "10px",
+  height: 180,
   handleChange: (e) => console.log(e),
 };
