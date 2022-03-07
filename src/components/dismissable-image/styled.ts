@@ -2,8 +2,8 @@ import styled from "styled-components";
 import { PALETTE } from "../../tokens/color";
 
 export const StyledDimissableImageContainer = styled.div({
-  width: "250px",
-  height: "250px",
+  width: "100%",
+  height: "100%",
   borderRadius: "10px",
   position: "relative",
   background: PALETTE.ash,

@@ -1,8 +1,8 @@
-import { ElementType } from 'react';
-import styled from 'styled-components';
-import { PALETTE } from '../../tokens/color';
-import { FONT_SIZE } from '../../tokens/font';
-import { HEIGHTS, RADIUS } from '../../tokens/sizes';
+import { ElementType } from "react";
+import styled from "styled-components";
+import { PALETTE } from "../../tokens/color";
+import { FONT_SIZE } from "../../tokens/font";
+import { HEIGHTS, RADIUS } from "../../tokens/sizes";
 
 type InputType = {
   width: string;
@@ -41,7 +41,7 @@ export const StyledInputFlex = styled.div<InputFlexType>`
   ${(props) =>
     props.trailing != null
       ? `& > input {
-    padding-right: 40px !important;
+    padding-right: 55px !important;
   } `
       : ``}
   ${(props) =>
@@ -59,11 +59,11 @@ export const StyledInputPrefix = styled.div`
 
 export const StyledInputSuffix = styled.div`
   position: absolute;
-  right: 40px;
+  right: 20px;
 `;
 
 export const StyledInputContainer = styled.div<InputContainerType>`
-  margin-bottom: ${(props) => (props.margin ? '20px' : '0px')};
+  margin-bottom: ${(props) => (props.margin ? "20px" : "0px")};
 `;
 
 export const StyledSearchInput = styled.input`
