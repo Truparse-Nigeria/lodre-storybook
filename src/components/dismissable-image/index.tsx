@@ -23,7 +23,7 @@ const DimissableImage: FC<DimissableImageProps> = ({
     <StyledDimissableImageContainer>
       <StyledDismissableImage src={src} />
       {dismissable && (
-        <StyledDismissable onClick={() => removeImage(id)}>
+        <StyledDismissable type="button" onClick={() => removeImage(id)}>
           <X width={15} height={15} />
         </StyledDismissable>
       )}
