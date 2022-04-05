@@ -11,7 +11,7 @@ export default {
 } as Meta;
 
 const Template: Story<TabsProps> = ({ ...args }) => (
-  <Tabs {...args}>
+  <Tabs {...args} activeTab={1}>
     <Tab title="Hello">
       <Paragraph>Hello World!</Paragraph>
     </Tab>

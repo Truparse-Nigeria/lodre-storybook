@@ -17,24 +17,6 @@ const Dropdown: FC<DropdownProps> = ({
   children,
 }) => {
   const [focus, setFocus] = useState<boolean>(false);
-  const [atEnd, setAtEnd] = useState<boolean>(false);
-
-  useEffect(() => {
-    if (typeof window !== "undefined") {
-      window.addEventListener("scroll", () => {
-        const body = window.innerHeight;
-        const dropdown = (document.getElementById("dropdown") as HTMLElement)
-          .scrollHeight;
-        if (body - dropdown === 0) {
-          setAtEnd(true);
-        } else {
-          setAtEnd(false);
-        }
-      });
-    }
-
-    return window.removeEventListener("scroll", () => {});
-  }, []);
 
   return (
     <StyledDropdownContainer>
@@ -49,6 +31,7 @@ const Dropdown: FC<DropdownProps> = ({
           className="button"
           onClick={() => setFocus(!focus)}
           variant="outline"
+          type="button"
         >
           <>{buttonChildren}</>
           <ArrowDown className="icon" width={18} height={18} />
@@ -57,7 +40,7 @@ const Dropdown: FC<DropdownProps> = ({
         <Card
           border
           id="dropdown"
-          className={`dropdown mt-10 ${atEnd ? "up" : "down"}`}
+          className={`dropdown mt-10`}
           onMouseLeave={() => setFocus(false)}
         >
           <CardBody>

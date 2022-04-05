@@ -1,4 +1,4 @@
-import React, { FC, ReactElement, useState } from "react";
+import React, { FC, ReactElement, useEffect, useState } from "react";
 import { PaletteType } from "../../tokens/color";
 import { StyledFullWidthContainer, TabContainer, TabGroup } from "./styled";
 import { TabProps } from "./tab";
@@ -10,6 +10,7 @@ export interface TabsProps {
   background?: PaletteType;
   foreground?: PaletteType;
   radius?: boolean;
+  activeTab?: number;
 }
 
 const Tabs: FC<TabsProps> = ({
@@ -18,8 +19,13 @@ const Tabs: FC<TabsProps> = ({
   background,
   radius,
   children,
+  activeTab,
 }) => {
   const [active, setActive] = useState<number>(0);
+
+  useEffect(() => {
+    if (activeTab) setActive(activeTab);
+  }, [activeTab]);
 
   return (
     <TabContainer centered={centered}>

@@ -60,7 +60,11 @@ const SelectField: FC<SelectFieldProps> = ({
       borderRadius={borderRadius}
       focused={focused}
     >
-      <Button className="button" onClick={() => setFocused(!focused)}>
+      <Button
+        className="button"
+        type="button"
+        onClick={() => setFocused(!focused)}
+      >
         {options.filter((e) => value === e.value)[0]?.text || placeholder}
         <ArrowDown className="icon" />
       </Button>

@@ -1,6 +1,11 @@
 import React, { useState } from "react";
 import { Paragraph } from "..";
-import { StyledCounterContainer, StyledCounterValue } from "./styled";
+import { Minus, Plus } from "../../icons";
+import {
+  StyledCounterButton,
+  StyledCounterContainer,
+  StyledCounterValue,
+} from "./styled";
 
 export interface CounterControlProps {
   maxValue: number;
@@ -15,6 +20,9 @@ const Counter = ({ maxValue, handleChange, ...props }: CounterControlProps) => {
       overTheLimit={count > maxValue}
       underTheLimit={count === 0}
     >
+      <StyledCounterButton>
+        <Minus width={18} height={18} />
+      </StyledCounterButton>
       <StyledCounterValue
         overTheLimit={count > maxValue}
         underTheLimit={count === 0}
@@ -28,6 +36,9 @@ const Counter = ({ maxValue, handleChange, ...props }: CounterControlProps) => {
         defaultValue={count}
         {...props}
       />
+      <StyledCounterButton>
+        <Plus width={18} height={18} />
+      </StyledCounterButton>
       {count > maxValue && (
         <Paragraph size="small" className="py-10 danger">
           You above the stocked number

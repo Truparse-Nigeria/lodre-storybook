@@ -10,7 +10,7 @@ interface CounterProps {
 export const StyledCounterValue = styled.input<CounterProps>`
   border: 1px solid
     ${(props) =>
-      props.overTheLimit || props.underTheLimit ? "red" : PALETTE.ash};
+      props.overTheLimit || props.underTheLimit ? "red" : "transparent"};
   border-radius: 10px;
   text-align: center;
   outline: none;
@@ -24,6 +24,13 @@ export const StyledCounterValue = styled.input<CounterProps>`
     cursor: pointer;
     visibility: visible !important;
   }
+`;
+
+export const StyledCounterButton = styled.button`
+  padding: 15px;
+  border-radius: 50%;
+  background-color: ${PALETTE.grey};
+  border: none;
 `;
 
 export const StyledCounterContainer = styled.div<CounterProps>`
