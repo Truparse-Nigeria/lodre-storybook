@@ -44,4 +44,11 @@ export const StyledButton = styled.button<StyledButtonProps>`
   &:hover {
     opacity: 0.8;
   }
+  &:disabled {
+    opacity: 0.6;
+  }
+`;
+
+export const StyledLoading = styled.div`
+  margin-left: 5px
 `;

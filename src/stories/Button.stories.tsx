@@ -18,6 +18,13 @@ Block.args = {
   iconOnly: false,
 };
 
+export const Loading = Template.bind({});
+Loading.args = {
+  children: "Primary Button",
+  loading: true,
+  disabled: true
+};
+
 export const Outline = Template.bind({});
 Outline.args = {
   children: "Outline Button",

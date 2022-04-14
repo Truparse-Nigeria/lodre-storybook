@@ -4,9 +4,11 @@ import React, {
   HTMLAttributes,
   ReactNode,
 } from "react";
+import { Loading } from "../../icons";
 import { PaletteType } from "../../tokens/color";
 import { ComponentSize } from "../../tokens/sizes";
-import { StyledButton } from "./styled";
+import { Flex } from "../flex";
+import { StyledButton, StyledLoading } from "./styled";
 
 export type ButtonVariant = "block" | "outline";
 
@@ -17,6 +19,7 @@ export interface IButton {
   usage?: PaletteType;
   fluid?: boolean;
   iconOnly?: boolean;
+  loading?: boolean;
 }
 
 const Button: FC<IButton & ButtonHTMLAttributes<HTMLButtonElement>> = ({
@@ -26,6 +29,7 @@ const Button: FC<IButton & ButtonHTMLAttributes<HTMLButtonElement>> = ({
   usage = "primary",
   fluid = false,
   iconOnly = false,
+  loading = false,
   ...rest
 }) => {
   return (
@@ -37,7 +41,7 @@ const Button: FC<IButton & ButtonHTMLAttributes<HTMLButtonElement>> = ({
       iconOnly={iconOnly}
       {...rest}
     >
-      {children}
+      {children} {loading && <StyledLoading><Loading width={24} height={24} /></StyledLoading>}
     </StyledButton>
   );
 };

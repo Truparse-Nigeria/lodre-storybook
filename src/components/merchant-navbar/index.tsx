@@ -43,6 +43,7 @@ const MerchantNavbar: FC<INavbar> = ({
           xl={`${sideNavSize}px 1fr`}
           lg={`${sideNavSize}px 1fr`}
           md={`${sideNavSize}px 1fr`}
+          sm="1fr"
         >
           <StyledSideNav width={sideNavSize} open={open}>
             {navChildren}
