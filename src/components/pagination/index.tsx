@@ -1,31 +1,28 @@
-import React, { FC, useState } from "react";
+import React, { FC, useEffect, useState } from "react";
 import { Flex, SmallText } from "..";
 import { CaretLeft, CaretRight } from "../../icons";
 import { StyledPageButton, StyledPageNumber } from "./styled";
 
 interface PaginationProps {
-  next: Function;
-  previous: Function;
   pages: number;
   current: number;
-  goTo: Function;
+  goTo: (page: number) => void;
 }
 
-const Pagination: FC<PaginationProps> = ({
-  next,
-  previous,
-  pages,
-  current,
-  goTo,
-}) => {
+const Pagination: FC<PaginationProps> = ({ pages, current, goTo }) => {
   const [currentPage, setCurrentPage] = useState<number>(current);
+
+  useEffect(() => {
+    setCurrentPage(current);
+  }, [current]);
+
   return (
     <Flex alignItems="center" gap={1}>
       <StyledPageButton
         disabled={currentPage === 1}
         onClick={() => {
-          previous();
           setCurrentPage(currentPage - 1);
+          goTo(currentPage - 1);
         }}
       >
         <CaretLeft width={24} height={24} />
@@ -55,8 +52,8 @@ const Pagination: FC<PaginationProps> = ({
       <StyledPageButton
         disabled={currentPage === pages}
         onClick={() => {
+          goTo(currentPage + 1);
           setCurrentPage(currentPage + 1);
-          next();
         }}
       >
         <CaretRight width={24} height={24} />

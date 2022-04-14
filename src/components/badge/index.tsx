@@ -1,18 +1,18 @@
 import React, { FC, ReactChild, ReactChildren } from "react";
-import { PaletteType } from "../../tokens/color";
+import { PALETTE } from "../../tokens/color";
 import { StyledBadge } from "./styled";
 
 export interface BadgeProps {
-  borderColor?: PaletteType;
-  fillColor?: PaletteType;
-  color?: PaletteType;
+  borderColor?: string;
+  fillColor?: string;
+  color?: string;
   children?: ReactChild | ReactChildren | JSX.Element | JSX.Element[];
 }
 
 const Badge: FC<BadgeProps> = ({
-  borderColor = "primary",
-  fillColor = "light",
-  color = "dark",
+  borderColor = PALETTE.primary,
+  fillColor = PALETTE.primary,
+  color = PALETTE.dark,
   children,
 }) => {
   return (

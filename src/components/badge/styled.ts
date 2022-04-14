@@ -1,20 +1,18 @@
 import styled from "styled-components";
-import { PALETTE, PaletteType } from "../../tokens/color";
 
 export interface StyledBadgeProps {
-  borderColor?: PaletteType;
-  fillColor?: PaletteType;
-  color?: PaletteType;
+  borderColor?: string;
+  fillColor?: string;
+  color?: string;
 }
 
 export const StyledBadge = styled.div<StyledBadgeProps>`
   padding: 5px 10px;
   border-radius: 10px;
-  outline: 2px solid
-    ${(props) => props.borderColor && PALETTE[props.borderColor]};
+  outline: 2px solid ${(props) => props.borderColor};
   outline-offset: 0px;
-  background: ${(props) => props.fillColor && PALETTE[props.fillColor]};
-  color: ${(props) => props.color && PALETTE[props.color]};
+  background: ${(props) => props.fillColor};
+  color: ${(props) => props.color};
   display: flex;
   align-items: center;
   justify-content: center;
