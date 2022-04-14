@@ -9,7 +9,7 @@ export interface IFlex {
 }
 
 export interface ICol {
-  children: ReactNode | JSX.Element | JSX.Element[];
+  children: ReactNode | JSX.Element | JSX.Element[] ;
   size?: number;
   align?: textAlignmentType;
 }
