@@ -17,7 +17,7 @@ const Tabs: FC<TabsProps> = ({
   centered,
   foreground,
   background,
-  radius,
+  radius = false,
   children,
   activeTab,
 }) => {

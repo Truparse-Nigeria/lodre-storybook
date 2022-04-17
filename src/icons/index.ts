@@ -22,6 +22,7 @@ export { default as Logo } from "./Logo";
 export { default as Menu } from "./Menu";
 export { default as MenuLine } from "./MenuLine";
 export { default as Minus } from "./Minus";
+export { default as More } from "./More";
 export { default as Orders } from "./Orders";
 export { default as Overview } from "./Overview";
 export { default as Phone } from "./Phone";

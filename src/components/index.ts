@@ -38,3 +38,4 @@ export { default as CategoryContainer } from "./category-item/category";
 export { default as ColorPicker } from "./color-picker";
 export { default as DimissableImage } from "./dismissable-image";
 export { default as Rounded } from "./rounded";
+export { default as Menu } from "./menu";
