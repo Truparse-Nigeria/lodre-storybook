@@ -26,7 +26,7 @@ export const StyledPageButton = styled.button`
   svg {
     vertical-align: middle;
     path {
-      fill: ${(props) => (props.disabled ? PALETTE.grey : PALETTE.dark)};
+      fill: ${(props) => (props.disabled ? PALETTE.ash : PALETTE.dark)};
     }
   }
 
