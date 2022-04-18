@@ -47,4 +47,5 @@ export const StyledImage = styled.img<ImageType>`
 
 export const StyledImageRounded = styled(StyledImage)`
   border-radius: ${RADIUS.default}px;
+  border: 1px solid ${PALETTE.cream};
 `;
