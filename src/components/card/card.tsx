@@ -69,7 +69,7 @@ export const ProductCard: FC<IProductCard & HTMLAttributes<HTMLDivElement>> = ({
   height = 215,
 }) => {
   return (
-    <Rounded>
+    <Rounded borderColor={bgColor}>
       <StyledCard bgColor={bgColor}>
         <StyledImage height={height} src={src} />
         <StyledCardBody padding={padding}>{children}</StyledCardBody>
