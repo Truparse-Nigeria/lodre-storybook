@@ -1,4 +1,4 @@
-import React, { FC, ReactChild, useEffect, useState } from "react";
+import React, { FC, ReactChild, useState } from "react";
 import { Button, Card, CardBody } from "..";
 import { ArrowDown } from "../../icons";
 import { StyledDropdown, StyledDropdownContainer } from "./styled";

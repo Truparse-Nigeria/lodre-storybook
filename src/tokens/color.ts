@@ -6,7 +6,9 @@ export type PaletteType =
   | "grey"
   | "light"
   | "border"
-  | "primary_light";
+  | "primary_light"
+  | "success"
+  | "danger";
 
 export const PALETTE: { [Key in PaletteType]?: string } = {
   primary: "#FFC20E",
@@ -17,4 +19,6 @@ export const PALETTE: { [Key in PaletteType]?: string } = {
   light: "#FFFFFF",
   border: "#E4E4E4",
   primary_light: "#FFFAEB",
+  success: "green",
+  danger: "red",
 };

@@ -39,3 +39,4 @@ export { default as ColorPicker } from "./color-picker";
 export { default as DimissableImage } from "./dismissable-image";
 export { default as Rounded } from "./rounded";
 export { default as Menu } from "./menu";
+export { default as Modal } from "./modal";

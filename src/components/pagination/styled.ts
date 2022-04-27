@@ -16,12 +16,13 @@ export const StyledPageNumber = styled.div<PageNumberProps>`
 export const StyledPageButton = styled.button`
   padding: 7.5px 10px;
   border: 1px solid ${PALETTE.primary};
-  background: ${PALETTE.light};
+  background: ${PALETTE.primary};
   border-radius: 10px;
   outline: none;
   display: flex;
   align-items: center;
   justify-content: center;
+  opacity: ${(props) => (props.disabled ? "0.5" : "1")};
 
   svg {
     vertical-align: middle;
