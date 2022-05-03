@@ -65,19 +65,21 @@ export const StyledSideNav = styled.div<SideNavProps>`
   position: sticky;
 
   @media (max-width: ${VIEWPORT.sm}px) {
-    position: absolute;
+    position: fixed;
     top: 0;
     overflow-x: hidden;
     left: ${(props) => (props.open ? `0%` : `-${VIEWPORT.sm}px`)};
     transition: all ease-in-out 0.3s;
+    z-index: 9999;
   }
 
   @media (max-width: ${VIEWPORT.md}px) {
-    position: absolute;
+    position: fixed;
     top: 0;
     overflow-x: hidden;
     left: ${(props) => (props.open ? `0%` : `-${VIEWPORT.md}px`)};
     transition: all ease-in-out 0.3s;
+    z-index: 9999;
   }
 `;
 

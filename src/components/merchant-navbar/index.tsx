@@ -1,6 +1,6 @@
 import React, { FC, ReactChild, ReactChildren, useState } from "react";
 import { Flex, Grid } from "..";
-import { MenuLine } from "../../icons";
+import { MenuLine, X } from "../../icons";
 
 import { StyledGrid, StyledMain, StyledNavbar, StyledSideNav } from "./styled";
 
@@ -46,6 +46,13 @@ const MerchantNavbar: FC<INavbar> = ({
           sm="1fr"
         >
           <StyledSideNav width={sideNavSize} open={open}>
+            <Flex justifyContent="end">
+              <>
+                {open && (
+                  <X width={18} height={18} onClick={() => setOpen(false)} />
+                )}
+              </>
+            </Flex>
             {navChildren}
           </StyledSideNav>
           <>{children}</>
