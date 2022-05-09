@@ -18,11 +18,12 @@ export const StyledCounterValue = styled.input<CounterProps>`
   width: auto;
   height: 50px;
   padding: 25px;
+  margin: 0 10px;
   position: relative;
 
   ::-webkit-inner-spin-button {
     cursor: pointer;
-    visibility: visible !important;
+    visibility: hidden !important;
   }
 `;
 
@@ -31,6 +32,7 @@ export const StyledCounterButton = styled.button`
   border-radius: 50%;
   background-color: ${PALETTE.grey};
   border: none;
+  cursor: pointer;
 `;
 
 export const StyledCounterContainer = styled.div<CounterProps>`

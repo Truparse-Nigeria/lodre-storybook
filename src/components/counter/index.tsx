@@ -20,13 +20,20 @@ const Counter = ({ maxValue, handleChange, ...props }: CounterControlProps) => {
       overTheLimit={count > maxValue}
       underTheLimit={count === 0}
     >
-      <StyledCounterButton>
+      <StyledCounterButton
+        onClick={() => {
+          setCount(count - 1);
+          handleChange(count - 1);
+        }}
+        disabled={count === 1}
+      >
         <Minus width={18} height={18} />
       </StyledCounterButton>
       <StyledCounterValue
         overTheLimit={count > maxValue}
         underTheLimit={count === 0}
-        type={"number"}
+        type="number"
+        value={count}
         min={1}
         max={maxValue}
         onChange={(e) => {
@@ -36,7 +43,13 @@ const Counter = ({ maxValue, handleChange, ...props }: CounterControlProps) => {
         defaultValue={count}
         {...props}
       />
-      <StyledCounterButton>
+      <StyledCounterButton
+        onClick={() => {
+          setCount(count + 1);
+          handleChange(count + 1);
+        }}
+        disabled={count === maxValue}
+      >
         <Plus width={18} height={18} />
       </StyledCounterButton>
       {count > maxValue && (
