@@ -62,7 +62,7 @@ const ProductShowcase: FC<ProductShowcaseProps> = ({
   }, [goForward, timeout]);
 
   return (
-    <div>
+    <>
       <StyledSelectedImageContainer>
         <StyledSelectedImage
           height={height}
@@ -107,7 +107,7 @@ const ProductShowcase: FC<ProductShowcaseProps> = ({
           ))}
         </StyledImageSelectFlex>
       )}
-    </div>
+    </>
   );
 };
 

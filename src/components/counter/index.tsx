@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Paragraph } from "..";
 import { Minus, Plus } from "../../icons";
 import {
@@ -8,12 +8,22 @@ import {
 } from "./styled";
 
 export interface CounterControlProps {
+  initialValue?: number;
   maxValue: number;
   handleChange: (count: number) => void;
 }
 
-const Counter = ({ maxValue, handleChange, ...props }: CounterControlProps) => {
+const Counter = ({
+  initialValue,
+  maxValue,
+  handleChange,
+  ...props
+}: CounterControlProps) => {
   const [count, setCount] = useState(1);
+
+  useEffect(() => {
+    if (initialValue) setCount(initialValue);
+  }, [initialValue]);
 
   return (
     <StyledCounterContainer
