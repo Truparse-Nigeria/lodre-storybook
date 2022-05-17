@@ -12,14 +12,12 @@ export const StyledCounterValue = styled.input<CounterProps>`
     ${(props) =>
       props.overTheLimit || props.underTheLimit ? "red" : "transparent"};
   border-radius: 10px;
-  text-align: center;
+  text-align: center !important;
   outline: none;
   font-weight: ${FONT_WEIGHT.w600};
   width: auto;
   height: 50px;
-  padding: 25px;
   margin: 0 10px;
-  position: relative;
 
   ::-webkit-inner-spin-button {
     cursor: pointer;
