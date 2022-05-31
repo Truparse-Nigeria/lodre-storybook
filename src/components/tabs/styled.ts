@@ -45,7 +45,7 @@ export const TabGroup = styled.div<TabsProps>`
   justify-content: ${(props) => (props.centered ? "center" : "flex-start")};
   background: ${(props) =>
     props.background ? PALETTE[props.background] : "transparent"};
-  border-radius: ${(props) => props.radius && "4px"};
+  border-radius: ${(props) => props.radius ? "4px": "0px"};
   overflow-x: auto;
   margin-bottom: ${SIDE_PADDINGS.default}px;
 `;
