@@ -9,7 +9,7 @@ export interface TabsProps {
   centered?: boolean;
   background?: PaletteType;
   foreground?: PaletteType;
-  radius?: boolean;
+  radius: boolean;
   activeTab?: number;
 }
 
