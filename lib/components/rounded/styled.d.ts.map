@@ -1,0 +1,1 @@
+{"version":3,"file":"styled.d.ts","sourceRoot":"","sources":["../../../src/components/rounded/styled.ts"],"names":[],"mappings":"AACA,OAAO,EAAW,WAAW,EAAE,MAAM,oBAAoB,CAAC;AAC1D,OAAO,EAAE,aAAa,EAAU,MAAM,oBAAoB,CAAC;AAE3D,UAAU,kBAAkB;IAC1B,YAAY,EAAE,aAAa,CAAC;IAC5B,WAAW,CAAC,EAAE,WAAW,CAAC;CAC3B;AAED,eAAO,MAAM,aAAa,oFAQzB,CAAC"}

@@ -91,4 +91,5 @@ export const StyledSearchButton = styled.button`
   justify-content: center;
   border: 2px solid ${PALETTE.primary};
   background: ${PALETTE.primary};
+  pointer: cursor;
 `;
