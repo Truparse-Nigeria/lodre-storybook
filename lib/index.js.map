@@ -1,1 +1,0 @@
-{"version":3,"file":"index.js","sourceRoot":"","sources":["../src/index.tsx"],"names":[],"mappings":"AAAA,cAAc,cAAc,CAAC;AAC7B,cAAc,wBAAwB,CAAC;AAEvC,sCAAsC","sourcesContent":["export * from \"./components\";\r\nexport * from \"./config/global.styles\";\r\n\r\n/** Creating a diff to push to main */\r\n"]}

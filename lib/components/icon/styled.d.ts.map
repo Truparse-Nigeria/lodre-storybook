@@ -1,1 +1,0 @@
-{"version":3,"file":"styled.d.ts","sourceRoot":"","sources":["../../../src/components/icon/styled.ts"],"names":[],"mappings":"AACA,OAAO,EAAW,WAAW,EAAE,MAAM,oBAAoB,CAAC;AAE1D,aAAK,QAAQ,GAAG;IACZ,OAAO,EAAE,WAAW,CAAC;IACrB,KAAK,EAAE,MAAM,CAAC;IACd,MAAM,EAAE,MAAM,CAAC;CAClB,CAAA;AAED,eAAO,MAAM,UAAU,0EAQtB,CAAC"}
