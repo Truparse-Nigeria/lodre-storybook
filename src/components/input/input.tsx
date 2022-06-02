@@ -52,14 +52,12 @@ const Input: FC<IInput & InputHTMLAttributes<HTMLInputElement>> = ({
 export const SearchInput: FC<
   IInput & InputHTMLAttributes<HTMLInputElement>
 > = ({ type, placeholder, onSubmit, ...rest }) => (
-  <form onSubmit={onSubmit}>
-    <Flex gap={0}>
-      <StyledSearchInput type={type} placeholder={placeholder} {...rest} />
-      <StyledSearchButton>
-        <SvgSearch width="20" height="20" />
-      </StyledSearchButton>
-    </Flex>
-  </form>
+  <Flex gap={0}>
+    <StyledSearchInput type={type} placeholder={placeholder} {...rest} />
+    <StyledSearchButton>
+      <SvgSearch width="20" height="20" onClick={onSubmit} />
+    </StyledSearchButton>
+  </Flex>
 );
 
 export default Input;
