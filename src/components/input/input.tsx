@@ -53,7 +53,7 @@ export const SearchInput: FC<
   IInput & InputHTMLAttributes<HTMLInputElement>
 > = ({ type, placeholder, onSubmit, ...rest }) => (
   <Flex gap={0}>
-    <StyledSearchInput type={type} placeholder={placeholder} {...rest} />
+    <StyledSearchInput type={type} placeholder={placeholder} onSubmit={onSubmit} {...rest} />
     <StyledSearchButton>
       <SvgSearch width="20" height="20" onClick={onSubmit} />
     </StyledSearchButton>
