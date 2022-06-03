@@ -1,9 +1,4 @@
-import React, {
-  ElementType,
-  FC,
-  HTMLAttributes,
-  InputHTMLAttributes,
-} from "react";
+import React, { ElementType, FC, InputHTMLAttributes } from "react";
 import { Flex } from "..";
 import SvgSearch from "../../icons/Search";
 import {
@@ -59,8 +54,8 @@ export const SearchInput: FC<
 > = ({ type, placeholder, onSubmit, ...rest }) => (
   <Flex gap={0}>
     <StyledSearchInput type={type} placeholder={placeholder} {...rest} />
-    <StyledSearchButton onClick={() => onSubmit}>
-      <SvgSearch width="20" height="20" />
+    <StyledSearchButton>
+      <SvgSearch width="20" height="20" onClick={onSubmit} />
     </StyledSearchButton>
   </Flex>
 );
