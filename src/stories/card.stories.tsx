@@ -38,7 +38,7 @@ const Template: Story<ICard> = (args) => <Card {...args}>
 
 const ProductTemplate: Story<IProductCard> = (args) => (
   <Container>
-    <Grid md="repeat(2, 1fr)" lg="repeat(3, 1fr)">
+    <Grid xs="repeat(2, 1fr)" lg="repeat(3, 1fr)">
       {[...Array(3).fill(0)].map((n) => (
         <ProductCard {...args}>
           <Paragraph weight="w600" ellipsis={2}>
@@ -66,7 +66,7 @@ const ProductTemplate: Story<IProductCard> = (args) => (
 
 const SideProductTemplate: Story<ISideProductCard> = (args) => (
   <Container>
-    <Grid md="repeat(2, 1fr)" lg="repeat(3, 1fr)">
+    <Grid xs="repeat(2, 1fr)" lg="repeat(3, 1fr)">
       {[...Array(3).fill(0)].map((n) => (
         <SideProductCard {...args}>
           <Paragraph weight="w600" ellipsis={2}>
