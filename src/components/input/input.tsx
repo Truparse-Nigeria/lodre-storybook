@@ -1,6 +1,6 @@
-import React, { ElementType, FC, InputHTMLAttributes } from "react";
-import { Flex } from "..";
-import SvgSearch from "../../icons/Search";
+import React, { ElementType, FC, InputHTMLAttributes } from 'react';
+import { Flex } from '..';
+import SvgSearch from '../../icons/Search';
 import {
   StyledInputContainer,
   StyledInput,
@@ -9,7 +9,7 @@ import {
   StyledInputPrefix,
   StyledSearchButton,
   StyledSearchInput,
-} from "./styled";
+} from './styled';
 
 export interface IInput {
   subText?: string;
@@ -29,7 +29,7 @@ const Input: FC<IInput & InputHTMLAttributes<HTMLInputElement>> = ({
   type,
   placeholder,
   margin = true,
-  width = "100%",
+  width = '100%',
   ...rest
 }) => {
   return (
@@ -52,12 +52,14 @@ const Input: FC<IInput & InputHTMLAttributes<HTMLInputElement>> = ({
 export const SearchInput: FC<
   IInput & InputHTMLAttributes<HTMLInputElement>
 > = ({ type, placeholder, onSubmit, ...rest }) => (
-  <Flex gap={0}>
-    <StyledSearchInput type={type} placeholder={placeholder} onSubmit={onSubmit} {...rest} />
-    <StyledSearchButton>
-      <SvgSearch width="20" height="20" onClick={onSubmit} />
-    </StyledSearchButton>
-  </Flex>
+  <form onSubmit={onSubmit}>
+    <Flex gap={0}>
+      <StyledSearchInput type={type} placeholder={placeholder} {...rest} />
+      <StyledSearchButton type="submit">
+        <SvgSearch width="20" height="20" onClick={onSubmit} />
+      </StyledSearchButton>
+    </Flex>
+  </form>
 );
 
 export default Input;
