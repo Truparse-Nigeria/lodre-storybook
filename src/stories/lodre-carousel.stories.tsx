@@ -19,6 +19,7 @@ export const PrimaryCarousel = Template.bind({});
 PrimaryCarousel.args = {
   height: "400px",
   timeout: 4000,
+  getIndex: (index) => {alert(index)},
   showButtons: false,
   showThumbs: false,
   showIndicators: true,

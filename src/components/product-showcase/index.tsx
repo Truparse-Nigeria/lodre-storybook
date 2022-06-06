@@ -18,6 +18,7 @@ export interface ProductShowcaseProps {
   showThumbs?: boolean;
   showButtons?: boolean;
   showIndicators?: boolean;
+  getIndex?: (index: number) => void;
 }
 
 const ProductShowcase: FC<ProductShowcaseProps> = ({
@@ -27,6 +28,7 @@ const ProductShowcase: FC<ProductShowcaseProps> = ({
   showButtons = true,
   showThumbs = true,
   showIndicators = true,
+  getIndex
 }) => {
   const [key, setKey] = useState<number>(0);
   const [selected, setSelected] = useState<string>(pictures[key]);
@@ -68,6 +70,7 @@ const ProductShowcase: FC<ProductShowcaseProps> = ({
           height={height}
           src={selected}
           alt="product display"
+          onClick={() => getIndex?.(key)}
         />
         {showButtons && (
           <>

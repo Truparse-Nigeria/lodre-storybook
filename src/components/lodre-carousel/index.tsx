@@ -8,6 +8,7 @@ export interface LodreCarouselProps {
   showThumbs?: boolean;
   showButtons?: boolean;
   showIndicators?: boolean;
+  getIndex?: (index: number) => void;
 }
 
 const LodreCarousel: FC<LodreCarouselProps> = ({
@@ -17,6 +18,7 @@ const LodreCarousel: FC<LodreCarouselProps> = ({
   showThumbs,
   showButtons,
   showIndicators,
+  getIndex,
   ...props
 }) => {
   return (
@@ -28,6 +30,7 @@ const LodreCarousel: FC<LodreCarouselProps> = ({
         showButtons={showButtons}
         timeout={timeout}
         showThumbs={showThumbs}
+        getIndex={getIndex}
         {...props}
       />
     </>

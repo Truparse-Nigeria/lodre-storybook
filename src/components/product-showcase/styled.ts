@@ -47,6 +47,7 @@ export const StyledSelectedImage = styled.img<StyledSelectedImageProps>`
   height: ${(props) => (props.height ? props.height : "100%")};
   border-radius: 10px;
   object-fit: cover;
+  cursor: pointer;
 `;
 
 export const StyledSelectedImageContainer = styled.div`
