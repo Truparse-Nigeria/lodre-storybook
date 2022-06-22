@@ -34,6 +34,7 @@ TextInputWithSuffix.args = {
 export const TextInputWithPrefix = Template.bind({});
 TextInputWithPrefix.args = {
   type: "text",
+  onSubmit: () => {alert('works')},
   placeholder: "Placeholder",
   leading: <EyeClose />,
 };

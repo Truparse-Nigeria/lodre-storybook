@@ -6,10 +6,10 @@ export type ViewportType = 'xl' | 'lg' | 'md' | 'sm' | 'xs';
 
 export const VIEWPORT: { [key in ViewportType]?: number } = {
   xs: 0,
-  sm: 575.98,
-  md: 767.98,
-  lg: 991.98,
-  xl: 1153.98,
+  sm: 640,
+  md: 768,
+  lg: 1024,
+  xl: 1200,
 };
 
 export const SIDE_PADDINGS: { [key in ComponentSize]: number } = {

@@ -14,13 +14,13 @@ type CardType = {
 
 type CardBodyType = {
   padding: ComponentSize;
+  imgSize?: ComponentSize;
 };
 
 type CardProductBodyType = {
   padding: ComponentSize;
   height?: number;
 };
-
 
 type CardHeaderType = {
   padding: ComponentSize;
@@ -42,16 +42,23 @@ export const StyledCard = styled.div<CardType>`
 `;
 
 export const StyledCardBody = styled.div<CardBodyType>`
-  padding: ${(props) => SIDE_PADDINGS[props.padding]}px;
+  padding: 0.6rem;
+
+  ${mediaQueries('md')(`
+    padding: ${SIDE_PADDINGS.default}px;
+    `)}
 `;
 
 export const StyledProductCardBody = styled.div<CardProductBodyType>`
   & img {
-    height: 100px;
+    height: 165px;
   }
 
   & .children {
-    padding: ${(props) => SIDE_PADDINGS[props.padding]}px;
+    padding: 0.6rem;
+    ${mediaQueries('md')(`
+      padding: ${SIDE_PADDINGS.default}px;
+    `)}
 
     & p,
     & s {
@@ -61,7 +68,7 @@ export const StyledProductCardBody = styled.div<CardProductBodyType>`
 
   ${(props) =>
     props.height &&
-    mediaQueries('md')(`
+    mediaQueries('sm')(`
     & img {
       height: ${props.height}px;
     }
@@ -73,11 +80,16 @@ export const StyledSideCardBody = styled.div<CardBodyType>`
   padding: 0px;
   & img {
     border-radius: ${RADIUS.default}px ${RADIUS.default}px 0 0;
+    height: 165px;
   }
 
   & .children {
-    padding: ${(props) => SIDE_PADDINGS[props.padding]}px;
     padding-top: 0;
+    padding: 0 0.6rem 0.6rem 0.6rem;
+    ${mediaQueries('md')(`
+      padding: ${SIDE_PADDINGS.default}px;
+    `)}
+
 
     & p,
     & s {
@@ -87,11 +99,12 @@ export const StyledSideCardBody = styled.div<CardBodyType>`
 
   ${(props) =>
     props.padding &&
-    mediaQueries('md')(`
+    mediaQueries('sm')(`
     padding: ${SIDE_PADDINGS[props.padding]}px;
 
     & img {
       border-radius: ${RADIUS.default}px;
+      height: ${props.imgSize === 'default' ? '100px' : '80px'};
     }
 
     & .children {
@@ -108,9 +121,11 @@ export const StyledCardHeader = styled.div<CardHeaderType>`
 export const StyledImage = styled.img<ImageType>`
   object-fit: cover;
   width: 100%;
-  ${(props) => props.height && (`
+  ${(props) =>
+    props.height &&
+    `
     height: ${props.height}px
-  `)}
+  `}
 `;
 
 export const StyledImageRounded = styled(StyledImage)`

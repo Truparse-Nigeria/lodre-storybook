@@ -25,7 +25,7 @@ NormalCategory.args = {
     <div>
       <CategoryItem
         className="fit-content"
-        title="Attire &amp; Clothing"
+        title="Camera, Photo & Accessories Accessories"
         children={
           <Flex className="px-10 py-10">
             <div>

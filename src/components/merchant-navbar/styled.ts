@@ -44,7 +44,7 @@ export const StyledGrid = styled.div`
     display: none;
     cursor: pointer;
 
-    @media (max-width: ${VIEWPORT.sm}px) {
+    @media (min-width: ${VIEWPORT.md}px) {
       display: initial;
     }
   }

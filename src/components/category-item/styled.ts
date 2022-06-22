@@ -25,7 +25,7 @@ export const StyledCategory = styled.div`
   align-item: start;
 `;
 
-export const StyledCategoryItemButton = styled.button`
+export const StyledCategoryItemButton = styled.div`
   width: 100%;
   border: none;
   outline: none;
@@ -38,7 +38,7 @@ export const StyledCategoryItemButton = styled.button`
 `;
 
 export const StyledCategoryItemMenu = styled.div<MenuProps>`
-  width: 800px;
+  width: 740px;
   padding: 20px;
   border-radius: 10px;
   position: absolute;

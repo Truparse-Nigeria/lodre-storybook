@@ -71,8 +71,8 @@ export const ProductCard: FC<IProductCard & HTMLAttributes<HTMLDivElement>> = ({
   height = 215,
 }) => {
   return (
-    <Rounded borderColor={bgColor}>
-      <StyledCard bgColor={bgColor}>
+    <Rounded borderColor={bgColor} className="h-100">
+      <StyledCard bgColor={bgColor} className="h-100">
         <StyledProductCardBody height={height} padding={padding}>
           <StyledImage src={src} />
           <div className="children">{children}</div>
@@ -92,8 +92,8 @@ export const SideProductCard: FC<
   imgSize = 'default',
 }) => {
   return (
-    <StyledCard bgColor={bgColor}>
-      <StyledSideCardBody padding={padding}>
+    <StyledCard bgColor={bgColor} className="h-100">
+      <StyledSideCardBody padding={padding} className="h-100">
         <Grid
           md={imgSize === 'default' ? '100px 1fr' : '80px 1fr'}
           alignItems="center"

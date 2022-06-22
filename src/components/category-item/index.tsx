@@ -4,15 +4,16 @@ import React, {
   ReactChild,
   ReactElement,
   useState,
-} from "react";
-import { Flex } from "..";
-import { CaretRight } from "../../icons";
+} from 'react';
+import { Flex } from '..';
+import { CaretRight } from '../../icons';
+import { Paragraph } from '../typography';
 import {
   StyledCategoryIcon,
   StyledCategoryItemButton,
   StyledCategoryItemContainer,
   StyledCategoryItemMenu,
-} from "./styled";
+} from './styled';
 
 export interface CategoryItemProps {
   title: string;
@@ -36,7 +37,11 @@ const CategoryItem: FC<CategoryItemProps & HTMLAttributes<HTMLDivElement>> = ({
         <Flex alignItems="center">
           <>
             {icon && <StyledCategoryIcon>{icon}</StyledCategoryIcon>}
-            {title}
+            <div>
+              <Paragraph ellipsis={1} size="small">
+                {title}
+              </Paragraph>
+            </div>
           </>
         </Flex>
         <CaretRight width={20} height={20} />
