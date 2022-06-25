@@ -10,6 +10,7 @@ export const StyledNavbar = styled.section`
   position: sticky;
   top: 0;
   z-index: 999;
+  box-shadow: 0 2px 4px 0 rgba(0,0,0,.08);
 `;
 
 export const StyledGrid = styled.div`

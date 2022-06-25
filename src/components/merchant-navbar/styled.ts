@@ -15,11 +15,15 @@ interface SideNavProps {
 
 export const StyledNavbar = styled.section`
   background-color: ${PALETTE.light};
-  padding: ${SIDE_PADDINGS.default}px ${SIDE_PADDINGS.small}px;
+  padding: ${SIDE_PADDINGS.small/2}px ${SIDE_PADDINGS.small}px;
   border-bottom: 1px solid ${PALETTE.grey};
   position: sticky;
   top: 0;
   z-index: 999;
+
+  ${mediaQueries('lg')(`
+    padding: ${SIDE_PADDINGS.small}px;
+    `)}
 `;
 
 export const StyledGrid = styled.div`
@@ -44,7 +48,7 @@ export const StyledGrid = styled.div`
     display: none;
     cursor: pointer;
 
-    @media (min-width: ${VIEWPORT.md}px) {
+    @media (max-width: ${VIEWPORT.md}px) {
       display: initial;
     }
   }
