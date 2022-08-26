@@ -13,17 +13,20 @@ import {
   StyledCategoryItemButton,
   StyledCategoryItemContainer,
   StyledCategoryItemMenu,
+  StyledImg,
 } from './styled';
 
 export interface CategoryItemProps {
   title: string;
   children: ReactElement | ReactElement[] | ReactChild | ReactChild[];
   icon?: JSX.Element | SVGElement | ReactChild;
+  image?: string
 }
 
 const CategoryItem: FC<CategoryItemProps & HTMLAttributes<HTMLDivElement>> = ({
   title,
   icon,
+  image,
   children,
   ...props
 }) => {
@@ -37,6 +40,7 @@ const CategoryItem: FC<CategoryItemProps & HTMLAttributes<HTMLDivElement>> = ({
         <Flex alignItems="center">
           <>
             {icon && <StyledCategoryIcon>{icon}</StyledCategoryIcon>}
+            {image && <StyledImg src={image} alt="lodre category"  />}
             <div>
               <Paragraph ellipsis={1} size="small">
                 {title}

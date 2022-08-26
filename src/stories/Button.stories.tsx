@@ -16,6 +16,7 @@ Block.args = {
   fluid: false,
   outline: "block",
   iconOnly: false,
+  size: 'default',
 };
 
 export const Loading = Template.bind({});
@@ -36,4 +37,12 @@ export const Usage = Template.bind({});
 Usage.args = {
   children: "Outline Button",
   usage: "dark",
+};
+
+export const ColorChange = Template.bind({});
+ColorChange.args = {
+  children: "Outline Button",
+  usage: "danger",
+  size: "xSmall",
+  color: "light"
 };
