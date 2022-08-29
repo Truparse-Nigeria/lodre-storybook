@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { ButtonVariant } from ".";
 import { PALETTE, PaletteType } from "../../tokens/color";
-import { FONT_SIZE, FONT_WEIGHT, TYPOGRAPHY } from "../../tokens/font";
+import { FONT_SIZE, FONT_WEIGHT } from "../../tokens/font";
 import {
   ComponentSize,
   HEIGHTS,
@@ -13,6 +13,7 @@ interface StyledButtonProps {
   size: ComponentSize;
   variant: ButtonVariant;
   usage: PaletteType;
+  color: PaletteType;
   fluid?: boolean;
   iconOnly?: boolean;
 }
@@ -31,7 +32,7 @@ export const StyledButton = styled.button<StyledButtonProps>`
   font-size: ${FONT_SIZE.pSmall}px;
   font-weight: ${FONT_WEIGHT.w700};
   height: ${(props) => HEIGHTS.buttons[props.size] || 0}px;
-  color: ${props => PALETTE[props.usage] === PALETTE.dark ?  PALETTE.light: PALETTE.dark };
+  color: ${props => PALETTE[props.usage] === PALETTE.dark ?  PALETTE.light: PALETTE[props.color]};
   background-color: ${(props) =>
     props.variant === "block" ? PALETTE[props.usage] : "transparent"};
   min-width: ${(props) => (props.iconOnly ? 0 : 140)}px;

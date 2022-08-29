@@ -1,4 +1,4 @@
-export type ComponentSize = 'default' | 'large' | 'small';
+export type ComponentSize = 'default' | 'large' | 'small' | 'xSmall';
 
 type ComponentType = 'inputs' | 'buttons';
 type Elements = { [key in ComponentSize]: number };
@@ -16,12 +16,14 @@ export const SIDE_PADDINGS: { [key in ComponentSize]: number } = {
   large: 30,
   default: 25,
   small: 20,
+  xSmall: 15,
 };
 
 export const RADIUS: { [key in ComponentSize]: number } = {
   large: 12,
   default: 8,
   small: 4,
+  xSmall: 2,
 };
 
 export const HEIGHTS: { [key in ComponentType]: Elements } = {
@@ -29,11 +31,13 @@ export const HEIGHTS: { [key in ComponentType]: Elements } = {
     large: 55,
     default: 45,
     small: 35,
+    xSmall: 25
   },
   buttons: {
     large: 58,
     default: 52,
-    small: 45,
+    small: 40,
+    xSmall: 32,
   },
 };
 

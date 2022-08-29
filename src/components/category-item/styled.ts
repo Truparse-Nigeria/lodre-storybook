@@ -1,14 +1,14 @@
-import styled from "styled-components";
-import { PALETTE } from "../../tokens/color";
+import styled from 'styled-components';
+import { PALETTE } from '../../tokens/color';
 
 interface MenuProps {
   visible: boolean;
 }
 
 export const StyledCategoryContainer = styled.div({
-  height: "100%",
+  height: '100%',
   background: PALETTE.light,
-  borderRadius: "10px",
+  borderRadius: '10px',
 });
 
 export const StyledCategoryItemContainer = styled.div`
@@ -46,9 +46,17 @@ export const StyledCategoryItemMenu = styled.div<MenuProps>`
   top: 0%;
   left: 100%;
   background: ${PALETTE.light};
-  visibility: ${(props) => (props.visible ? "visible" : "hidden")};
-  pointer-events: ${(props) => (props.visible ? "auto" : "none")};
+  visibility: ${(props) => (props.visible ? 'visible' : 'hidden')};
+  pointer-events: ${(props) => (props.visible ? 'auto' : 'none')};
   box-shadow: 0 0 15px 7px rgba(0, 0, 0, 0.1);
+`;
+
+export const StyledImg = styled.img`
+  width: 32px;
+  height: 32px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 1px solid ${PALETTE.primary};
 `;
 
 export const StyledCategoryIcon = styled.div`

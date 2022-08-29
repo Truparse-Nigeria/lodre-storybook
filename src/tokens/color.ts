@@ -9,6 +9,7 @@ export type PaletteType =
   | "primary_light"
   | "success_light"
   | "success"
+  | "warning"
   | "danger";
 
 export const PALETTE: { [Key in PaletteType]?: string } = {
@@ -22,5 +23,6 @@ export const PALETTE: { [Key in PaletteType]?: string } = {
   primary_light: "#FFFAEB",
   success: "#34623f",
   success_light: "#d9ffe2",
-  danger: "#E15634",
+  warning: '#D65108',
+  danger: "#DF2935",
 };
