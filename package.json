@@ -1,6 +1,6 @@
 {
   "name": "truparse-lodre",
-  "version": "1.8.8",
+  "version": "1.8.12",
   "private": false,
   "main": "lib/index.js",
   "files": [
@@ -30,11 +30,11 @@
     "copy-styles": "copyfiles -u 1 src/config/styles/* lib/",
     "eject": "react-scripts eject",
     "postbuild": "yarn copy-fonts && yarn copy-styles",
-    "prebuild": "rm -rf ./lib && yarn compile-icons",
+    "prebuild": "rimraf ./lib && yarn compile-icons",
     "prepublish": "yarn build",
     "storybook": "start-storybook -p 6006 -s public",
     "build-storybook": "build-storybook -s public",
-    "postpublish": "rm -rf ./lib"
+    "postpublish": "rimraf ./lib"
   },
   "peerDependencies": {
     "react": ">=17.0.2",
