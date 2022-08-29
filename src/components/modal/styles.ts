@@ -54,6 +54,7 @@ const StyledModalClose = styled.button`
 
 const StyledModalBody = styled.div<ModalBody>`
   max-width: 95%;
+  max-height: 95vh;
   width: ${(props) => (props.width ? props.width : 450)}px;
   height: auto;
   overflow-x: hidden;
