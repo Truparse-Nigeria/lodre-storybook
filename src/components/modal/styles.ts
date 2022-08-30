@@ -59,6 +59,7 @@ const StyledModalBody = styled.div<ModalBody>`
   height: auto;
   overflow-x: hidden;
   overflow-y: auto;
+  margin-bottom: 15rem;
 `;
 
 export { StyledModal, StyledModalBody, StyledModalClose };
