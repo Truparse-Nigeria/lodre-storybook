@@ -7,7 +7,7 @@ interface ModalBody {
 
 const StyledModal = styled.div`
   position: fixed;
-  overflow: hidden;
+  overflow-y: auto;
   top: 0;
   left: 0;
   background-color: rgba(0, 0, 0, 0.65);
@@ -54,7 +54,6 @@ const StyledModalClose = styled.button`
 
 const StyledModalBody = styled.div<ModalBody>`
   max-width: 95%;
-  max-height: 95vh;
   width: ${(props) => (props.width ? props.width : 450)}px;
   height: auto;
   overflow-x: hidden;
