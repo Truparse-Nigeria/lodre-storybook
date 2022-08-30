@@ -53,6 +53,7 @@ const StyledModalClose = styled.button`
 `;
 
 const StyledModalBody = styled.div<ModalBody>`
+  margin-top: 15rem;
   max-width: 95%;
   width: ${(props) => (props.width ? props.width : 450)}px;
   height: auto;
