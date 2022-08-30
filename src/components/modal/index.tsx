@@ -1,7 +1,12 @@
 import React, { FC, ReactChild, useEffect, useState } from "react";
 import { X } from "../../icons";
 import Card, { CardBody } from "../card";
-import { StyledModal, StyledModalBody, StyledModalClose } from "./styles";
+import {
+  StyledModal,
+  StyledModalBody,
+  StyledModalBodyContainer,
+  StyledModalClose,
+} from "./styles";
 
 interface ModalProps {
   trigger: boolean;
@@ -29,13 +34,15 @@ const Modal: FC<ModalProps> = ({ trigger, children, width, close }) => {
           <StyledModalClose onClick={() => close(false)}>
             <X width={18} height={18} />
           </StyledModalClose>
-          <StyledModalBody width={width}>
-            <Card className="full">
-              <CardBody>
-                <>{children}</>
-              </CardBody>
-            </Card>
-          </StyledModalBody>
+          <StyledModalBodyContainer>
+            <StyledModalBody width={width}>
+              <Card className="full">
+                <CardBody>
+                  <>{children}</>
+                </CardBody>
+              </Card>
+            </StyledModalBody>
+          </StyledModalBodyContainer>
         </StyledModal>
       ) : null}
     </>

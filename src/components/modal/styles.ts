@@ -52,14 +52,23 @@ const StyledModalClose = styled.button`
   }
 `;
 
-const StyledModalBody = styled.div<ModalBody>`
+const StyledModalBodyContainer = styled.div`
   margin-top: 15rem;
+  margin-bottom: 15rem;
+`;
+
+const StyledModalBody = styled.div<ModalBody>`
   max-width: 95%;
   width: ${(props) => (props.width ? props.width : 450)}px;
   height: auto;
   overflow-x: hidden;
   overflow-y: auto;
-  margin-bottom: 15rem;
+  margin: auto;
 `;
 
-export { StyledModal, StyledModalBody, StyledModalClose };
+export {
+  StyledModal,
+  StyledModalBody,
+  StyledModalClose,
+  StyledModalBodyContainer,
+};
