@@ -16,7 +16,7 @@ const StyledModal = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 1.5em 1em;
+  padding: 3.5em 1em;
   z-index: 999999;
   box-sizing: border-box;
   backdrop-filter: blur(8px);
