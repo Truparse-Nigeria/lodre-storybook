@@ -16,7 +16,7 @@ const StyledModal = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 1.5em 1em;
+  padding: 3.5em 1em;
   z-index: 999999;
   box-sizing: border-box;
   backdrop-filter: blur(8px);
@@ -53,13 +53,12 @@ const StyledModalClose = styled.button`
 `;
 
 const StyledModalBody = styled.div<ModalBody>`
-  margin-top: 15rem;
   max-width: 95%;
   width: ${(props) => (props.width ? props.width : 450)}px;
   height: auto;
   overflow-x: hidden;
   overflow-y: auto;
-  margin-bottom: 15rem;
+  margin: auto;
 `;
 
 export { StyledModal, StyledModalBody, StyledModalClose };

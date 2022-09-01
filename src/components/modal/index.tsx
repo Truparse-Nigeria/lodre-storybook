@@ -29,6 +29,7 @@ const Modal: FC<ModalProps> = ({ trigger, children, width, close }) => {
           <StyledModalClose onClick={() => close(false)}>
             <X width={18} height={18} />
           </StyledModalClose>
+
           <StyledModalBody width={width}>
             <Card className="full">
               <CardBody>
