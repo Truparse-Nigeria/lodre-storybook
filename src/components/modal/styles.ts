@@ -52,11 +52,6 @@ const StyledModalClose = styled.button`
   }
 `;
 
-const StyledModalBodyContainer = styled.div`
-  margin-top: 15rem;
-  margin-bottom: 15rem;
-`;
-
 const StyledModalBody = styled.div<ModalBody>`
   max-width: 95%;
   width: ${(props) => (props.width ? props.width : 450)}px;
@@ -66,9 +61,4 @@ const StyledModalBody = styled.div<ModalBody>`
   margin: auto;
 `;
 
-export {
-  StyledModal,
-  StyledModalBody,
-  StyledModalClose,
-  StyledModalBodyContainer,
-};
+export { StyledModal, StyledModalBody, StyledModalClose };
