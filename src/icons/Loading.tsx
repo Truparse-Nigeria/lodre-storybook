@@ -1,6 +1,5 @@
 import * as React from "react";
 import { SVGProps } from "react";
-
 const SvgLoading = (props: SVGProps<SVGSVGElement>) => (
   <svg
     width="1em"
@@ -8,6 +7,7 @@ const SvgLoading = (props: SVGProps<SVGSVGElement>) => (
     viewBox="0 0 38 38"
     xmlns="http://www.w3.org/2000/svg"
     stroke="#000"
+    role="img"
     {...props}
   >
     <g
@@ -30,5 +30,4 @@ const SvgLoading = (props: SVGProps<SVGSVGElement>) => (
     </g>
   </svg>
 );
-
 export default SvgLoading;

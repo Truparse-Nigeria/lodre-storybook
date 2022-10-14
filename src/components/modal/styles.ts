@@ -7,7 +7,7 @@ interface ModalBody {
 
 const StyledModal = styled.div`
   position: fixed;
-  overflow: hidden;
+  overflow-y: auto;
   top: 0;
   left: 0;
   background-color: rgba(0, 0, 0, 0.65);
@@ -16,7 +16,7 @@ const StyledModal = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 1.5em 1em;
+  padding: 3.5em 1em;
   z-index: 999999;
   box-sizing: border-box;
   backdrop-filter: blur(8px);
@@ -54,11 +54,11 @@ const StyledModalClose = styled.button`
 
 const StyledModalBody = styled.div<ModalBody>`
   max-width: 95%;
-  max-height: 95vh;
   width: ${(props) => (props.width ? props.width : 450)}px;
   height: auto;
   overflow-x: hidden;
   overflow-y: auto;
+  margin: auto;
 `;
 
 export { StyledModal, StyledModalBody, StyledModalClose };

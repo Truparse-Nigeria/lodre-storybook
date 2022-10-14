@@ -15,6 +15,11 @@ const Modal: FC<ModalProps> = ({ trigger, children, width, close }) => {
 
   useEffect(() => {
     trigger ? setOpenModal(true) : setOpenModal(false);
+    if (trigger === true) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "auto";
+    }
   }, [trigger]);
 
   return (
@@ -24,6 +29,7 @@ const Modal: FC<ModalProps> = ({ trigger, children, width, close }) => {
           <StyledModalClose onClick={() => close(false)}>
             <X width={18} height={18} />
           </StyledModalClose>
+
           <StyledModalBody width={width}>
             <Card className="full">
               <CardBody>

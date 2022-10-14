@@ -1,6 +1,5 @@
 import * as React from "react";
 import { SVGProps } from "react";
-
 const SvgCaretRight = (props: SVGProps<SVGSVGElement>) => (
   <svg
     width="1em"
@@ -8,6 +7,7 @@ const SvgCaretRight = (props: SVGProps<SVGSVGElement>) => (
     viewBox="0 0 24 24"
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
+    role="img"
     {...props}
   >
     <path
@@ -16,5 +16,4 @@ const SvgCaretRight = (props: SVGProps<SVGSVGElement>) => (
     />
   </svg>
 );
-
 export default SvgCaretRight;
