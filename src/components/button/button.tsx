@@ -28,7 +28,7 @@ const Button: FC<IButton & ButtonHTMLAttributes<HTMLButtonElement>> = ({
   variant = "block",
   size = "default",
   usage = "primary",
-  color = "dark",
+  color = "light",
   fluid = false,
   iconOnly = false,
   loading = false,
@@ -39,7 +39,7 @@ const Button: FC<IButton & ButtonHTMLAttributes<HTMLButtonElement>> = ({
       size={size}
       variant={variant}
       usage={usage}
-      color={color}
+      color={variant === 'outline' ? "dark" :color}
       fluid={fluid}
       iconOnly={iconOnly}
       {...rest}

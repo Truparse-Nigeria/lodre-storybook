@@ -1,6 +1,5 @@
 import * as React from "react";
 import { SVGProps } from "react";
-
 const SvgGrid = (props: SVGProps<SVGSVGElement>) => (
   <svg
     width="1em"
@@ -8,6 +7,7 @@ const SvgGrid = (props: SVGProps<SVGSVGElement>) => (
     viewBox="0 0 18 18"
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
+    role="img"
     {...props}
   >
     <mask id="Grid_svg__a" fill="#fff">
@@ -64,5 +64,4 @@ const SvgGrid = (props: SVGProps<SVGSVGElement>) => (
     />
   </svg>
 );
-
 export default SvgGrid;
