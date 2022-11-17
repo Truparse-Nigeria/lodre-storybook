@@ -64,6 +64,7 @@ export const StyledRadio = styled.input<StyledRadioProps>`
 
   &:checked {
     border: 2px solid ${PALETTE.primary};
+    background-color: ${PALETTE.primary};
   }
 
   ::before {

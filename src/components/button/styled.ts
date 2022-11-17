@@ -32,7 +32,10 @@ export const StyledButton = styled.button<StyledButtonProps>`
   font-size: ${FONT_SIZE.pSmall}px;
   font-weight: ${FONT_WEIGHT.w700};
   height: ${(props) => HEIGHTS.buttons[props.size] || 0}px;
-  color: ${props => PALETTE[props.usage] === PALETTE.dark ?  PALETTE.light: PALETTE[props.color]};
+  color: ${(props) =>
+    PALETTE[props.usage] === PALETTE.dark
+      ? PALETTE.light
+      : PALETTE[props.color]};
   background-color: ${(props) =>
     props.variant === "block" ? PALETTE[props.usage] : "transparent"};
   min-width: ${(props) => (props.iconOnly ? 0 : 140)}px;
@@ -51,5 +54,5 @@ export const StyledButton = styled.button<StyledButtonProps>`
 `;
 
 export const StyledLoading = styled.div`
-  margin-left: 5px
+  margin-left: 5px;
 `;

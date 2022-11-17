@@ -24,6 +24,7 @@ export const StyledSelectField = styled.div<SideSelectFieldProps>`
     border: 1.5px solid ${PALETTE.ash} !important;
     background: ${(props) => PALETTE[props.background]};
     border-radius: ${(props) => props.borderRadius} !important;
+    color: ${PALETTE.dark};
 
     .icon {
       justify-self: flex-end;
