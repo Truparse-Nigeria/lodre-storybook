@@ -25,6 +25,7 @@ export const StyledSelectField = styled.div<SideSelectFieldProps>`
     background: ${(props) => PALETTE[props.background]};
     border-radius: ${(props) => props.borderRadius} !important;
     color: ${PALETTE.dark};
+    height: 45px;
 
     .icon {
       justify-self: flex-end;
@@ -36,6 +37,9 @@ export const StyledSelectField = styled.div<SideSelectFieldProps>`
   }
 `;
 
+// box-shadow: ${(props) =>
+//   props.height === 0 ? "" : "0 0 7px 2px ${PALETTE.grey}"};
+
 export const StyledOptionsContainer = styled.div<SideSelectFieldProps>`
   position: absolute;
   width: 100%;
@@ -44,9 +48,10 @@ export const StyledOptionsContainer = styled.div<SideSelectFieldProps>`
   z-index: 99;
   visibility: ${(props) => (props.focused ? "visible" : "hidden")};
   pointer-events: ${(props) => (props.focused ? "auto" : "none")};
-  box-shadow: 0 0 7px 2px ${PALETTE.grey};
+  box-shadow: ${(props) =>
+    props.height === 0 ? "" : `0 0 7px 2px ${PALETTE.grey}`};
   background: ${PALETTE.light};
-  padding: 10px 0;
+  padding: ${(props) => (props.height === 0 ? "" : "10px 0")};
   height: ${(props) =>
     props.focused ? `${props.height && props.height}px` : "180px"};
   overflow-y: auto;
