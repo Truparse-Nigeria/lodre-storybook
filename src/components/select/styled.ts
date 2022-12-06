@@ -37,9 +37,6 @@ export const StyledSelectField = styled.div<SideSelectFieldProps>`
   }
 `;
 
-// box-shadow: ${(props) =>
-//   props.height === 0 ? "" : "0 0 7px 2px ${PALETTE.grey}"};
-
 export const StyledOptionsContainer = styled.div<SideSelectFieldProps>`
   position: absolute;
   width: 100%;

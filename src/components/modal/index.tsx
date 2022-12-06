@@ -10,11 +10,11 @@ interface ModalProps {
   close: (trigger: boolean) => void;
 }
 
-const Modal: FC<ModalProps> = ({ trigger, children, width, close }) => {
+const Modal: FC<ModalProps> = ({ trigger = false, children, width, close }) => {
   const [openModal, setOpenModal] = useState<boolean>();
 
   useEffect(() => {
-    trigger ? setOpenModal(true) : setOpenModal(false);
+    setOpenModal(trigger);
     if (trigger === true) {
       document.body.style.overflow = "hidden";
     } else {

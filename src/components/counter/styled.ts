@@ -4,13 +4,10 @@ import { FONT_WEIGHT } from "../../tokens/font";
 
 interface CounterProps {
   overTheLimit: boolean;
-  underTheLimit: boolean;
 }
 
 export const StyledCounterValue = styled.input<CounterProps>`
-  border: 1px solid
-    ${(props) =>
-      props.overTheLimit || props.underTheLimit ? "red" : "transparent"};
+  border: 1px solid ${(props) => (props.overTheLimit ? "red" : "transparent")};
   border-radius: 10px;
   text-align: center !important;
   outline: none;
