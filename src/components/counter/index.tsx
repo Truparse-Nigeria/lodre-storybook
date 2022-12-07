@@ -8,7 +8,7 @@ import {
 } from "./styled";
 
 export interface CounterControlProps {
-  initialValue?: number;
+  initialValue: number;
   maxValue: number;
   handleChange: (count: number) => void;
 }
@@ -19,10 +19,10 @@ const Counter = ({
   handleChange,
   ...props
 }: CounterControlProps) => {
-  const [count, setCount] = useState(0);
+  const [count, setCount] = useState(initialValue);
 
   useEffect(() => {
-    if (initialValue) setCount(initialValue);
+    setCount(initialValue);
   }, [initialValue]);
 
   return (
